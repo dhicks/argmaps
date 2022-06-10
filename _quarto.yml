@@ -1,0 +1,22 @@
+project:
+  type: book
+
+book:
+  title: "Mapping Arguments and Debates with Argdown"
+  author: "Dan Hicks"
+  chapters:
+    - index.md
+    - 02-argdown.md
+    - 03-simple.md
+    - 04-objections.md
+
+format:
+  html:
+    theme: 
+        - cosmo
+        - theming.scss
+
+filters:
+    - argdown-filter
+
+

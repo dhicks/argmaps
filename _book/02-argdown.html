@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.355">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Mapping Arguments and Debates with Argdown - 2&nbsp; Setting up Argdown</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<link href="./03-simple.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Argdown</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Mapping Arguments and Debates with Argdown</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction #</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-argdown.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Argdown</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-simple.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple argument maps</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-objections.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Contradicting arguments and objections #</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#using-the-argdown-sandbox" id="toc-using-the-argdown-sandbox" class="nav-link active" data-scroll-target="#using-the-argdown-sandbox"> <span class="header-section-number">2.1</span> Using the Argdown Sandbox</a>
+  <ul class="collapse">
+  <li><a href="#saving-your-work-in-the-argdown-sandbox" id="toc-saving-your-work-in-the-argdown-sandbox" class="nav-link" data-scroll-target="#saving-your-work-in-the-argdown-sandbox"> <span class="header-section-number">2.1.1</span> Saving your work in the Argdown Sandbox</a></li>
+  <li><a href="#saving-an-image-file-from-the-argdown-sandbox" id="toc-saving-an-image-file-from-the-argdown-sandbox" class="nav-link" data-scroll-target="#saving-an-image-file-from-the-argdown-sandbox"> <span class="header-section-number">2.1.2</span> Saving an image file from the Argdown Sandbox</a></li>
+  </ul></li>
+  <li><a href="#using-argdown-with-obsidian" id="toc-using-argdown-with-obsidian" class="nav-link" data-scroll-target="#using-argdown-with-obsidian"> <span class="header-section-number">2.2</span> Using Argdown with Obsidian</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Argdown</span></h1>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>Argdown is software designed to turn pieces of text into argument maps, visual representations of the structure of an argument or debate. This page has instructions for two ways of setting up this software: you can use a website called the Argdown Sandbox, or you can download and install Argdown on your computer, along with notetaking software called Obsidian.</p>
+<p>Both options for using Argdown are completely free, and either one will work to generate argument maps for this course. The <em>Argdown Sandbox</em> doesn’t require any setup — you just open up a website and start typing — but doesn’t have a simple way to save your work. Using <em>Argdown with Obsidian</em> requires you to download and install some software on your computer. It’s easy to use Obsidian to save your argument maps; but the software hasn’t been vetted by our campus IT office. That means there’s a security risk installing this software. <strong>Do not store any sensitive information in Obsidian.</strong></p>
+<section id="using-the-argdown-sandbox" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="using-the-argdown-sandbox"><span class="header-section-number">2.1</span> Using the Argdown Sandbox</h2>
+<p>Using the <em>Argdown Sandbox</em> is simple: simply open a web browser to <a href="https://argdown.org/sandbox/" class="uri">https://argdown.org/sandbox/</a>, and you should see the same thing as <a href="#fig-sandbox">Figure&nbsp;<span>2.1</span></a>. Since you’ll be creating argument maps pretty regularly in this class, you’ll probably want to bookmark that link.</p>
+<div id="fig-sandbox" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/sandbox.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.1: The Argdown Sandbox: <a href="https://argdown.org/sandbox/" class="uri">https://argdown.org/sandbox/</a></figcaption><p></p>
+</figure>
+</div>
+<p>Most of the Sandbox is taken up by the text pane (left) and preview pane (right). Notice that you can’t click or do anything in the preview pane. But click anywhere in the text pane, hit ⌘+a (Control+a on Windows) to select all, then hit backspace or delete to clear out the demo text. Type the following, including at least two spaces or a tab at the start of the second line:</p>
+<pre><code>I'm a premise 
+  +&gt; I'm a conclusion</code></pre>
+<p>At the very top-right, there’s a list of rendering options (methods for representing the text in the text pane): HTML, Map, and JSON, then two outgoing links for Documentation (the Argdown homepage) and the Argdown source code on GitHub.</p>
+<p>If you’re in HTML mode, you should see something like <a href="#fig-sandbox-html">Figure&nbsp;<span>2.2</span></a> in the preview pane.</p>
+<div id="fig-sandbox-html" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/sandbox-html.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.2: Example output of the Argdown Sandbox in HTML mode</figcaption><p></p>
+</figure>
+</div>
+<p>To view the argument map itself, select Map mode in the upper-right, then click Dagre D3 Map at the top of the preview pane. The whole thing should look like <a href="#fig-sandbox-map">Figure&nbsp;<span>2.3</span></a>.</p>
+<div id="fig-sandbox-map" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/sandbox-map.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.3: Example output of the Argdown Sandbox with Dagre D3 Map mode</figcaption><p></p>
+</figure>
+</div>
+<section id="saving-your-work-in-the-argdown-sandbox" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="saving-your-work-in-the-argdown-sandbox"><span class="header-section-number">2.1.1</span> Saving your work in the Argdown Sandbox</h3>
+<p><strong>The Argdown Sandbox has no way to save your work.</strong> It’s meant to be a quick preview of what Argdown can do, not a space for you to regularly do important work. You’ll need to manually save your work by copying and pasting to a file on your computer.</p>
+<p><em>Before you save your work for the first time</em>, create a designated folder for all of the work for this course. I’m going to call this <strong>the course folder</strong>. The Documents folder on your computer is a good place to do this. If you don’t know how to find your Documents folder and create a new folder there, your instructor and TA can help.</p>
+<p>Once you’ve created the course folder, follow these steps to save a new argument map. Try them out with the example you typed in to the text pane a few minutes ago.</p>
+<ol type="1">
+<li><p>Open the app TextEdit (on a Mac) or Notepad (on Windows).[^You can use any plaintext editor of your choice. But something like Microsoft Word <em>won’t</em> work.]</p></li>
+<li><p>Create a new file, and copy and paste the argument map text from the Argdown Sandbox into the new file.</p></li>
+<li><p><em>On a Mac</em>: You may need to go to Format -&gt; Make Plain Text. See <a href="#fig-plaintext">Figure&nbsp;<span>2.4</span></a>.</p>
+<div id="fig-plaintext" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/plaintext.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.4: Changing TextEdit to plaintext mode</figcaption><p></p>
+</figure>
+</div></li>
+<li><p>Hit ⌘+s (Mac) or Control+s (Windows) to bring up the save dialog.</p>
+<ul>
+<li><strong>Make sure you’re saving to the course folder.</strong></li>
+<li><strong>Make sure the file type is set to “plain text” or “txt”.</strong><br>
+<img src="img/save.png" id="fig-save" class="img-fluid" alt="The Mac save dialog, showing that I’m saving this to the course folder and that the file type is plain text"></li>
+</ul></li>
+</ol>
+<p>When you want to open up a saved argument map, you’ll need to follow these steps.</p>
+<ol type="1">
+<li>Find the argument map file in the course folder, and open it with your text editor.<br>
+</li>
+<li>Select the entire argument map text, then copy it.</li>
+<li>Open the Argdown Sandbox by navigating a web browser to <a href="https://argdown.org/sandbox/" class="uri">https://argdown.org/sandbox/</a>.</li>
+<li>Select the example text in the text pane, then paste the argument map text.</li>
+</ol>
+</section>
+<section id="saving-an-image-file-from-the-argdown-sandbox" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="saving-an-image-file-from-the-argdown-sandbox"><span class="header-section-number">2.1.2</span> Saving an image file from the Argdown Sandbox</h3>
+<p>After creating an argument map in the Argdown Sandbox, you can download an image file by clicking on png near the upper-right. Hit “Create PNG” in the dialog box, and you’ll automatically download an image file named <code>map.png</code>. <strong>Move this to the course folder, and give it the same name as the corresponding text file.</strong></p>
+</section>
+</section>
+<section id="using-argdown-with-obsidian" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="using-argdown-with-obsidian"><span class="header-section-number">2.2</span> Using Argdown with Obsidian</h2>
+<div class="todo">
+<p>instructions</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction #</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03-simple.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple argument maps</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
