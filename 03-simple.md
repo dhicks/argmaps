@@ -6,25 +6,18 @@ Let's start with a simple argument for a campus mask mandate:
 
 > <blue>Masks are effective at preventing people from spreading Covid-19.</blue>  <green>So our campus should have a mask mandate.</green> 
 
-This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word **so**.  To start mapping out this argument, we start with the conclusion.  Click *> Details* for instructions on how to enter this into Argdown. 
-
-<details>
-Either (a) open up the [Argdown Sandbox](https://argdown.org/sandbox/map/dagre-d3) or (b) make a new blank file in your text editor.  
-
-(a) Type in the text in `typerwriter` font.  Click on the HTML tab in the upper-right to view the result.  
-(b) Type in the text in `typewriter` font.  Save the file.  On the command line, type `argdown html <file>`; the result will be in the `html` folder. 
-</details>
+This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word **so**.  To start mapping out this argument, we start with the conclusion. Enter this into either the [Argdown Sandbox](02-argdown.html#using-the-argdown-sandbox) or [Obsidian](02-argdown.html#using-argdown-with-obsidian).  
 
 
-```.argdown
+```
 [mandate]: our campus should have a mask mandate
 ```
 
-We give the conclusion a title, `[abortion]`, so that we can construct multiple arguments that involve it without having to type and retype it again and again.  
+We give the conclusion a title, `[mandate]`, so that we can construct multiple arguments that involve it without having to type and retype it again and again.  
 
-Next we'll add the premise, and indicate that it supports the conclusion.  Like the conclusion, we give the premise a name so that we can refer back to it again.  Markdown has a few different ways of indicating support relationships.  All of the following are equivalent: 
+Next we'll add the premise, and indicate that it supports the conclusion.  Like the conclusion, we give the premise a name so that we can refer back to it again.  Argdown has a few different ways of indicating support relationships.  All of the following are equivalent: 
 
-```.argdown
+```
 [mandate]: Our campus should have a mask mandate. 
 
 [masks effective]: Masks are effective at preventing people from spreading Covid-19.
@@ -37,15 +30,7 @@ Next we'll add the premise, and indicate that it supports the conclusion.  Like 
 	+ [masks effective]	
 ```
 
-The first version has the premise, followed by the conclusion.  The second and third start with the conclusion, then give the premise.  Notice that the direction of the arrow is reversed between the first and second versions.  Support goes from the premise, to the conclusion.  The third version can be useful for showing how an conclusion can be supported by multiple independent arguments; more on that later.  
-
-To generate visual argument maps, we use exactly the same text representation but give Argdown slightly different instructions.  Click on *> Details*.  You result should be the same as the image below. 
-
-<details>
-On the Argdown Sandbox, click Map in the upper-right.  Viz.js Map should be highlighted just below where you clicked.  You might need to click on Dagre D3	 Map to view the argument map.  To export it, click on the svg or png buttons just to the right.  
-
-On the command line, type `argdown map <file>` to generate a static PDF file image, or `argdown web-component <file>` to generate an interactive HTML file. 
-</details>
+The first version has the premise, followed by the conclusion.  The second and third start with the conclusion, then give the premise.  Notice that the direction of the arrow is reversed between the first and second versions.  Support always goes from the premise and to the conclusion.  The third version can be useful for showing how an conclusion can be supported by multiple independent arguments; more on that later.  Whichever way you write out the argument in Argdown, you should see this when you visualize it:  
 
 ```{.argdown-map}
 [mandate]: Our campus should have a mask mandate. 
@@ -75,7 +60,7 @@ Consider the following passage:
 This argument has one conclusion sentence (in <strong>bold</strong>) and three premises, in <red>red</red>, <blue>blue</blue>, and <purple>purple</purple>. These premises form **independent** arguments:  the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat.  Because they're talking about different aspects of the debate over animal agriculture, these arguments are independent of each other.  Here's how we can represent these three independent arguments in an argument map.  
 
 <details>
-Click on "Source" to view the Argdown source code.
+Most of the argument maps in this tutorial will be interactive.  You can click on the Source button to view the underlying Argdown code.  
 </details>
 
 ```{.argdown-map mode="web-component"}
@@ -115,10 +100,13 @@ Different arguments support different conclusions.  We can modify the Argdown so
 	+> [not bad for people]
 ```
 
+This example illustrates the importance of putting each claim of an argument in its own box.  The premise **meat healthy** isn't an argument for the **not bad for enviro** conclusion; it's only making claims about the health effects of eating meat.  And someone might present an objection to the **unusuable land** premise without addressing the other two, independent arguments.  
 
-::: todo
-exercise
+
+::: exercises
+1. Construct a map of the following argument: 
+
+> Eating animals is wrong for a variety of reasons. First, many animals are sentient creatures that have thoughts and emotions. Second, we should not cause animals to suffer if we don’t need to. Finally, raising animals for food uses resources, like grain, that could be used to feed hungry people around the world. 
 :::
-
 
 

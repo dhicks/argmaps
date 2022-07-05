@@ -8,7 +8,9 @@ book:
     - index.md
     - 02-argdown.md
     - 03-simple.md
-    - 04-objections.md
+    - 04-interdependent.md
+    - 05-objections.md
+    - biofuel/debate-01.md
 
 format:
   html:
