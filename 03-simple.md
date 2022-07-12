@@ -1,10 +1,10 @@
-# Simple argument maps
+# Simple argument maps {#sec-simple}
 
 ## A first map ##
 
 Let's start with a simple argument for a campus mask mandate:  
 
-> <blue>Masks are effective at preventing people from spreading Covid-19.</blue>  <green>So our campus should have a mask mandate.</green> 
+> [Masks are effective at preventing people from spreading Covid-19.]{.blue}  [So our campus should have a mask mandate.]{.green}
 
 This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word **so**.  To start mapping out this argument, we start with the conclusion. Enter this into either the [Argdown Sandbox](02-argdown.html#using-the-argdown-sandbox) or [Obsidian](02-argdown.html#using-argdown-with-obsidian).  
 
@@ -18,17 +18,19 @@ We give the conclusion a title, `[mandate]`, so that we can construct multiple a
 Next we'll add the premise, and indicate that it supports the conclusion.  Like the conclusion, we give the premise a name so that we can refer back to it again.  Argdown has a few different ways of indicating support relationships.  All of the following are equivalent: 
 
 ```
-[mandate]: Our campus should have a mask mandate. 
-
 [masks effective]: Masks are effective at preventing people from spreading Covid-19.
 	+> [mandate]
 	
 [mandate]
-	<+ [masks effective]
+	<+ [masks effective]: Masks are effective at preventing people from spreading Covid-19.
 
 [mandate] 
-	+ [masks effective]	
+	+ [masks effective]: Masks are effective at preventing people from spreading Covid-19.
 ```
+
+:::{.callout-note}
+We can refer to claims (premises or conclusions) using just the title, without having to type them out again and again. 
+:::
 
 The first version has the premise, followed by the conclusion.  The second and third start with the conclusion, then give the premise.  Notice that the direction of the arrow is reversed between the first and second versions.  Support always goes from the premise and to the conclusion.  The third version can be useful for showing how an conclusion can be supported by multiple independent arguments; more on that later.  Whichever way you write out the argument in Argdown, you should see this when you visualize it:  
 
@@ -55,13 +57,13 @@ The first version has the premise, followed by the conclusion.  The second and t
 
 Consider the following passage:  
 
-> <strong>Animal agriculture is not bad for the environment and it is not bad for people.</strong> <red>The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.</red> <blue>Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.</blue> Furthermore, <purple>new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases. </purple> (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)
+> **Animal agriculture is not bad for the environment and it is not bad for people.** [The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.]{.red} [Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.]{.blue} Furthermore, [new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.]{.purple} (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)
 
-This argument has one conclusion sentence (in <strong>bold</strong>) and three premises, in <red>red</red>, <blue>blue</blue>, and <purple>purple</purple>. These premises form **independent** arguments:  the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat.  Because they're talking about different aspects of the debate over animal agriculture, these arguments are independent of each other.  Here's how we can represent these three independent arguments in an argument map.  
+This argument has one conclusion sentence (in **bold**) and three premises, in red, blue, and purple. These premises form **independent** arguments:  the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat.  Because they're talking about different aspects of the debate over animal agriculture, these arguments are independent of each other.  Here's how we can represent these three independent arguments in an argument map.  
 
-<details>
+::: {.callout-note}
 Most of the argument maps in this tutorial will be interactive.  You can click on the Source button to view the underlying Argdown code.  
-</details>
+:::
 
 ```{.argdown-map mode="web-component"}
 [not bad for enviro or people]: Animal agriculture is not bad for the environment and it is not bad for people. 

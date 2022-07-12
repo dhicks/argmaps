@@ -137,7 +137,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple argument maps</span></h1>
+<h1 class="title"><span id="sec-simple" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple argument maps</span></span></h1>
 </div>
 
 
@@ -155,26 +155,37 @@ ul.task-list{list-style: none;}
 <h2 data-number="3.1" class="anchored" data-anchor-id="a-first-map"><span class="header-section-number">3.1</span> A first map</h2>
 <p>Let’s start with a simple argument for a campus mask mandate:</p>
 <blockquote class="blockquote">
-<p><blue>Masks are effective at preventing people from spreading Covid-19.</blue> <green>So our campus should have a mask mandate.</green></p>
+<p><span class="blue">Masks are effective at preventing people from spreading Covid-19.</span> <span class="green">So our campus should have a mask mandate.</span></p>
 </blockquote>
 <p>This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word <strong>so</strong>. To start mapping out this argument, we start with the conclusion. Enter this into either the <a href="02-argdown.html#using-the-argdown-sandbox">Argdown Sandbox</a> or <a href="02-argdown.html#using-argdown-with-obsidian">Obsidian</a>.</p>
 <pre><code>[mandate]: our campus should have a mask mandate</code></pre>
 <p>We give the conclusion a title, <code>[mandate]</code>, so that we can construct multiple arguments that involve it without having to type and retype it again and again.</p>
 <p>Next we’ll add the premise, and indicate that it supports the conclusion. Like the conclusion, we give the premise a name so that we can refer back to it again. Argdown has a few different ways of indicating support relationships. All of the following are equivalent:</p>
-<pre><code>[mandate]: Our campus should have a mask mandate. 
-
-[masks effective]: Masks are effective at preventing people from spreading Covid-19.
+<pre><code>[masks effective]: Masks are effective at preventing people from spreading Covid-19.
     +&gt; [mandate]
     
 [mandate]
-    &lt;+ [masks effective]
+    &lt;+ [masks effective]: Masks are effective at preventing people from spreading Covid-19.
 
 [mandate] 
-    + [masks effective] </code></pre>
+    + [masks effective]: Masks are effective at preventing people from spreading Covid-19.</code></pre>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We can refer to claims (premises or conclusions) using just the title, without having to type them out again and again.</p>
+</div>
+</div>
 <p>The first version has the premise, followed by the conclusion. The second and third start with the conclusion, then give the premise. Notice that the direction of the arrow is reversed between the first and second versions. Support always goes from the premise and to the conclusion. The third version can be useful for showing how an conclusion can be supported by multiple independent arguments; more on that later. Whichever way you write out the argument in Argdown, you should see this when you visualize it:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="data:image/svg+xml;base64,CjwhLS0gR2VuZXJhdGVkIGJ5IGdyYXBodml6IHZlcnNpb24gMi40Ny4wICgyMDIxMDMxNi4wMDA0KQogLS0+CjwhLS0gVGl0bGU6IEFyZ3VtZW50IE1hcCBQYWdlczogMSAtLT4KPHN2ZyB3aWR0aD0iMjIxcHQiIGhlaWdodD0iMTM2cHQiCiB2aWV3Qm94PSIwLjAwIDAuMDAgMjIxLjAwIDEzNi4wMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxnIGlkPSJncmFwaDAiIGNsYXNzPSJncmFwaCIgdHJhbnNmb3JtPSJzY2FsZSgxIDEpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoNCAxMzIpIj4KPHRpdGxlPkFyZ3VtZW50IE1hcDwvdGl0bGU+CjwhLS0gbjAgLS0+CjxnIGlkPSJub2RlMSIgY2xhc3M9Im5vZGUiPgo8dGl0bGU+bjA8L3RpdGxlPgo8cGF0aCBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMWI5ZTc3IiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0yMDEsLTEyOEMyMDEsLTEyOCAxMiwtMTI4IDEyLC0xMjggNiwtMTI4IDAsLTEyMiAwLC0xMTYgMCwtMTE2IDAsLTEwMCAwLC0xMDAgMCwtOTQgNiwtODggMTIsLTg4IDEyLC04OCAyMDEsLTg4IDIwMSwtODggMjA3LC04OCAyMTMsLTk0IDIxMywtMTAwIDIxMywtMTAwIDIxMywtMTE2IDIxMywtMTE2IDIxMywtMTIyIDIwNywtMTI4IDIwMSwtMTI4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iODcuNTUiIHk9Ii0xMTQiIGZvbnQtZmFtaWx5PSJhcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iMTAuMDAiIGZpbGw9IiMwMDAwMDAiPm1hbmRhdGU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMTAuMzEiIHk9Ii05NyIgZm9udC1mYW1pbHk9ImFyaWFsIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5PdXIgY2FtcHVzIHNob3VsZCBoYXZlIGEgbWFzayBtYW5kYXRlLiA8L3RleHQ+CjwvZz4KPCEtLSBuMSAtLT4KPGcgaWQ9Im5vZGUyIiBjbGFzcz0ibm9kZSI+Cjx0aXRsZT5uMTwvdGl0bGU+CjxwYXRoIGZpbGw9IndoaXRlIiBzdHJva2U9IiMxYjllNzciIHN0cm9rZS13aWR0aD0iMiIgZD0iTTE5Mi41LC01MkMxOTIuNSwtNTIgMjAuNSwtNTIgMjAuNSwtNTIgMTQuNSwtNTIgOC41LC00NiA4LjUsLTQwIDguNSwtNDAgOC41LC0xMiA4LjUsLTEyIDguNSwtNiAxNC41LDAgMjAuNSwwIDIwLjUsMCAxOTIuNSwwIDE5Mi41LDAgMTk4LjUsMCAyMDQuNSwtNiAyMDQuNSwtMTIgMjA0LjUsLTEyIDIwNC41LC00MCAyMDQuNSwtNDAgMjA0LjUsLTQ2IDE5OC41LC01MiAxOTIuNSwtNTIiLz4KPHRleHQgdGV4dC1hbmNob3I9InN0YXJ0IiB4PSI3Mi4wNSIgeT0iLTM4IiBmb250LWZhbWlseT0iYXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5tYXNrcyBlZmZlY3RpdmU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMzMuMTUiIHk9Ii0yMSIgZm9udC1mYW1pbHk9ImFyaWFsIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5NYXNrcyBhcmUgZWZmZWN0aXZlIGF0IHByZXZlbnRpbmc8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMzIuNiIgeT0iLTkiIGZvbnQtZmFtaWx5PSJhcmlhbCIgZm9udC1zaXplPSIxMC4wMCIgZmlsbD0iIzAwMDAwMCI+IHBlb3BsZSBmcm9tIHNwcmVhZGluZyBDb3ZpZCYjNDU7MTkuPC90ZXh0Pgo8L2c+CjwhLS0gbjEmIzQ1OyZndDtuMCAtLT4KPGcgaWQ9ImVkZ2UxIiBjbGFzcz0iZWRnZSI+Cjx0aXRsZT5uMSYjNDU7Jmd0O24wPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBmZjAwIiBkPSJNMTA2LjUsLTUyLjMxQzEwNi41LC02MC40MiAxMDYuNSwtNjkuNDcgMTA2LjUsLTc3LjgzIi8+Cjxwb2x5Z29uIGZpbGw9IiMwMGZmMDAiIHN0cm9rZT0iIzAwZmYwMCIgcG9pbnRzPSIxMDMsLTc3Ljk0IDEwNi41LC04Ny45NCAxMTAsLTc3Ljk0IDEwMywtNzcuOTQiLz4KPC9nPgo8L2c+Cjwvc3ZnPgo=" class="img-fluid figure-img"></p>
+<p><img src="data:image/svg+xml;base64,CjwhLS0gR2VuZXJhdGVkIGJ5IGdyYXBodml6IHZlcnNpb24gMi40Ny4wICgyMDIxMDMxNi4wMDA0KQogLS0+CjwhLS0gVGl0bGU6IEFyZ3VtZW50IE1hcCBQYWdlczogMSAtLT4KPHN2ZyB3aWR0aD0iMjIxcHQiIGhlaWdodD0iMTM2cHQiCiB2aWV3Qm94PSIwLjAwIDAuMDAgMjIxLjAwIDEzNi4wMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxnIGlkPSJncmFwaDAiIGNsYXNzPSJncmFwaCIgdHJhbnNmb3JtPSJzY2FsZSgxIDEpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoNCAxMzIpIj4KPHRpdGxlPkFyZ3VtZW50IE1hcDwvdGl0bGU+CjwhLS0gbjAgLS0+CjxnIGlkPSJub2RlMSIgY2xhc3M9Im5vZGUiPgo8dGl0bGU+bjA8L3RpdGxlPgo8cGF0aCBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMWI5ZTc3IiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0yMDEsLTEyOEMyMDEsLTEyOCAxMiwtMTI4IDEyLC0xMjggNiwtMTI4IDAsLTEyMiAwLC0xMTYgMCwtMTE2IDAsLTEwMCAwLC0xMDAgMCwtOTQgNiwtODggMTIsLTg4IDEyLC04OCAyMDEsLTg4IDIwMSwtODggMjA3LC04OCAyMTMsLTk0IDIxMywtMTAwIDIxMywtMTAwIDIxMywtMTE2IDIxMywtMTE2IDIxMywtMTIyIDIwNywtMTI4IDIwMSwtMTI4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iODcuNTUiIHk9Ii0xMTQiIGZvbnQtZmFtaWx5PSJhcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iMTAuMDAiIGZpbGw9IiMwMDAwMDAiPm1hbmRhdGU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMTAuMzEiIHk9Ii05NyIgZm9udC1mYW1pbHk9ImFyaWFsIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5PdXIgY2FtcHVzIHNob3VsZCBoYXZlIGEgbWFzayBtYW5kYXRlLiA8L3RleHQ+CjwvZz4KPCEtLSBuMSAtLT4KPGcgaWQ9Im5vZGUyIiBjbGFzcz0ibm9kZSI+Cjx0aXRsZT5uMTwvdGl0bGU+CjxwYXRoIGZpbGw9IndoaXRlIiBzdHJva2U9IiMxYjllNzciIHN0cm9rZS13aWR0aD0iMiIgZD0iTTE5Mi41LC01MkMxOTIuNSwtNTIgMjAuNSwtNTIgMjAuNSwtNTIgMTQuNSwtNTIgOC41LC00NiA4LjUsLTQwIDguNSwtNDAgOC41LC0xMiA4LjUsLTEyIDguNSwtNiAxNC41LDAgMjAuNSwwIDIwLjUsMCAxOTIuNSwwIDE5Mi41LDAgMTk4LjUsMCAyMDQuNSwtNiAyMDQuNSwtMTIgMjA0LjUsLTEyIDIwNC41LC00MCAyMDQuNSwtNDAgMjA0LjUsLTQ2IDE5OC41LC01MiAxOTIuNSwtNTIiLz4KPHRleHQgdGV4dC1hbmNob3I9InN0YXJ0IiB4PSI3Mi4wNSIgeT0iLTM4IiBmb250LWZhbWlseT0iYXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5tYXNrcyBlZmZlY3RpdmU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMzMuMTUiIHk9Ii0yMSIgZm9udC1mYW1pbHk9ImFyaWFsIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5NYXNrcyBhcmUgZWZmZWN0aXZlIGF0IHByZXZlbnRpbmc8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMzIuNiIgeT0iLTkiIGZvbnQtZmFtaWx5PSJhcmlhbCIgZm9udC1zaXplPSIxMC4wMCIgZmlsbD0iIzAwMDAwMCI+IHBlb3BsZSBmcm9tIHNwcmVhZGluZyBDb3ZpZCYjNDU7MTkuPC90ZXh0Pgo8L2c+CjwhLS0gbjEmIzQ1OyZndDtuMCAtLT4KPGcgaWQ9ImVkZ2UxIiBjbGFzcz0iZWRnZSI+Cjx0aXRsZT5uMSYjNDU7Jmd0O24wPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA5NmZmIiBkPSJNMTA2LjUsLTUyLjMxQzEwNi41LC02MC40MiAxMDYuNSwtNjkuNDcgMTA2LjUsLTc3LjgzIi8+Cjxwb2x5Z29uIGZpbGw9IiMwMDk2ZmYiIHN0cm9rZT0iIzAwOTZmZiIgcG9pbnRzPSIxMDMsLTc3Ljk0IDEwNi41LC04Ny45NCAxMTAsLTc3Ljk0IDEwMywtNzcuOTQiLz4KPC9nPgo8L2c+Cjwvc3ZnPgo=" class="img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption"></figcaption><p></p>
 </figure>
 </div>
@@ -193,12 +204,22 @@ ul.task-list{list-style: none;}
 <h2 data-number="3.2" class="anchored" data-anchor-id="independent-arguments-for-the-same-conclusion"><span class="header-section-number">3.2</span> Independent arguments for the same conclusion</h2>
 <p>Consider the following passage:</p>
 <blockquote class="blockquote">
-<p><strong>Animal agriculture is not bad for the environment and it is not bad for people.</strong> <red>The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.</red> <blue>Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.</blue> Furthermore, <purple>new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases. </purple> (Adapted from <em>Rulebook for Arguments</em>, Third Edition, pp36-37)</p>
+<p><strong>Animal agriculture is not bad for the environment and it is not bad for people.</strong> <span class="red">The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.</span> <span class="blue">Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.</span> Furthermore, <span class="purple">new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.</span> (Adapted from <em>Rulebook for Arguments</em>, Third Edition, pp36-37)</p>
 </blockquote>
-<p>This argument has one conclusion sentence (in <strong>bold</strong>) and three premises, in <red>red</red>, <blue>blue</blue>, and <purple>purple</purple>. These premises form <strong>independent</strong> arguments: the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat. Because they’re talking about different aspects of the debate over animal agriculture, these arguments are independent of each other. Here’s how we can represent these three independent arguments in an argument map.</p>
-<details>
-Most of the argument maps in this tutorial will be interactive. You can click on the Source button to view the underlying Argdown code.
-</details>
+<p>This argument has one conclusion sentence (in <strong>bold</strong>) and three premises, in red, blue, and purple. These premises form <strong>independent</strong> arguments: the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat. Because they’re talking about different aspects of the debate over animal agriculture, these arguments are independent of each other. Here’s how we can represent these three independent arguments in an argument map.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Most of the argument maps in this tutorial will be interactive. You can click on the Source button to view the underlying Argdown code.</p>
+</div>
+</div>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.css"><script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-bundle.js" type="module"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.js"></script><figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[not bad for enviro or people]:</span> Animal agriculture is not bad for the environment and it is not bad for people. 
 
@@ -238,8 +259,8 @@ Most of the argument maps in this tutorial will be interactive. You can click on
 <!-- n1&#45;&gt;n0 -->
 <g id="edge1" class="edge">
 <title>n1-&gt;n0</title>
-<path fill="none" stroke="#00ff00" d="M163.38,-94.1C190.58,-109.53 222.04,-127.39 249.08,-142.73"></path>
-<polygon fill="#00ff00" stroke="#00ff00" points="247.64,-145.94 258.07,-147.83 251.1,-139.85 247.64,-145.94"></polygon>
+<path fill="none" stroke="#0096ff" d="M163.38,-94.1C190.58,-109.53 222.04,-127.39 249.08,-142.73"></path>
+<polygon fill="#0096ff" stroke="#0096ff" points="247.64,-145.94 258.07,-147.83 251.1,-139.85 247.64,-145.94"></polygon>
 </g>
 <!-- n2 -->
 <g id="node3" class="node">
@@ -257,8 +278,8 @@ Most of the argument maps in this tutorial will be interactive. You can click on
 <!-- n2&#45;&gt;n0 -->
 <g id="edge2" class="edge">
 <title>n2-&gt;n0</title>
-<path fill="none" stroke="#00ff00" d="M313,-112.29C313,-120.89 313,-129.64 313,-137.85"></path>
-<polygon fill="#00ff00" stroke="#00ff00" points="309.5,-137.92 313,-147.92 316.5,-137.92 309.5,-137.92"></polygon>
+<path fill="none" stroke="#0096ff" d="M313,-112.29C313,-120.89 313,-129.64 313,-137.85"></path>
+<polygon fill="#0096ff" stroke="#0096ff" points="309.5,-137.92 313,-147.92 316.5,-137.92 309.5,-137.92"></polygon>
 </g>
 <!-- n3 -->
 <g id="node4" class="node">
@@ -275,8 +296,8 @@ Most of the argument maps in this tutorial will be interactive. You can click on
 <!-- n3&#45;&gt;n0 -->
 <g id="edge3" class="edge">
 <title>n3-&gt;n0</title>
-<path fill="none" stroke="#00ff00" d="M441.48,-106.09C419.83,-118.38 397,-131.34 376.69,-142.86"></path>
-<polygon fill="#00ff00" stroke="#00ff00" points="374.82,-139.9 367.85,-147.88 378.27,-145.99 374.82,-139.9"></polygon>
+<path fill="none" stroke="#0096ff" d="M441.48,-106.09C419.83,-118.38 397,-131.34 376.69,-142.86"></path>
+<polygon fill="#0096ff" stroke="#0096ff" points="374.82,-139.9 367.85,-147.88 378.27,-145.99 374.82,-139.9"></polygon>
 </g>
 </g>
 </svg>
@@ -337,8 +358,8 @@ Most of the argument maps in this tutorial will be interactive. You can click on
 <!-- n2&#45;&gt;n0 -->
 <g id="edge1" class="edge">
 <title>n2-&gt;n0</title>
-<path fill="none" stroke="#00ff00" d="M132.47,-94.02C146.22,-108.79 161.92,-125.66 175.28,-140"></path>
-<polygon fill="#00ff00" stroke="#00ff00" points="173.05,-142.75 182.43,-147.68 178.18,-137.98 173.05,-142.75"></polygon>
+<path fill="none" stroke="#0096ff" d="M132.47,-94.02C146.22,-108.79 161.92,-125.66 175.28,-140"></path>
+<polygon fill="#0096ff" stroke="#0096ff" points="173.05,-142.75 182.43,-147.68 178.18,-137.98 173.05,-142.75"></polygon>
 </g>
 <!-- n3 -->
 <g id="node4" class="node">
@@ -356,14 +377,14 @@ Most of the argument maps in this tutorial will be interactive. You can click on
 <!-- n3&#45;&gt;n0 -->
 <g id="edge2" class="edge">
 <title>n3-&gt;n0</title>
-<path fill="none" stroke="#00ff00" d="M262.01,-112.28C253.1,-121.94 244.1,-131.7 235.99,-140.49"></path>
-<polygon fill="#00ff00" stroke="#00ff00" points="233.33,-138.2 229.13,-147.93 238.48,-142.95 233.33,-138.2"></polygon>
+<path fill="none" stroke="#0096ff" d="M262.01,-112.28C253.1,-121.94 244.1,-131.7 235.99,-140.49"></path>
+<polygon fill="#0096ff" stroke="#0096ff" points="233.33,-138.2 229.13,-147.93 238.48,-142.95 233.33,-138.2"></polygon>
 </g>
 <!-- n3&#45;&gt;n1 -->
 <g id="edge3" class="edge">
 <title>n3-&gt;n1</title>
-<path fill="none" stroke="#00ff00" d="M363.99,-112.28C372.9,-121.94 381.9,-131.7 390.01,-140.49"></path>
-<polygon fill="#00ff00" stroke="#00ff00" points="387.52,-142.95 396.87,-147.93 392.67,-138.2 387.52,-142.95"></polygon>
+<path fill="none" stroke="#0096ff" d="M363.99,-112.28C372.9,-121.94 381.9,-131.7 390.01,-140.49"></path>
+<polygon fill="#0096ff" stroke="#0096ff" points="387.52,-142.95 396.87,-147.93 392.67,-138.2 387.52,-142.95"></polygon>
 </g>
 <!-- n4 -->
 <g id="node5" class="node">
@@ -380,8 +401,8 @@ Most of the argument maps in this tutorial will be interactive. You can click on
 <!-- n4&#45;&gt;n1 -->
 <g id="edge4" class="edge">
 <title>n4-&gt;n1</title>
-<path fill="none" stroke="#00ff00" d="M482.2,-106.19C471.47,-117.72 460.29,-129.73 450.42,-140.32"></path>
-<polygon fill="#00ff00" stroke="#00ff00" points="447.75,-138.06 443.49,-147.77 452.87,-142.83 447.75,-138.06"></polygon>
+<path fill="none" stroke="#0096ff" d="M482.2,-106.19C471.47,-117.72 460.29,-129.73 450.42,-140.32"></path>
+<polygon fill="#0096ff" stroke="#0096ff" points="447.75,-138.06 443.49,-147.77 452.87,-142.83 447.75,-138.06"></polygon>
 </g>
 </g>
 </svg>

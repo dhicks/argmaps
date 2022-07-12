@@ -21,4 +21,5 @@ format:
 filters:
     - argdown-filter
 
+number-sections: true
 

@@ -2,7 +2,7 @@
 
 Now consider this argument: 
 
-> <blue>If a student completes 10 of the 12 weekly assignments for this class, they'll get an A.</blue> <red>I completed 10 of the 12 weekly assignments for this class.</red> <strong>So I should get an A.</strong>
+> [If a student completes 10 of the 12 weekly assignments for this class, they'll get an A.]{.blue} [I completed 10 of the 12 weekly assignments for this class.]{.red} **So I should get an A.**
 
 Following the advice of the last section, we want to put each claim of this argument in its own box.  But the argument map below is misleading.  Can you explain why?  
 
@@ -27,7 +27,9 @@ To start, let's arrange the argument in premise-conclusion form.
 (3) [get an A]: I should get an A. 
 ```
 
-**Note:** Argdown only understands premise-conclusion form if you put the numbers in parentheses and four hyphens separating the conclusion. 
+::: {.callout-warning}
+Argdown only understands premise-conclusion form if you put the numbers in parentheses and four hyphens separating the conclusion. 
+:::
 
 If you put this into Argdown, you'll get a rather odd result.  
 
@@ -47,7 +49,8 @@ What happened to the premises?  By default, Argdown only displays labeled claims
 (3) [C]: I should get an A. 
 ```
 
-Alternatively, copy-and-paste the following at the top of your map's definition.  Numbering the premises will probably be less tedious.^[If you're using Obsidian, you can [set up a template](https://help.obsidian.md/Plugins/Templates) to easily create a new argument map with this extra bit at the top.]
+Alternatively, copy-and-paste the following (called a [YAML header](https://monashdatafluency.github.io/r-rep-res/yaml-header.html)) at the top of your map's definition.  Numbering the premises will probably be less tedious.
+
 
 ```
 ===
@@ -71,6 +74,12 @@ selection:
 ----
 (3) [get an A]: I should get an A. 
 ```
+
+::: {.callout-tip collapse="true"}
+# If you're using Obsidian #
+
+In Obsidian you can [set up a template](https://help.obsidian.md/Plugins/Templates) to easily create a new argument map with the YAML header. 
+:::
 
 Now for that "Untitled 1" box.  Argdown wants you to give the argument itself a label.  Just put it in angled brackets at the top.  Visually, it's like the green argument label collects together its premises.  
 

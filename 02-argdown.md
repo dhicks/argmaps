@@ -1,10 +1,18 @@
 # Setting up Argdown 
 
-Argdown is software designed to turn pieces of text into argument maps, visual representations of the structure of an argument or debate.  This page has instructions for two ways of setting up this software:  you can use a website called the Argdown Sandbox, or you can download and install Argdown on your computer, along with notetaking software called Obsidian.  
+Argdown is software designed to turn pieces of text into argument maps, visual representations of the structure of an argument or debate.  This page has instructions for two ways of setting up this software:  [you can use a website called the Argdown Sandbox](#using-the-argdown-sandbox), or you can [download and install Argdown on your computer](#using-argdown-with-obsidian), along with notetaking software called [Obsidian](https://obsidian.md/).  
 
-Both options for using Argdown are completely free, and either one will work to generate argument maps for this course.  The [Argdown Sandbox](#using-the-argdown-sandbox) doesn't require any setup — you just open up a website and start typing — but doesn't have a simple way to save your work.  Using [Argdown with Obsidian](#using-argdown-with-obsidian) requires you to download and install some software on your computer.  It's easy to use Obsidian to save your argument maps; but the software hasn't been vetted by our campus IT office.  That means there's a security risk installing this software.  **Do not store any sensitive information in Obsidian.**  
+Both options for using Argdown are completely free, and either one will work to generate argument maps for this course.  The [Argdown Sandbox](#using-the-argdown-sandbox) doesn't require any setup — you just open up a website and start typing — but doesn't have a simple way to save your work.  Using [Argdown with Obsidian](#using-argdown-with-obsidian) requires you to download and install some software on your computer.  It's easy to use Obsidian to save your argument maps; but the software hasn't been vetted by our campus IT office.  That means there's a security risk installing this software.  
+
+::: {.callout-important}
+Do not store any sensitive information in Obsidian. 
+:::
 
 ## Using the Argdown Sandbox
+
+::: {.callout-important}
+The Argdown Sandbox uses the default color scheme, which is not colorblind-friendly.  And unfortunately I can't figure out how to change the color scheme.  If you or someone you work with has trouble with the default color scheme, you'll need to [use Obsidian](#using-argdown-with-obsidian).  
+:::
 
 Using the *Argdown Sandbox* is simple:  simply open a web browser to <https://argdown.org/sandbox/>, and you should see the same thing as @fig-sandbox.  Since you'll be creating argument maps pretty regularly in this class, you'll probably want to bookmark that link.  
 
@@ -47,13 +55,25 @@ There's also a technical reason for not leaving all of your files on your deskto
 
 ### Saving your work in the Argdown Sandbox
 
-**The Argdown Sandbox has no way to save your work.**  It's meant to be a quick preview of what Argdown can do, not a space for you to regularly do important work.  You'll need to manually save your work by copying and pasting to a file on your computer.  
+::: {.callout-important}
+## The Argdown Sandbox has no way to save your work ##  
 
-*Before you save your work for the first time*, create a designated folder for all of the work for this course.  I'm going to call this **the course folder**.  The Documents folder on your computer is a good place to do this.  If you don't know how to find your Documents folder and create a new folder there, your instructor and TA can help.  
+It's meant to be a quick preview of what Argdown can do, not a space for you to regularly do important work.  You'll need to manually save your work by copying and pasting to a file on your computer.  
+:::
+
+::: {.callout-tip}
+Before you save your work for the first time, create **a designated folder for all of the work for this course**.  I'm going to call this **the course folder**.  The Documents folder on your computer is a good place to do this.  If you don't know how to find your Documents folder and create a new folder there, your instructor and TA can help.  
+:::
+
 
 Once you've created the course folder, follow these steps to save a new argument map.  Try them out with the example you typed in to the text pane a few minutes ago.  
 
-1. Open the app TextEdit (on a Mac) or Notepad (on Windows).^[You can use any plaintext editor of your choice.  But something like Microsoft Word or Google Docs *won't* work.]
+1. Open the app TextEdit (on a Mac) or Notepad (on Windows).
+
+::: {.callout-note}
+You can use any [plaintext](https://en.wikipedia.org/wiki/Plain_text) editor of your choice.  But Microsoft Word and Google Docs *won't* work.
+:::
+
 2. Create a new file, and copy and paste the argument map text from the Argdown Sandbox into the new file. 
 3. *On a Mac*: You may need to go to Format -> Make Plain Text.  See @fig-plaintext. 
 
@@ -82,7 +102,9 @@ After creating an argument map in the Argdown Sandbox, you can download an image
 
 [Obsidian](https://obsidian.md/) is notetaking and [knowledge base](https://en.wikipedia.org/wiki/Knowledge_base) software.  If you've used the website Notion, it's somewhat similar.  We can use Obsidian with Argdown using a community-developed plugin.  Both Obsidian and the Argdown plugin are entirely free.  Creating argument maps is just a little more complicated than using the Argdown Sandbox, but as an app on your computer it's simple to save and open argument maps.  
 
-**If you're going with this option, remember that OIT has not vetted Obsidian for security and privacy.  Be sure not to store any sensitive information in Obsidian.**
+::: {.callout-important}
+If you're going with this option, remember that OIT has *not* vetted Obsidian for security and privacy.  Be sure not to store any sensitive information in Obsidian. 
+:::
 
 ### Installing Obsidian and the Argdown plugin
 
@@ -121,7 +143,11 @@ Once the Argdown plugin is installed and activated, you can add an argument map 
 
 	![Rendered argument map in Obsidian](img/obsidian-map.png){#fig-obsidian-map}
 
-**Important:** In the rest of this tutorial, I won't include the \`\`\``argdown` line at the top or the \`\`\` at the end.  You need to use these special symbols (called *code fencing*) to tell Obsidian that it needs to run the argument map through Argdown.  
+
+::: {.callout-note}
+In the rest of this tutorial, I won't include the \`\`\``argdown` line at the top or the \`\`\` at the end.  You need to use these special symbols (called *code fencing*) to tell Obsidian that it needs to run the argument map through Argdown.  
+:::
+
 
 ### Saving an argument map as a PDF file
 
