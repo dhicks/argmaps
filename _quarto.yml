@@ -11,7 +11,8 @@ book:
     - 03-simple.md
     - 04-interdependent.md
     - 05-objections.md
-    - biofuel/debate-01.md
+    - 06-biofuels.md
+  repo-url: https://github.com/dhicks/argmaps
 
 format:
   html:
