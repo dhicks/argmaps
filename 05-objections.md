@@ -45,6 +45,10 @@ color:
 Obnoxiously, this change to the color scheme doesn't appear to work in the Argdown Sandbox. 
 :::
 
+::: {.callout-note}
+[*Embryo*](https://en.wikipedia.org/wiki/Embryo) is the term for the first 8-9 weeks of development, starting with conception (unification of an egg cell and sperm cell).  After that it's a [*fetus*](https://en.wikipedia.org/wiki/Embryo), though according to the Wikipedia article "Prenatal development is a continuum, with no clear defining feature distinguishing an embryo from a fetus."  *Length of pregnancy* is usually measured from the last menstrual period, which is typically 9-20 days before conception.  "Fetus" seems to be more common in the abortin debate than "embryo." But a six-week abortion ban is a prohibition on abortion during part of the embryonic stage.  So here I'm using "embryo." 
+:::
+
 These two arguments form a pair, each opposing the other.  They also don't engage with each other.  The pro-choice side appeals to the right to bodily autonomy, while the anti-abortion side appeals to the right to life.  Because they don't address each others' arguments, the debate doesn't go anywhere.  
 
 

@@ -227,3 +227,11 @@ Sahota agrees that we should switch to electric vehicles, but argues that we'll 
 [heavy duty]: Planes, trains, and large ships cannot be electrified for several decades
 	-> <Electric vehicles argument>
 ```
+
+## Exercise
+
+*[jobs]*
+
+::: {.exercises}
+:::
+
