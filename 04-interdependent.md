@@ -126,5 +126,13 @@ Now for that "Untitled 1" box.  Argdown wants you to give the argument itself a 
 
 > If you stay at the party until 2am, you won't be able to study on Sunday.  And if you don't study on Sunday you'll definitely fail the test on Monday.  You don't want to fail the test, so come home from the party before 2am! 
 
+3. Represent this argument using an argument map: 
+
+> The state needs to ensure that DNA tests are available to all de- fendants in capital murder trials. The state has an obligation to ensure that justice is done in criminal courts—especially when the death penalty is at stake. The only way to do justice is to ensure that all available evidence, including DNA tests, is available in capital murder trials. 
+
+4. Represent this argument using an argument map: 
+
+> By reducing student debt, eliminating tuition at medical schools would enable more new doctors to become primary care physicians. We have a shortage of primary care physicians in this country. Therefore, medical schools ought to be free. 
+
 :::
 

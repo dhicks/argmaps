@@ -49,6 +49,10 @@ The first version has the premise, followed by the conclusion.  The second and t
 3. Construct a map for the following argument: 
 
 > Bikes, scooters, and the bus all have a lower carbon footprint than individual cars.  So campus should encourage people to take bikes, scooters, and the bus.  
+
+4. Construct a map for the following argument: 
+
+> 
 :::
 
 
@@ -109,6 +113,14 @@ This example illustrates the importance of putting each claim of an argument in 
 1. Construct a map of the following argument: 
 
 > Eating animals is wrong for a variety of reasons. First, many animals are sentient creatures that have thoughts and emotions. Second, we should not cause animals to suffer if we don’t need to. Finally, raising animals for food uses resources, like grain, that could be used to feed hungry people around the world. 
+
+2. Construct a map of the following argument: 
+
+> Poverty, illiteracy, and child mortality are all falling faster than ever. The average person is less likely to be affected by war, governed by a dictator, or die in a natural disaster than ever before. This shows that there has never been a better time to be alive than right now.
+
+3. Construct a map of the following argument: 
+
+> People who work in the technology industry are increasingly lim- iting their kids’ screen time and their access to technology. Apple CEO Tim Cook prohibited his nephew from joining social media. Cook’s predecessor, Apple co-founder Steve Jobs, prohib- ited his young children from using iPads. Former Microsoft CEO Bill Gates wouldn’t let his kids have cell phones until they were teenagers. 
 :::
 
 
