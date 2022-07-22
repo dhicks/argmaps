@@ -11,7 +11,7 @@ book:
     - 03-simple.qmd
     - 04-interdependent.qmd
     - 05-objections.qmd
-    - 06-biofuels.md
+    - 06-biofuels.qmd
   repo-url: https://github.com/dhicks/argmaps
 
 format:

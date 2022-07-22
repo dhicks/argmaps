@@ -192,6 +192,7 @@ To illustrate objecting to support, let's go back to our basic opposition betwee
 This objection challenges the pro-choice argument, but it doesn't challenge the premise of bodily autonomy.  Instead it challenges the support, the link, between that premise and the conclusion of legal abortion.  In Mermaid, we can represent this by opposing an argument label, rather than a premise.  So we'll add label for the pro-choice "autonomy argument," then the objection targeting it. 
 
 ```{mermaid}
+%%| echo: true
 flowchart TB
 
 Pautonomy(Everyone has a right to bodily autonomy.)
@@ -239,6 +240,7 @@ The drowning children example comes from a paper by the ethicist James Rachels. 
 This reply to the precedence objection again targets the support of the argument.  The objection can agree that the right to life takes precedence over bodily autonomy.  But, they claim, the right to life isn't violated in abortion, because abortion is letting an embryo die rather than killing it.  
 
 ```{mermaid}
+%%| echo: true
 flowchart TB
 
 Pautonomy(Everyone has a right to bodily autonomy.)
