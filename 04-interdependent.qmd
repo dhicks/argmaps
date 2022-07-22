@@ -1,0 +1,89 @@
+# Arguments with interdependent claims
+
+Now consider this argument: 
+
+> [To get an A in PHIL 00X, you just need to complete 10 of the 12 weekly assignments.]{.blue} [I completed 11 weekly assignments.]{.red} **So I should get an A.**]
+
+Following the advice of the last section, we want to put each claim of this argument in its own box.  But the argument map below is misleading.  Can you explain why?  
+
+```{mermaid}
+%%| echo: true
+flowchart TB
+
+P1("To get an A in PHIL 00X, you just need 
+    to complete 10 of the 12 weekly 
+    assignments.")
+
+P2("I completed 11 weekly assignments.")
+
+C("I should get an A.")
+
+P1 --> C
+P2 --> C
+```
+
+
+The two claims don't form two separate arguments for the same conclusion.  To establish that I should get an A, we need to establish *both* the rule that someone needs 10/12 assignments to get an A, *and* that I satisfied this requirement.  We need a way to visually group these premises together in the argument map.  In Mermaid, we can do this by writing the "arrow lines" slightly differently: we combine the two premises, `P1 & P2`, then connect them to an argument label with a triple-dash, and then add an arrow to the conclusion.  All together: `P1 & P2 --- A1[Arg. 1] --> C`. 
+
+```{mermaid}
+%%| echo: true
+%%| code-fold: show
+
+flowchart TB
+
+P1("To get an A in PHIL 00X, you just need 
+    to complete 10 of the 12 weekly 
+    assignments.")
+
+P2("I completed 11 weekly assignments.")
+
+C("I should get an A.")
+
+P1 & P2 --- A1[Weekly Assignments] --> C
+```
+
+In this version of the argument map, the two premises are combined together into Argument 1, and it's the argument that supports the conclusion.  
+
+
+::: exercises
+1. Expand the weekly assignments argument map to include this second argument for getting an A. 
+
+```{mermaid}
+%%| echo: false
+%%| code-fold: show
+
+flowchart TB
+
+P1("To get an A in PHIL 00X, you just need 
+    to complete 10 of the 12 weekly 
+    assignments.")
+
+P2("I completed 11 weekly assignments.")
+
+C("I should get an A.")
+
+P1 & P2 --- A1[Weekly Assignments] --> C
+
+P3("Each extra credit assignment can make
+    up for 1 missing weekly assignment.")
+P4("I've completed at least 7 weekly 
+    assignments and 3 extra credit 
+    assignments.") 
+    
+P1 & P3 & P4 --- A2[Extra Credit] --> C
+```
+
+2. Represent this argument using an argument map: 
+
+> If you stay at the party until 2am, you won't be able to study on Sunday.  And if you don't study on Sunday you'll definitely fail the test on Monday.  You don't want to fail the test, so come home from the party before 2am! 
+
+3. Represent this argument using an argument map: 
+
+> The state needs to ensure that DNA tests are available to all defendants in capital murder trials. The state has an obligation to ensure that justice is done in criminal courts, especially when the death penalty is at stake. The only way to do justice is to ensure that all available evidence, including DNA tests, is available in capital murder trials. 
+
+4. Represent this argument using an argument map: 
+
+> By reducing student debt, eliminating tuition at medical schools would enable more new doctors to become primary care physicians. We have a shortage of primary care physicians in this country. Therefore, medical schools ought to be free. 
+
+:::
+

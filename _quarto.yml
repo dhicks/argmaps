@@ -9,7 +9,7 @@ book:
     - index.md
     - 02-mermaid.qmd
     - 03-simple.qmd
-    - 04-interdependent.md
+    - 04-interdependent.qmd
     - 05-objections.md
     - 06-biofuels.md
   repo-url: https://github.com/dhicks/argmaps
