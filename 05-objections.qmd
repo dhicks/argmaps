@@ -1,6 +1,6 @@
 # Opposing arguments and objections 
 
-An **opposing argument** is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise (**challenging a premise**), or (b) another argument's premises don't support its conclusion (**challenging support**).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Argdown, which enables us to represent complex debates. 
+An **opposing argument** is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise (**challenging a premise**), or (b) another argument's premises don't support its conclusion (**challenging support**).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Mermaid, which enables us to represent complex debates. 
 
 ## Opposing arguments
 

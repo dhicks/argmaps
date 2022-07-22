@@ -221,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>An <strong>opposing argument</strong> is an argument whose conclusion is the opposite of another argument. An <strong>objection</strong> is an argument whose conclusion is that (a) another argument has a false premise (<strong>challenging a premise</strong>), or (b) another argument’s premises don’t support its conclusion (<strong>challenging support</strong>). In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument. We can represent both opposing arguments and objections in Argdown, which enables us to represent complex debates.</p>
+<p>An <strong>opposing argument</strong> is an argument whose conclusion is the opposite of another argument. An <strong>objection</strong> is an argument whose conclusion is that (a) another argument has a false premise (<strong>challenging a premise</strong>), or (b) another argument’s premises don’t support its conclusion (<strong>challenging support</strong>). In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument. We can represent both opposing arguments and objections in Mermaid, which enables us to represent complex debates.</p>
 <section id="opposing-arguments" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="opposing-arguments"><span class="header-section-number">5.1</span> Opposing arguments</h2>
 <p>Consider two arguments on the legality of abortion, one from the pro-choice side and one from the anti-abortion side. In Mermaid, we’ll use a regular arrow <code>--&gt;</code> to indicate support for a claim (it gets colored blue in our custom theme) and a dashed arrow <code>-.-&gt;</code> to indicate opposition (it gets colored red). We’ll also label opposing arguments and objections with <code>O</code> rather than <code>P</code>, which will color their boxes red instead of blue in our custom theme.</p>
@@ -558,6 +558,21 @@ Note
 <p>To illustrate objecting to support, let’s go back to our basic opposition between bodily autonomy and an embryo’s right to life. A pro-life person might agree that bodily autonomy — the right to do what you want with your own body — is important. But, they might continue, not all rights are equally important. Specifically, someone’s right to life takes precedence over other rights. As <a href="https://quoteinvestigator.com/2011/10/15/liberty-fist-nose/">a nineteenth-century aphorism</a> put it, “My right to swing my fist ends where your nose begins.”</p>
 <p>This objection challenges the pro-choice argument, but it doesn’t challenge the premise of bodily autonomy. Instead it challenges the support, the link, between that premise and the conclusion of legal abortion. In Mermaid, we can represent this by opposing an argument label, rather than a premise. So we’ll add label for the pro-choice “autonomy argument,” then the objection targeting it.</p>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy.)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>Oright-to-life(An embryo has a right to life from conception.) </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Oright-to-life -.-&gt; C</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Oprecedence("Someone's right to life takes precedence</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>             over another person's right to bodily</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>             autonomy.")</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>Oprecedence &amp; Oright-to-life --- OL[Precedence obj.] -.-&gt; Aautonomy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <p>
@@ -627,6 +642,27 @@ Note
 </div>
 <p>This reply to the precedence objection again targets the support of the argument. The objection can agree that the right to life takes precedence over bodily autonomy. But, they claim, the right to life isn’t violated in abortion, because abortion is letting an embryo die rather than killing it.</p>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy.)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>Oright-to-life(An embryo has a right to life from conception.) </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>Oright-to-life -.-&gt; C</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>Oprecedence("Someone's right to life takes precedence</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>             over another person's right to bodily</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>             autonomy.")</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>Oprecedence &amp; Oright-to-life --- OLprecedence[Precedence obj.] -.-&gt; Aautonomy</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>Okilling-die("Unlike killing, letting someone die </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>              does not violate their right to life.")</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Oabortion-die("Abortion is letting an embryo die, </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>               not killing it")</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>Okilling-die &amp; Oabortion-die --- OL[Killing vs.\nletting die] -.-&gt; OLprecedence</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <p>
@@ -656,14 +692,6 @@ Okilling-die &amp; Oabortion-die --- OL[Killing vs.\nletting die] -.-&gt; OLprec
 </div>
 </div>
 </div>
-<p><span class="todo">start here</span></p>
-<pre class="argdown-map" data-mode="web-component"><code>&lt;Killing vs. letting die reply&gt;
-
-(1) [killing vs. letting die]: Unlike killing, letting someone die does not violate their right to life
-(2) [abortion is letting die]: Abortion is letting an embryo die, not killing it
-----
-(3) [C]: Abortion does not violate an embryo's right to life
-    -&gt; &lt;Precedence objection&gt;</code></pre>
 <p>While this is a useful example for showing how we represent objections and replies in argument maps, I don’t think it’s a very compelling reply to the objection. In my opinion, both premises have problems. First, many homeless people in our society die of exposure and treatable diseases. This is letting them die — we don’t actively hunt down homeless people who survive these challenges — but denying them access to housing and health care does, I think, violate their right to life. Second, it’s not clear to me what the difference is supposed to be between ending a pregnancy and ending the life of the embryo or fetus involved in that pregnancy, i.e., killing it. It seems to me like these are just two ways of describing the same action.</p>
 <div class="exercises">
 <p>Expand the argument map above to include my two objections to the killing vs.&nbsp;letting die reply. Are these objections to support or objections to premises?</p>
@@ -817,286 +845,275 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Opposing arguments and objections </span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>An **opposing argument** is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise (**challenging a premise**), or (b) another argument's premises don't support its conclusion (**challenging support**).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Argdown, which enables us to represent complex debates. </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Opposing arguments</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>Consider two arguments on the legality of abortion, one from the pro-choice side and one from the anti-abortion side.  In Mermaid, we'll use a regular arrow <span class="in">`--&gt;`</span> to indicate support for a claim (it gets colored blue in our custom theme) and a dashed arrow <span class="in">`-.-&gt;`</span> to indicate opposition (it gets colored red).  We'll also label opposing arguments and objections with <span class="in">`O`</span> rather than <span class="in">`P`</span>, which will color their boxes red instead of blue in our custom theme.  </span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>%%| code<span class="ot">-f</span>olding: show</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife(An embryo has a right to life from conception)</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife -.-&gt; C</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">*Embryo*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span> is the term for the first 8-9 weeks of development, starting with conception (unification of an egg cell and sperm cell).  After that it's a <span class="co">[</span><span class="ot">*fetus*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span>, though according to the Wikipedia article "Prenatal development is a continuum, with no clear defining feature distinguishing an embryo from a fetus."  *Length of pregnancy* is usually measured from the last menstrual period, which is typically 9-20 days before conception.  "Fetus" seems to be more common in the abortin debate than "embryo." But a six-week abortion ban is a prohibition on abortion during part of the embryonic stage.  So here I'm using "embryo." </span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>These two arguments form a pair, each opposing the other.  They also don't engage with each other.  The pro-choice side appeals to the right to bodily autonomy, while the anti-abortion side appeals to the right to life.  Because they don't address each others' arguments, the debate doesn't go anywhere.  </span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objecting to a premise</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>Again, an **objection** is an argument whose conclusion is that (a) another argument has a false premise, or (b) another argument's premises don't support its conclusion. Let's start with the first kind of objection, which challenges a premise.  </span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>A premise in an argument is just a claim, like any other, which means it can be supported or opposed with arguments.  In her 1973 article <span class="co">[</span><span class="ot">"On the Moral and Legal Status of Abortion,"</span><span class="co">](https://drive.google.com/file/d/0B6oYmzobonqodjBuRTN5Qmdwb0E/view?usp=sharing&amp;resourcekey=0-1WqVWQZio3z9oV4w8gsHyw)</span> the ethicist Mary Anne Warren gave a critique of the pro-life claim that an embryo has a right to life from conception.  Here's my paraphrase of her critique:  </span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; An embryo lacks consciousness, the capacity to feel pain, self-motivated activity, the capacity to community, and self-awareness.  But only beings with these capacities have a right to life.  So an embryo does not have a right to life.</span>  </span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>This argument has two interdependent premises, so we'll collect them together using the argument label <span class="in">`Warren's objection`</span>.  To color the argument label red, give it the type <span class="in">`OL`</span> instead of <span class="in">`A`</span>.  </span>
-<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>%%| code<span class="ot">-f</span>olding: show</span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
-<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife(An embryo has a right to life from conception)</span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife -.-&gt; C</span>
-<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>OWarren1(<span class="ot">"</span><span class="st">Only beings with the capacity for </span></span>
-<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
-<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.</span><span class="ot">"</span>)</span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>OWarren2(<span class="ot">"</span><span class="st">An embryo lacks these capacities.</span><span class="ot">"</span>)</span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>OWarren1 &amp; OWarren2 --- OL[Warren<span class="ot">'</span><span class="ss">s objection] -.-&gt; Oright-to-life</span></span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
-<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="ss">When you</span><span class="ot">'</span>re reading this, remember that solid/blue indicates support <span class="ot">and</span> dashed/red indicates opposition.  So Warren<span class="ot">'</span><span class="ss">s two premises support (solid blue line) her objection, and the objection opposes (dashed red line) the right-to-life premise.  In turn, the right-to-life premise opposes (dashed red line) the conclusion that abortion should be legal.  </span></span>
-<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="ss">An opposing argument is not much better than **mere disagreement** (where one side makes a claim and the other side says the opposite, without any arguments).  Opposing arguments give us some insight into how each side of a debate thinks about the issue.  But objections help us understand what one side thinks of the other side</span><span class="ot">'</span>s arguments.  This can lead to deeper insights:  What<span class="ot">'</span><span class="ss">s the fundamental disagreement between the two sides?  Where do they agree?  Tracing out a complex debate, using tools like argument maps, might not resolve a controversy, but they can help us understand it better.  </span></span>
-<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="ss">A number of philosophers and other writers, including the [ethicist Don Marquis](https://drive.google.com/file/d/0B6oYmzobonqoWTJqeUhxSm5XcWM/view?usp=sharing&amp;resourcekey=0-VNrlLS4h6Iz1txoiA9swGA), responded to Warren</span><span class="ot">'</span>s argument by pointing out that coma patients have a right to life, despite lacking the capacities Warren points to. </span>
-<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span><span class="st">mermaid</span></span>
-<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="st">%%| echo: true</span></span>
-<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="st">%%| code-folding: show</span></span>
-<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="st">flowchart TB</span></span>
-<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy(Everyone has a right to bodily autonomy)</span></span>
-<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy --&gt; C(Abortion should be legal)</span></span>
-<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life(An embryo has a right to life from conception)</span></span>
-<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life -.-&gt; C</span></span>
-<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1("Only beings with the capacity for </span></span>
-<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
-<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
-<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
-<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.")</span></span>
-<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren2("An embryo lacks these capacities.")</span></span>
-<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span></span>
-<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1("Coma patients also lack these capacities.")</span></span>
-<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis2("Coma patients have a right to life.")</span></span>
-<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span></span>
-<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
-<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>Marquis<span class="ot">'</span><span class="ss"> argument doesn</span><span class="ot">'</span>t deny that an embryo lacks the capacities <span class="kw">for</span> consciousness, pain, <span class="ot">and</span> so on.  Instead he<span class="ot">'</span><span class="ss">s criticizing Warren</span><span class="ot">'</span>s claim that only beings with these capacities have a right to life.  So his argument is another example of an objection to a premise.  Specifically, this kind of objection to a previous objection is called a *<span class="dt">*reply</span>*<span class="wa">*.</span>  In philosophy classes, you<span class="ot">'</span><span class="ss">ll often be asked to write papers where you present an argument, an objection, and finally a reply to that objection.  </span></span>
-<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a><span class="ss">Marquis didn</span><span class="ot">'</span>t just give a reply to Warren<span class="ot">'</span><span class="ss">s objection.  He offered his own argument for an embryo</span><span class="ot">'</span>s right to life.  He calls it the <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> argument, because it appeals to the idea that <span class="ot">"</span><span class="st">The future of a standard fetus includes a set of experiences, projects, activities, and such which are identical with the futures of adult human beings and are identical with the futures of young children,</span><span class="ot">"</span> <span class="ot">and</span> that a fetus has a right to life because it has the potential <span class="kw">for</span> this kind of future.  Marquis also argues that this <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> view explains why temporary coma patients, at least, have a right to life: because they have the potential to awaken <span class="ot">and</span> lead a more<span class="ot">-o</span>r<span class="ot">-l</span>ess typical adult human life.  </span>
-<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span><span class="st">mermaid</span></span>
-<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="st">%%| echo: true</span></span>
-<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a><span class="st">%%| code-folding: show</span></span>
-<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a><span class="st">flowchart TB</span></span>
-<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy(Everyone has a right to bodily autonomy)</span></span>
-<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy --&gt; C(Abortion should be legal)</span></span>
-<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life(An embryo has a right to life from conception)</span></span>
-<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life -.-&gt; C</span></span>
-<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a><span class="st">%% Warren's objection to the right-to-life argument</span></span>
-<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Warren's objection</span></span>
-<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1("Only beings with the capacity for </span></span>
-<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
-<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
-<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
-<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.")</span></span>
-<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren2("An embryo lacks these capacities.")</span></span>
-<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span></span>
-<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
-<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a><span class="st">%% Marquis' reply to Warren's objection</span></span>
-<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Marquis' reply</span></span>
-<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1("Coma patients also lack these capacities.")</span></span>
-<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis2("Coma patients have a right to life.")</span></span>
-<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span></span>
-<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
-<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a><span class="st">%% Marquis' future-like-ours account of the right to life</span></span>
-<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Marquis' future-like-ours account</span></span>
-<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture("Any being with the potential to </span></span>
-<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a><span class="st">         lead a future-like-ours has a </span></span>
-<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a><span class="st">         right to life.")</span></span>
-<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a><span class="st">Pcoma("Temporary coma patients have the potential</span></span>
-<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a><span class="st">       to lead a future-like-ours.")</span></span>
-<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture &amp; Pcoma --- Acoma[Marquis: Coma patient] --&gt; OMarquis2</span></span>
-<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a><span class="st">Pembryo("An embryo has the potential</span></span>
-<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a><span class="st">         to lead a future-like-ours.")</span></span>
-<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture &amp; Pembryo --- Aembryo[Marquis: Embryo] --&gt; Oright-to-life</span></span>
-<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
-<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
-<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a>::: {.callout<span class="ot">-t</span>ip collapse=true}</span>
-<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a><span class="co">## Adding boxes using subgraphs</span></span>
-<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>You can draw a box around a section of the debate by putting <span class="ot">`</span><span class="st">subgraph [name]</span><span class="ot">`</span> at the beginning of the section <span class="ot">and</span> <span class="ot">`</span><span class="st">end</span><span class="ot">`</span> at the end.  Check the source code to see how.</span>
-<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>Initially, this <span class="fu">map</span> of the debate over abortion might <span class="ot">not</span> seem that helpful.  We<span class="ot">'</span><span class="ss">ve taken a complex moral and political debate, and turned it into a complex diagram.  </span></span>
-<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a><span class="ss">But examining the map does help us understand a few aspects of the debate.  First, no one is denying that embryos lack the capacity to feel pain or consciousness or the like.  And no one is denying that (typically) embryos have the potential for a future-like-ours.  </span></span>
-<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a><span class="ss">Second, this debate has stepped back from the concrete issue of abortion itself, to focus on the abstract question *who has a right to life?*  The interlocutors give two very different answers to this question — Warren says a right to life requires certain cognitive capacities, Marquis says it</span><span class="ot">'</span>s based on a <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> — <span class="ot">and</span> there<span class="ot">'</span><span class="ss">s no neutral way to determine which answer is right.  Abortion proponents have a strong incentive to favor Warren</span><span class="ot">'</span>s account, <span class="ot">and</span> abortion opponents have an equally strong incentive to favor Marquis<span class="ot">'</span><span class="ss"> account.  This is a common feature of philosophical debate, and in my opinion one reason people often find philosophy useless and frustrating.  </span></span>
-<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="ss">::: {.callout-note collapse=true}</span></span>
-<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a><span class="ss">## [interlocutor](https://en.wiktionary.org/wiki/interlocutor)</span></span>
-<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a><span class="ss">A person who takes part in dialogue or conversation. </span></span>
-<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
-<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a><span class="ss">But this abstract philosophical debate can still be useful, for helping us understand the deeper disagreement between abortion defenders and opponents.  This is the third point.  Anti-abortion advocates, like Marquis, often think of embryos and fetuses as (soon-to-be, more-or-less) infants.  They</span><span class="ot">'</span>ll acknowledge that, in the early stages of pregnancy, an embryo <span class="ot">or</span> fetus is biologically pretty far off from a newborn.  But they emphasize what the embryo <span class="ot">or</span> fetus might be like, months <span class="ot">or</span> even years later.  Pro<span class="ot">-c</span>hoice advocates, like Warren, instead tend to focus on what the embryo <span class="ot">or</span> fetus is in itself at that early stage of development, setting aside what it might be like in the future.  When they <span class="kw">do</span> think about what the embryo might be in the future, they emphasize the effort <span class="ot">and</span> risk that pregnant people experience on the way.  </span>
-<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a>In her essay [<span class="ot">"</span><span class="st">Virtue Theory and Abortion,</span><span class="ot">"</span>](https://drive.google.com/file/d/0B6oYmzobonqoZHBrNGpBcWx5aDQ/view?usp=sharing&amp;resourcekey=<span class="dv">0</span><span class="ot">-M</span>CEVK23t5bKtI2IGFVi41g) the ethicist Rosalind Hursthouse looks at this debate, <span class="ot">and</span> acknowledges that both of these perspectives on an embryo/fetus are important.  </span>
-<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a>&gt; [T]he premature termination of a pregnancy is, in some sense, the cutting off of a new human life, <span class="ot">and</span> thereby ... connects with all <span class="kw">our</span> thoughts about human life <span class="ot">and</span> death, parenthood, <span class="ot">and</span> family relationships .... </span>
-<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a>&gt; </span>
-<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a>&gt; [But also, many women] view pregnancy only as eight months of misery, followed by hours <span class="kw">if</span> <span class="ot">not</span> days of agony <span class="ot">and</span> exhaustion, <span class="ot">and</span> abortion only as the blessed escape from this prospect[.  This point of view] is entirely understandable <span class="ot">and</span> does <span class="ot">not</span> manifest any lack of serious respect <span class="kw">for</span> human life <span class="ot">or</span> a shallow attitude to motherhood. (<span class="dv">237</span>, <span class="dv">240</span>)</span>
-<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a>Hursthouse goes on to argue that an abstract debate over whether an embryo has a right to life is <span class="kw">less</span> useful than a concrete discussion of the many factors — financial, personal, cultural, medical — that play a role in whether someone chooses to carry a pregnancy to term <span class="ot">or</span> to have an abortion.  Rather than the high<span class="ot">-p</span>rofile pro<span class="ot">-c</span>hoice vs. anti-abortion positions, Hursthouse<span class="ot">'</span><span class="ss">s view fits better with the [reproductive justice movement](https://en.wikipedia.org/wiki/Reproductive_justice), which advocates for legalized abortion but also the need for free, high-quality healthcare and childcare and living wages.  </span></span>
-<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a><span class="ss">::: {.exercises}</span></span>
-<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a><span class="ss">Consider this argument, which we met earlier in @sec-simple: </span></span>
-<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a><span class="ss">&gt; **Animal agriculture is not bad for the environment and it is not bad for people.** [The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.]{.red} [Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.]{.blue} Furthermore, [new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.]{.purple} (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)</span></span>
-<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a><span class="ss">Using the rules from Chapter 1 of *Rulebook for Arguments*, develop an objection to one of the premises of this argument, and then a reply to your objection.  Present your objection and reply using an argument map.  </span></span>
-<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
-<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a><span class="ss">## Objecting to support</span></span>
-<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a><span class="ss">The other way that we can object to an argument is to challenge the support relationship between premises and conclusion.  That is, we might accept all of an argument</span><span class="ot">'</span>s premises, but still think that they don<span class="ot">'</span><span class="ss">t give a good reason to accept the conclusion.  In the rest of this semester, we</span><span class="ot">'</span>ll learn lots of different tools to assess support <span class="kw">for</span> different kinds of arguments.  For instance, <span class="kw">when</span> we talk about generalizations, <span class="ot">or</span> arguments by example, we<span class="ot">'</span><span class="ss">ll introduce a rule that *generalizations need more than one example*.  A generalization with a single example can have a true premise — this thing did happen in this one particular case — but, because it violates the rule, it doesn</span><span class="ot">'</span>t give much support to the conclusion.  </span>
-<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>Students often have a lot of trouble with the idea of support.  It<span class="ot">'</span><span class="ss">s okay if you don</span><span class="ot">'</span>t get it at first.  Think of this course as teaching how to recognize how support works <span class="kw">for</span> different kinds of arguments.  </span>
-<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a>To illustrate objecting to support, let<span class="ot">'</span><span class="ss">s go back to our basic opposition between bodily autonomy and an embryo</span><span class="ot">'</span>s right to life.  A pro<span class="ot">-l</span>ife person might agree that bodily autonomy — the right to <span class="kw">do</span> what you want with your own body — is important.  But, they might <span class="kw">continue</span>, <span class="ot">not</span> all rights are equally important.  Specifically, someone<span class="ot">'</span><span class="ss">s right to life takes precedence over other rights.  As [a nineteenth-century aphorism](https://quoteinvestigator.com/2011/10/15/liberty-fist-nose/) put it, "My right to swing my fist ends where your nose begins."  </span></span>
-<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a><span class="ss">This objection challenges the pro-choice argument, but it doesn</span><span class="ot">'</span>t challenge the premise of bodily autonomy.  Instead it challenges the support, the <span class="fu">link</span>, between that premise <span class="ot">and</span> the conclusion of legal abortion.  In Mermaid, we can represent this by opposing an argument label, rather than a premise.  So we<span class="ot">'</span><span class="ss">ll add label for the pro-choice "autonomy argument," then the objection targeting it. </span></span>
-<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a><span class="ss">```{mermaid}</span></span>
-<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a><span class="ss">flowchart TB</span></span>
-<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy(Everyone has a right to bodily autonomy.)</span></span>
-<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span></span>
-<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life(An embryo has a right to life from conception.) </span></span>
-<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life -.-&gt; C</span></span>
-<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence("Someone</span><span class="ot">'</span>s right to life takes precedence</span>
-<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a>             over another person<span class="ot">'</span><span class="ss">s right to bodily</span></span>
-<span id="cb6-215"><a href="#cb6-215" aria-hidden="true" tabindex="-1"></a><span class="ss">             autonomy.")</span></span>
-<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence &amp; Oright-to-life --- OL[Precedence obj.] -.-&gt; Aautonomy</span></span>
-<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
-<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a><span class="ss">The premise that an embryo has a right to life is playing two roles in this debate.  First, on its own, it provides an argument that abortion should not be legal.  But also, when combined with the claim about the precedence of a right to life, it gives an objection to the autonomy argument.  If an embryo doesn</span><span class="ot">'</span>t have a right to life, then it doesn<span class="ot">'</span><span class="ss">t matter if a right to life takes precedence over bodily autonomy.  So someone might give a reply to the precedence objection in three ways:  </span></span>
-<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a><span class="ss">1. Challenge the premise that an embryo has a right to life. </span></span>
-<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a><span class="ss">2. Challenge the premise that a right to life takes precedence over bodily autonomy. </span></span>
-<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a><span class="ss">3. Challenge the support of the precedence objection.  </span></span>
-<span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a><span class="ss">Warren</span><span class="ot">'</span>s objection could be used to take strategy (<span class="dv">1</span>).  The ethicist Judith Jarvis Thomson took strategy (<span class="dv">2</span>) in her <span class="dv">1971</span> paper [<span class="ot">"</span><span class="st">A Defense of Abortion</span><span class="ot">"</span>](https://drive.google.com/file/d/0B6oYmzobonqoR2Fka0FJbjZYMzQ/view?usp=sharing&amp;resourcekey=<span class="dv">0</span><span class="ot">-s</span>KH9_nhlpTXfCizCcVQBiA). </span>
-<span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=true}</span>
-<span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a><span class="co">## Thomson's defense of abortion</span></span>
-<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a>In her paper, Thomson grants (at least <span class="kw">for</span> the sake of argument) that an embryo has a right to life.  She defense of abortion is to argue that this right to life does <span class="ot">not</span> take precedence over bodily autonomy.  She introduces a famous thought experiment, in which you<span class="ot">'</span><span class="ss">re kidnapped and surgically connected to a world-famous violinist, who</span><span class="ot">'</span>s in a coma <span class="ot">and</span> will <span class="fu">die</span> <span class="kw">if</span> you don<span class="ot">'</span><span class="ss">t act as his life support system for the next nine months.  The violinist has a right to life, she says, but *not* a right to the use of your body.  </span></span>
-<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a><span class="ss">In my opinion, Thomson</span><span class="ot">'</span>s argument is based on an excessively strong form of individualism.  Later in the paper, in another thought experiment, she imagines that she<span class="ot">'</span><span class="ss">s dying in bed, and the actor Henry Fonda is standing in the doorway of her room, just a few feet away.  If Fonda walks over and touches her forehead, she</span><span class="ot">'</span>ll be instantly cured of her disease <span class="ot">and</span> her life will be saved.  She writes: </span>
-<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a>&gt; Suppose he has only to walk across the room, place a hand briefly on <span class="kw">my</span> brow-<span class="ot">and</span> lo, <span class="kw">my</span> life is saved. Then surely he ought to <span class="kw">do</span> it, it would be indecent to refuse. Is it to be said <span class="ot">"</span><span class="st">Ah,well, it follows that in this case she has a right to the touch of his hand on her brow, and so it would be an injustice in him to refuse</span><span class="ot">"</span>? ... It<span class="ot">'</span><span class="ss">s rather a shocking idea that anyone</span><span class="ot">'</span>s rights should fade away <span class="ot">and</span> disappear as it gets harder <span class="ot">and</span> harder to accord them to him. (<span class="dv">61</span>)</span>
-<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a>In other words, Thomson says that Fonda <span class="dt">*morally</span> should<span class="ot">*</span> <span class="kw">do</span> this trivial thing to save her life.  But she has <span class="fu">no</span> moral (<span class="ot">or</span> legal) <span class="dt">*right</span><span class="ot">*</span> to demand that he does so.  </span>
-<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a>My objection is that Thomson<span class="ot">'</span><span class="ss">s view would undermine any use of taxpayer funds to provide social benefits:  public roads, education, clean air and water, shelter, health care, food, and so on.  There are people who will die today because of lack of access to shelter or health care.  Does justice require that wealthy people be taxed, and those funds use to pay for things like homeless shelters and universal health insurance?  I think it does.  In other words, vulnerable people do have a *right* to demand that wealthy people pay for these kinds of things.  </span></span>
-<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
-<span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a><span class="ss">The third strategy amounts to saying:  Okay, at least for the sake of argument, I</span><span class="ot">'</span>ll agree that an embryo has a right to life; <span class="ot">and</span> a right to life takes precedence over a right to bodily autonomy.  But <span class="dt">*even</span> then<span class="ot">*</span> the precedence objection doesn<span class="ot">'</span><span class="ss">t work.  Those premises aren</span><span class="ot">'</span>t enough to conclude that the bodily autonomy argument is flawed.  </span>
-<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-243"><a href="#cb6-243" aria-hidden="true" tabindex="-1"></a>One way to take this third strategy is to make a distinction between killing someone <span class="ot">and</span> letting them <span class="fu">die</span>.  Many people would <span class="fu">say</span> there<span class="ot">'</span><span class="ss">s a difference between letting a young child drown in a bathtub and actively holding them underwater until they drown.  One version of this distinction is in terms of intentions: if the child managed to save themselves, you wouldn</span><span class="ot">'</span>t reach down <span class="ot">and</span> <span class="fu">push</span> them back under.  Someone might go on to argue that letting someone <span class="fu">die</span> doesn<span class="ot">'</span><span class="ss">t violate their right to life — it was sort of an accident or unintended consequence — and that abortion is letting an embryo die — if the embryo someone managed to survive the procedure, you wouldn</span><span class="ot">'</span>t actively try to <span class="fu">kill</span> it.  </span>
-<span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a>The drowning children example comes from a paper by the ethicist James Rachels.  Rachels<span class="ot">'</span><span class="ss"> point was to challenge the distinction: he claims that there</span><span class="ot">'</span>s actually <span class="fu">no</span> morally significant difference between these two cases.  </span>
-<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a>This reply to the precedence objection again targets the support of the argument.  The objection can agree that the right to life takes precedence over bodily autonomy.  But, they claim, the right to life isn<span class="ot">'</span><span class="ss">t violated in abortion, because abortion is letting an embryo die rather than killing it.  </span></span>
-<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a><span class="ss">```{mermaid}</span></span>
-<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a><span class="ss">flowchart TB</span></span>
-<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy(Everyone has a right to bodily autonomy.)</span></span>
-<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span></span>
-<span id="cb6-258"><a href="#cb6-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-259"><a href="#cb6-259" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life(An embryo has a right to life from conception.) </span></span>
-<span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life -.-&gt; C</span></span>
-<span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence("Someone</span><span class="ot">'</span>s right to life takes precedence</span>
-<span id="cb6-263"><a href="#cb6-263" aria-hidden="true" tabindex="-1"></a>             over another person<span class="ot">'</span><span class="ss">s right to bodily</span></span>
-<span id="cb6-264"><a href="#cb6-264" aria-hidden="true" tabindex="-1"></a><span class="ss">             autonomy.")</span></span>
-<span id="cb6-265"><a href="#cb6-265" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence &amp; Oright-to-life --- OLprecedence[Precedence obj.] -.-&gt; Aautonomy</span></span>
-<span id="cb6-266"><a href="#cb6-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-267"><a href="#cb6-267" aria-hidden="true" tabindex="-1"></a><span class="ss">Okilling-die("Unlike killing, letting someone die </span></span>
-<span id="cb6-268"><a href="#cb6-268" aria-hidden="true" tabindex="-1"></a><span class="ss">              does not violate their right to life.")</span></span>
-<span id="cb6-269"><a href="#cb6-269" aria-hidden="true" tabindex="-1"></a><span class="ss">Oabortion-die("Abortion is letting an embryo die, </span></span>
-<span id="cb6-270"><a href="#cb6-270" aria-hidden="true" tabindex="-1"></a><span class="ss">               not killing it")</span></span>
-<span id="cb6-271"><a href="#cb6-271" aria-hidden="true" tabindex="-1"></a><span class="ss">Okilling-die &amp; Oabortion-die --- OL[Killing vs.\nletting die] -.-&gt; OLprecedence</span></span>
-<span id="cb6-272"><a href="#cb6-272" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
-<span id="cb6-273"><a href="#cb6-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-274"><a href="#cb6-274" aria-hidden="true" tabindex="-1"></a><span class="ss">[start here]{.todo}</span></span>
-<span id="cb6-275"><a href="#cb6-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-276"><a href="#cb6-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-277"><a href="#cb6-277" aria-hidden="true" tabindex="-1"></a><span class="ss">```{.argdown-map mode="web-component"}</span></span>
-<span id="cb6-278"><a href="#cb6-278" aria-hidden="true" tabindex="-1"></a><span class="ss">&lt;Killing vs. letting die reply&gt;</span></span>
-<span id="cb6-279"><a href="#cb6-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-280"><a href="#cb6-280" aria-hidden="true" tabindex="-1"></a><span class="ss">(1) [killing vs. letting die]: Unlike killing, letting someone die does not violate their right to life</span></span>
-<span id="cb6-281"><a href="#cb6-281" aria-hidden="true" tabindex="-1"></a><span class="ss">(2) [abortion is letting die]: Abortion is letting an embryo die, not killing it</span></span>
-<span id="cb6-282"><a href="#cb6-282" aria-hidden="true" tabindex="-1"></a><span class="ss">----</span></span>
-<span id="cb6-283"><a href="#cb6-283" aria-hidden="true" tabindex="-1"></a><span class="ss">(3) [C]: Abortion does not violate an embryo</span><span class="ot">'</span>s right to life</span>
-<span id="cb6-284"><a href="#cb6-284" aria-hidden="true" tabindex="-1"></a>    -&gt; &lt;Precedence objection&gt;</span>
-<span id="cb6-285"><a href="#cb6-285" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
-<span id="cb6-286"><a href="#cb6-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-287"><a href="#cb6-287" aria-hidden="true" tabindex="-1"></a><span class="st">While this is a useful example for showing how we represent objections and replies in argument maps, I don't think it's a very compelling reply to the objection.  In my opinion, both premises have problems.  First, many homeless people in our society die of exposure and treatable diseases.  This is letting them die — we don't actively hunt down homeless people who survive these challenges — but denying them access to housing and health care does, I think, violate their right to life.  Second, it's not clear to me what the difference is supposed to be between ending a pregnancy and ending the life of the embryo or fetus involved in that pregnancy, i.e., killing it.  It seems to me like these are just two ways of describing the same action.  </span></span>
-<span id="cb6-288"><a href="#cb6-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-289"><a href="#cb6-289" aria-hidden="true" tabindex="-1"></a><span class="st">::: {.exercises}</span></span>
-<span id="cb6-290"><a href="#cb6-290" aria-hidden="true" tabindex="-1"></a><span class="st">Expand the argument map above to include my two objections to the killing vs. letting die reply. Are these objections to support or objections to premises? </span></span>
-<span id="cb6-291"><a href="#cb6-291" aria-hidden="true" tabindex="-1"></a><span class="st">:::</span></span>
-<span id="cb6-292"><a href="#cb6-292" aria-hidden="true" tabindex="-1"></a></span>
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Opposing arguments and objections </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>An **opposing argument** is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise (**challenging a premise**), or (b) another argument's premises don't support its conclusion (**challenging support**).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Mermaid, which enables us to represent complex debates. </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Opposing arguments</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Consider two arguments on the legality of abortion, one from the pro-choice side and one from the anti-abortion side.  In Mermaid, we'll use a regular arrow <span class="in">`--&gt;`</span> to indicate support for a claim (it gets colored blue in our custom theme) and a dashed arrow <span class="in">`-.-&gt;`</span> to indicate opposition (it gets colored red).  We'll also label opposing arguments and objections with <span class="in">`O`</span> rather than <span class="in">`P`</span>, which will color their boxes red instead of blue in our custom theme.  </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>%%| code<span class="ot">-f</span>olding: show</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife(An embryo has a right to life from conception)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife -.-&gt; C</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">*Embryo*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span> is the term for the first 8-9 weeks of development, starting with conception (unification of an egg cell and sperm cell).  After that it's a <span class="co">[</span><span class="ot">*fetus*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span>, though according to the Wikipedia article "Prenatal development is a continuum, with no clear defining feature distinguishing an embryo from a fetus."  *Length of pregnancy* is usually measured from the last menstrual period, which is typically 9-20 days before conception.  "Fetus" seems to be more common in the abortin debate than "embryo." But a six-week abortion ban is a prohibition on abortion during part of the embryonic stage.  So here I'm using "embryo." </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>These two arguments form a pair, each opposing the other.  They also don't engage with each other.  The pro-choice side appeals to the right to bodily autonomy, while the anti-abortion side appeals to the right to life.  Because they don't address each others' arguments, the debate doesn't go anywhere.  </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objecting to a premise</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>Again, an **objection** is an argument whose conclusion is that (a) another argument has a false premise, or (b) another argument's premises don't support its conclusion. Let's start with the first kind of objection, which challenges a premise.  </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>A premise in an argument is just a claim, like any other, which means it can be supported or opposed with arguments.  In her 1973 article <span class="co">[</span><span class="ot">"On the Moral and Legal Status of Abortion,"</span><span class="co">](https://drive.google.com/file/d/0B6oYmzobonqodjBuRTN5Qmdwb0E/view?usp=sharing&amp;resourcekey=0-1WqVWQZio3z9oV4w8gsHyw)</span> the ethicist Mary Anne Warren gave a critique of the pro-life claim that an embryo has a right to life from conception.  Here's my paraphrase of her critique:  </span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; An embryo lacks consciousness, the capacity to feel pain, self-motivated activity, the capacity to community, and self-awareness.  But only beings with these capacities have a right to life.  So an embryo does not have a right to life.</span>  </span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>This argument has two interdependent premises, so we'll collect them together using the argument label <span class="in">`Warren's objection`</span>.  To color the argument label red, give it the type <span class="in">`OL`</span> instead of <span class="in">`A`</span>.  </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>%%| code<span class="ot">-f</span>olding: show</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife(An embryo has a right to life from conception)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife -.-&gt; C</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>OWarren1(<span class="ot">"</span><span class="st">Only beings with the capacity for </span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.</span><span class="ot">"</span>)</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>OWarren2(<span class="ot">"</span><span class="st">An embryo lacks these capacities.</span><span class="ot">"</span>)</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>OWarren1 &amp; OWarren2 --- OL[Warren<span class="ot">'</span><span class="ss">s objection] -.-&gt; Oright-to-life</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a><span class="ss">When you</span><span class="ot">'</span>re reading this, remember that solid/blue indicates support <span class="ot">and</span> dashed/red indicates opposition.  So Warren<span class="ot">'</span><span class="ss">s two premises support (solid blue line) her objection, and the objection opposes (dashed red line) the right-to-life premise.  In turn, the right-to-life premise opposes (dashed red line) the conclusion that abortion should be legal.  </span></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a><span class="ss">An opposing argument is not much better than **mere disagreement** (where one side makes a claim and the other side says the opposite, without any arguments).  Opposing arguments give us some insight into how each side of a debate thinks about the issue.  But objections help us understand what one side thinks of the other side</span><span class="ot">'</span>s arguments.  This can lead to deeper insights:  What<span class="ot">'</span><span class="ss">s the fundamental disagreement between the two sides?  Where do they agree?  Tracing out a complex debate, using tools like argument maps, might not resolve a controversy, but they can help us understand it better.  </span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a><span class="ss">A number of philosophers and other writers, including the [ethicist Don Marquis](https://drive.google.com/file/d/0B6oYmzobonqoWTJqeUhxSm5XcWM/view?usp=sharing&amp;resourcekey=0-VNrlLS4h6Iz1txoiA9swGA), responded to Warren</span><span class="ot">'</span>s argument by pointing out that coma patients have a right to life, despite lacking the capacities Warren points to. </span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span><span class="st">mermaid</span></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a><span class="st">%%| echo: true</span></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a><span class="st">%%| code-folding: show</span></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a><span class="st">flowchart TB</span></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy(Everyone has a right to bodily autonomy)</span></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy --&gt; C(Abortion should be legal)</span></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life(An embryo has a right to life from conception)</span></span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life -.-&gt; C</span></span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1("Only beings with the capacity for </span></span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.")</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren2("An embryo lacks these capacities.")</span></span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1("Coma patients also lack these capacities.")</span></span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis2("Coma patients have a right to life.")</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span></span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>Marquis<span class="ot">'</span><span class="ss"> argument doesn</span><span class="ot">'</span>t deny that an embryo lacks the capacities <span class="kw">for</span> consciousness, pain, <span class="ot">and</span> so on.  Instead he<span class="ot">'</span><span class="ss">s criticizing Warren</span><span class="ot">'</span>s claim that only beings with these capacities have a right to life.  So his argument is another example of an objection to a premise.  Specifically, this kind of objection to a previous objection is called a *<span class="dt">*reply</span>*<span class="wa">*.</span>  In philosophy classes, you<span class="ot">'</span><span class="ss">ll often be asked to write papers where you present an argument, an objection, and finally a reply to that objection.  </span></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a><span class="ss">Marquis didn</span><span class="ot">'</span>t just give a reply to Warren<span class="ot">'</span><span class="ss">s objection.  He offered his own argument for an embryo</span><span class="ot">'</span>s right to life.  He calls it the <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> argument, because it appeals to the idea that <span class="ot">"</span><span class="st">The future of a standard fetus includes a set of experiences, projects, activities, and such which are identical with the futures of adult human beings and are identical with the futures of young children,</span><span class="ot">"</span> <span class="ot">and</span> that a fetus has a right to life because it has the potential <span class="kw">for</span> this kind of future.  Marquis also argues that this <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> view explains why temporary coma patients, at least, have a right to life: because they have the potential to awaken <span class="ot">and</span> lead a more<span class="ot">-o</span>r<span class="ot">-l</span>ess typical adult human life.  </span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span><span class="st">mermaid</span></span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a><span class="st">%%| echo: true</span></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a><span class="st">%%| code-folding: show</span></span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a><span class="st">flowchart TB</span></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy(Everyone has a right to bodily autonomy)</span></span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy --&gt; C(Abortion should be legal)</span></span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life(An embryo has a right to life from conception)</span></span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life -.-&gt; C</span></span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a><span class="st">%% Warren's objection to the right-to-life argument</span></span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Warren's objection</span></span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1("Only beings with the capacity for </span></span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.")</span></span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren2("An embryo lacks these capacities.")</span></span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a><span class="st">%% Marquis' reply to Warren's objection</span></span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Marquis' reply</span></span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1("Coma patients also lack these capacities.")</span></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis2("Coma patients have a right to life.")</span></span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span></span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="st">%% Marquis' future-like-ours account of the right to life</span></span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Marquis' future-like-ours account</span></span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture("Any being with the potential to </span></span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a><span class="st">         lead a future-like-ours has a </span></span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a><span class="st">         right to life.")</span></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a><span class="st">Pcoma("Temporary coma patients have the potential</span></span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a><span class="st">       to lead a future-like-ours.")</span></span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture &amp; Pcoma --- Acoma[Marquis: Coma patient] --&gt; OMarquis2</span></span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a><span class="st">Pembryo("An embryo has the potential</span></span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a><span class="st">         to lead a future-like-ours.")</span></span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture &amp; Pembryo --- Aembryo[Marquis: Embryo] --&gt; Oright-to-life</span></span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a>::: {.callout<span class="ot">-t</span>ip collapse=true}</span>
+<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a><span class="co">## Adding boxes using subgraphs</span></span>
+<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a>You can draw a box around a section of the debate by putting <span class="ot">`</span><span class="st">subgraph [name]</span><span class="ot">`</span> at the beginning of the section <span class="ot">and</span> <span class="ot">`</span><span class="st">end</span><span class="ot">`</span> at the end.  Check the source code to see how.</span>
+<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a>Initially, this <span class="fu">map</span> of the debate over abortion might <span class="ot">not</span> seem that helpful.  We<span class="ot">'</span><span class="ss">ve taken a complex moral and political debate, and turned it into a complex diagram.  </span></span>
+<span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a><span class="ss">But examining the map does help us understand a few aspects of the debate.  First, no one is denying that embryos lack the capacity to feel pain or consciousness or the like.  And no one is denying that (typically) embryos have the potential for a future-like-ours.  </span></span>
+<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a><span class="ss">Second, this debate has stepped back from the concrete issue of abortion itself, to focus on the abstract question *who has a right to life?*  The interlocutors give two very different answers to this question — Warren says a right to life requires certain cognitive capacities, Marquis says it</span><span class="ot">'</span>s based on a <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> — <span class="ot">and</span> there<span class="ot">'</span><span class="ss">s no neutral way to determine which answer is right.  Abortion proponents have a strong incentive to favor Warren</span><span class="ot">'</span>s account, <span class="ot">and</span> abortion opponents have an equally strong incentive to favor Marquis<span class="ot">'</span><span class="ss"> account.  This is a common feature of philosophical debate, and in my opinion one reason people often find philosophy useless and frustrating.  </span></span>
+<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a><span class="ss">::: {.callout-note collapse=true}</span></span>
+<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a><span class="ss">## [interlocutor](https://en.wiktionary.org/wiki/interlocutor)</span></span>
+<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a><span class="ss">A person who takes part in dialogue or conversation. </span></span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
+<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a><span class="ss">But this abstract philosophical debate can still be useful, for helping us understand the deeper disagreement between abortion defenders and opponents.  This is the third point.  Anti-abortion advocates, like Marquis, often think of embryos and fetuses as (soon-to-be, more-or-less) infants.  They</span><span class="ot">'</span>ll acknowledge that, in the early stages of pregnancy, an embryo <span class="ot">or</span> fetus is biologically pretty far off from a newborn.  But they emphasize what the embryo <span class="ot">or</span> fetus might be like, months <span class="ot">or</span> even years later.  Pro<span class="ot">-c</span>hoice advocates, like Warren, instead tend to focus on what the embryo <span class="ot">or</span> fetus is in itself at that early stage of development, setting aside what it might be like in the future.  When they <span class="kw">do</span> think about what the embryo might be in the future, they emphasize the effort <span class="ot">and</span> risk that pregnant people experience on the way.  </span>
+<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>In her essay [<span class="ot">"</span><span class="st">Virtue Theory and Abortion,</span><span class="ot">"</span>](https://drive.google.com/file/d/0B6oYmzobonqoZHBrNGpBcWx5aDQ/view?usp=sharing&amp;resourcekey=<span class="dv">0</span><span class="ot">-M</span>CEVK23t5bKtI2IGFVi41g) the ethicist Rosalind Hursthouse looks at this debate, <span class="ot">and</span> acknowledges that both of these perspectives on an embryo/fetus are important.  </span>
+<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a>&gt; [T]he premature termination of a pregnancy is, in some sense, the cutting off of a new human life, <span class="ot">and</span> thereby ... connects with all <span class="kw">our</span> thoughts about human life <span class="ot">and</span> death, parenthood, <span class="ot">and</span> family relationships .... </span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>&gt; </span>
+<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a>&gt; [But also, many women] view pregnancy only as eight months of misery, followed by hours <span class="kw">if</span> <span class="ot">not</span> days of agony <span class="ot">and</span> exhaustion, <span class="ot">and</span> abortion only as the blessed escape from this prospect[.  This point of view] is entirely understandable <span class="ot">and</span> does <span class="ot">not</span> manifest any lack of serious respect <span class="kw">for</span> human life <span class="ot">or</span> a shallow attitude to motherhood. (<span class="dv">237</span>, <span class="dv">240</span>)</span>
+<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a>Hursthouse goes on to argue that an abstract debate over whether an embryo has a right to life is <span class="kw">less</span> useful than a concrete discussion of the many factors — financial, personal, cultural, medical — that play a role in whether someone chooses to carry a pregnancy to term <span class="ot">or</span> to have an abortion.  Rather than the high<span class="ot">-p</span>rofile pro<span class="ot">-c</span>hoice vs. anti-abortion positions, Hursthouse<span class="ot">'</span><span class="ss">s view fits better with the [reproductive justice movement](https://en.wikipedia.org/wiki/Reproductive_justice), which advocates for legalized abortion but also the need for free, high-quality healthcare and childcare and living wages.  </span></span>
+<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a><span class="ss">::: {.exercises}</span></span>
+<span id="cb7-181"><a href="#cb7-181" aria-hidden="true" tabindex="-1"></a><span class="ss">Consider this argument, which we met earlier in @sec-simple: </span></span>
+<span id="cb7-182"><a href="#cb7-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-183"><a href="#cb7-183" aria-hidden="true" tabindex="-1"></a><span class="ss">&gt; **Animal agriculture is not bad for the environment and it is not bad for people.** [The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.]{.red} [Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.]{.blue} Furthermore, [new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.]{.purple} (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)</span></span>
+<span id="cb7-184"><a href="#cb7-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-185"><a href="#cb7-185" aria-hidden="true" tabindex="-1"></a><span class="ss">Using the rules from Chapter 1 of *Rulebook for Arguments*, develop an objection to one of the premises of this argument, and then a reply to your objection.  Present your objection and reply using an argument map.  </span></span>
+<span id="cb7-186"><a href="#cb7-186" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
+<span id="cb7-187"><a href="#cb7-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-188"><a href="#cb7-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-189"><a href="#cb7-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-190"><a href="#cb7-190" aria-hidden="true" tabindex="-1"></a><span class="ss">## Objecting to support</span></span>
+<span id="cb7-191"><a href="#cb7-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-192"><a href="#cb7-192" aria-hidden="true" tabindex="-1"></a><span class="ss">The other way that we can object to an argument is to challenge the support relationship between premises and conclusion.  That is, we might accept all of an argument</span><span class="ot">'</span>s premises, but still think that they don<span class="ot">'</span><span class="ss">t give a good reason to accept the conclusion.  In the rest of this semester, we</span><span class="ot">'</span>ll learn lots of different tools to assess support <span class="kw">for</span> different kinds of arguments.  For instance, <span class="kw">when</span> we talk about generalizations, <span class="ot">or</span> arguments by example, we<span class="ot">'</span><span class="ss">ll introduce a rule that *generalizations need more than one example*.  A generalization with a single example can have a true premise — this thing did happen in this one particular case — but, because it violates the rule, it doesn</span><span class="ot">'</span>t give much support to the conclusion.  </span>
+<span id="cb7-193"><a href="#cb7-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-194"><a href="#cb7-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb7-195"><a href="#cb7-195" aria-hidden="true" tabindex="-1"></a>Students often have a lot of trouble with the idea of support.  It<span class="ot">'</span><span class="ss">s okay if you don</span><span class="ot">'</span>t get it at first.  Think of this course as teaching how to recognize how support works <span class="kw">for</span> different kinds of arguments.  </span>
+<span id="cb7-196"><a href="#cb7-196" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-197"><a href="#cb7-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-198"><a href="#cb7-198" aria-hidden="true" tabindex="-1"></a>To illustrate objecting to support, let<span class="ot">'</span><span class="ss">s go back to our basic opposition between bodily autonomy and an embryo</span><span class="ot">'</span>s right to life.  A pro<span class="ot">-l</span>ife person might agree that bodily autonomy — the right to <span class="kw">do</span> what you want with your own body — is important.  But, they might <span class="kw">continue</span>, <span class="ot">not</span> all rights are equally important.  Specifically, someone<span class="ot">'</span><span class="ss">s right to life takes precedence over other rights.  As [a nineteenth-century aphorism](https://quoteinvestigator.com/2011/10/15/liberty-fist-nose/) put it, "My right to swing my fist ends where your nose begins."  </span></span>
+<span id="cb7-199"><a href="#cb7-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-200"><a href="#cb7-200" aria-hidden="true" tabindex="-1"></a><span class="ss">This objection challenges the pro-choice argument, but it doesn</span><span class="ot">'</span>t challenge the premise of bodily autonomy.  Instead it challenges the support, the <span class="fu">link</span>, between that premise <span class="ot">and</span> the conclusion of legal abortion.  In Mermaid, we can represent this by opposing an argument label, rather than a premise.  So we<span class="ot">'</span><span class="ss">ll add label for the pro-choice "autonomy argument," then the objection targeting it. </span></span>
+<span id="cb7-201"><a href="#cb7-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-204"><a href="#cb7-204" aria-hidden="true" tabindex="-1"></a><span class="ss">```{mermaid}</span></span>
+<span id="cb7-205"><a href="#cb7-205" aria-hidden="true" tabindex="-1"></a><span class="ss">%%| echo: true</span></span>
+<span id="cb7-206"><a href="#cb7-206" aria-hidden="true" tabindex="-1"></a><span class="ss">flowchart TB</span></span>
+<span id="cb7-207"><a href="#cb7-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-208"><a href="#cb7-208" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy(Everyone has a right to bodily autonomy.)</span></span>
+<span id="cb7-209"><a href="#cb7-209" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span></span>
+<span id="cb7-210"><a href="#cb7-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-211"><a href="#cb7-211" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life(An embryo has a right to life from conception.) </span></span>
+<span id="cb7-212"><a href="#cb7-212" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life -.-&gt; C</span></span>
+<span id="cb7-213"><a href="#cb7-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-214"><a href="#cb7-214" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence("Someone</span><span class="ot">'</span>s right to life takes precedence</span>
+<span id="cb7-215"><a href="#cb7-215" aria-hidden="true" tabindex="-1"></a>             over another person<span class="ot">'</span><span class="ss">s right to bodily</span></span>
+<span id="cb7-216"><a href="#cb7-216" aria-hidden="true" tabindex="-1"></a><span class="ss">             autonomy.")</span></span>
+<span id="cb7-217"><a href="#cb7-217" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence &amp; Oright-to-life --- OL[Precedence obj.] -.-&gt; Aautonomy</span></span>
+<span id="cb7-218"><a href="#cb7-218" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb7-219"><a href="#cb7-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-220"><a href="#cb7-220" aria-hidden="true" tabindex="-1"></a><span class="ss">The premise that an embryo has a right to life is playing two roles in this debate.  First, on its own, it provides an argument that abortion should not be legal.  But also, when combined with the claim about the precedence of a right to life, it gives an objection to the autonomy argument.  If an embryo doesn</span><span class="ot">'</span>t have a right to life, then it doesn<span class="ot">'</span><span class="ss">t matter if a right to life takes precedence over bodily autonomy.  So someone might give a reply to the precedence objection in three ways:  </span></span>
+<span id="cb7-221"><a href="#cb7-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-222"><a href="#cb7-222" aria-hidden="true" tabindex="-1"></a><span class="ss">1. Challenge the premise that an embryo has a right to life. </span></span>
+<span id="cb7-223"><a href="#cb7-223" aria-hidden="true" tabindex="-1"></a><span class="ss">2. Challenge the premise that a right to life takes precedence over bodily autonomy. </span></span>
+<span id="cb7-224"><a href="#cb7-224" aria-hidden="true" tabindex="-1"></a><span class="ss">3. Challenge the support of the precedence objection.  </span></span>
+<span id="cb7-225"><a href="#cb7-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-226"><a href="#cb7-226" aria-hidden="true" tabindex="-1"></a><span class="ss">Warren</span><span class="ot">'</span>s objection could be used to take strategy (<span class="dv">1</span>).  The ethicist Judith Jarvis Thomson took strategy (<span class="dv">2</span>) in her <span class="dv">1971</span> paper [<span class="ot">"</span><span class="st">A Defense of Abortion</span><span class="ot">"</span>](https://drive.google.com/file/d/0B6oYmzobonqoR2Fka0FJbjZYMzQ/view?usp=sharing&amp;resourcekey=<span class="dv">0</span><span class="ot">-s</span>KH9_nhlpTXfCizCcVQBiA). </span>
+<span id="cb7-227"><a href="#cb7-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-228"><a href="#cb7-228" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=true}</span>
+<span id="cb7-229"><a href="#cb7-229" aria-hidden="true" tabindex="-1"></a><span class="co">## Thomson's defense of abortion</span></span>
+<span id="cb7-230"><a href="#cb7-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-231"><a href="#cb7-231" aria-hidden="true" tabindex="-1"></a>In her paper, Thomson grants (at least <span class="kw">for</span> the sake of argument) that an embryo has a right to life.  She defense of abortion is to argue that this right to life does <span class="ot">not</span> take precedence over bodily autonomy.  She introduces a famous thought experiment, in which you<span class="ot">'</span><span class="ss">re kidnapped and surgically connected to a world-famous violinist, who</span><span class="ot">'</span>s in a coma <span class="ot">and</span> will <span class="fu">die</span> <span class="kw">if</span> you don<span class="ot">'</span><span class="ss">t act as his life support system for the next nine months.  The violinist has a right to life, she says, but *not* a right to the use of your body.  </span></span>
+<span id="cb7-232"><a href="#cb7-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-233"><a href="#cb7-233" aria-hidden="true" tabindex="-1"></a><span class="ss">In my opinion, Thomson</span><span class="ot">'</span>s argument is based on an excessively strong form of individualism.  Later in the paper, in another thought experiment, she imagines that she<span class="ot">'</span><span class="ss">s dying in bed, and the actor Henry Fonda is standing in the doorway of her room, just a few feet away.  If Fonda walks over and touches her forehead, she</span><span class="ot">'</span>ll be instantly cured of her disease <span class="ot">and</span> her life will be saved.  She writes: </span>
+<span id="cb7-234"><a href="#cb7-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-235"><a href="#cb7-235" aria-hidden="true" tabindex="-1"></a>&gt; Suppose he has only to walk across the room, place a hand briefly on <span class="kw">my</span> brow-<span class="ot">and</span> lo, <span class="kw">my</span> life is saved. Then surely he ought to <span class="kw">do</span> it, it would be indecent to refuse. Is it to be said <span class="ot">"</span><span class="st">Ah,well, it follows that in this case she has a right to the touch of his hand on her brow, and so it would be an injustice in him to refuse</span><span class="ot">"</span>? ... It<span class="ot">'</span><span class="ss">s rather a shocking idea that anyone</span><span class="ot">'</span>s rights should fade away <span class="ot">and</span> disappear as it gets harder <span class="ot">and</span> harder to accord them to him. (<span class="dv">61</span>)</span>
+<span id="cb7-236"><a href="#cb7-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-237"><a href="#cb7-237" aria-hidden="true" tabindex="-1"></a>In other words, Thomson says that Fonda <span class="dt">*morally</span> should<span class="ot">*</span> <span class="kw">do</span> this trivial thing to save her life.  But she has <span class="fu">no</span> moral (<span class="ot">or</span> legal) <span class="dt">*right</span><span class="ot">*</span> to demand that he does so.  </span>
+<span id="cb7-238"><a href="#cb7-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-239"><a href="#cb7-239" aria-hidden="true" tabindex="-1"></a>My objection is that Thomson<span class="ot">'</span><span class="ss">s view would undermine any use of taxpayer funds to provide social benefits:  public roads, education, clean air and water, shelter, health care, food, and so on.  There are people who will die today because of lack of access to shelter or health care.  Does justice require that wealthy people be taxed, and those funds use to pay for things like homeless shelters and universal health insurance?  I think it does.  In other words, vulnerable people do have a *right* to demand that wealthy people pay for these kinds of things.  </span></span>
+<span id="cb7-240"><a href="#cb7-240" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
+<span id="cb7-241"><a href="#cb7-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-242"><a href="#cb7-242" aria-hidden="true" tabindex="-1"></a><span class="ss">The third strategy amounts to saying:  Okay, at least for the sake of argument, I</span><span class="ot">'</span>ll agree that an embryo has a right to life; <span class="ot">and</span> a right to life takes precedence over a right to bodily autonomy.  But <span class="dt">*even</span> then<span class="ot">*</span> the precedence objection doesn<span class="ot">'</span><span class="ss">t work.  Those premises aren</span><span class="ot">'</span>t enough to conclude that the bodily autonomy argument is flawed.  </span>
+<span id="cb7-243"><a href="#cb7-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-244"><a href="#cb7-244" aria-hidden="true" tabindex="-1"></a>One way to take this third strategy is to make a distinction between killing someone <span class="ot">and</span> letting them <span class="fu">die</span>.  Many people would <span class="fu">say</span> there<span class="ot">'</span><span class="ss">s a difference between letting a young child drown in a bathtub and actively holding them underwater until they drown.  One version of this distinction is in terms of intentions: if the child managed to save themselves, you wouldn</span><span class="ot">'</span>t reach down <span class="ot">and</span> <span class="fu">push</span> them back under.  Someone might go on to argue that letting someone <span class="fu">die</span> doesn<span class="ot">'</span><span class="ss">t violate their right to life — it was sort of an accident or unintended consequence — and that abortion is letting an embryo die — if the embryo someone managed to survive the procedure, you wouldn</span><span class="ot">'</span>t actively try to <span class="fu">kill</span> it.  </span>
+<span id="cb7-245"><a href="#cb7-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-246"><a href="#cb7-246" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb7-247"><a href="#cb7-247" aria-hidden="true" tabindex="-1"></a>The drowning children example comes from a paper by the ethicist James Rachels.  Rachels<span class="ot">'</span><span class="ss"> point was to challenge the distinction: he claims that there</span><span class="ot">'</span>s actually <span class="fu">no</span> morally significant difference between these two cases.  </span>
+<span id="cb7-248"><a href="#cb7-248" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-249"><a href="#cb7-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-250"><a href="#cb7-250" aria-hidden="true" tabindex="-1"></a>This reply to the precedence objection again targets the support of the argument.  The objection can agree that the right to life takes precedence over bodily autonomy.  But, they claim, the right to life isn<span class="ot">'</span><span class="ss">t violated in abortion, because abortion is letting an embryo die rather than killing it.  </span></span>
+<span id="cb7-251"><a href="#cb7-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-254"><a href="#cb7-254" aria-hidden="true" tabindex="-1"></a><span class="ss">```{mermaid}</span></span>
+<span id="cb7-255"><a href="#cb7-255" aria-hidden="true" tabindex="-1"></a><span class="ss">%%| echo: true</span></span>
+<span id="cb7-256"><a href="#cb7-256" aria-hidden="true" tabindex="-1"></a><span class="ss">flowchart TB</span></span>
+<span id="cb7-257"><a href="#cb7-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-258"><a href="#cb7-258" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy(Everyone has a right to bodily autonomy.)</span></span>
+<span id="cb7-259"><a href="#cb7-259" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span></span>
+<span id="cb7-260"><a href="#cb7-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-261"><a href="#cb7-261" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life(An embryo has a right to life from conception.) </span></span>
+<span id="cb7-262"><a href="#cb7-262" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life -.-&gt; C</span></span>
+<span id="cb7-263"><a href="#cb7-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-264"><a href="#cb7-264" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence("Someone</span><span class="ot">'</span>s right to life takes precedence</span>
+<span id="cb7-265"><a href="#cb7-265" aria-hidden="true" tabindex="-1"></a>             over another person<span class="ot">'</span><span class="ss">s right to bodily</span></span>
+<span id="cb7-266"><a href="#cb7-266" aria-hidden="true" tabindex="-1"></a><span class="ss">             autonomy.")</span></span>
+<span id="cb7-267"><a href="#cb7-267" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence &amp; Oright-to-life --- OLprecedence[Precedence obj.] -.-&gt; Aautonomy</span></span>
+<span id="cb7-268"><a href="#cb7-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a><span class="ss">Okilling-die("Unlike killing, letting someone die </span></span>
+<span id="cb7-270"><a href="#cb7-270" aria-hidden="true" tabindex="-1"></a><span class="ss">              does not violate their right to life.")</span></span>
+<span id="cb7-271"><a href="#cb7-271" aria-hidden="true" tabindex="-1"></a><span class="ss">Oabortion-die("Abortion is letting an embryo die, </span></span>
+<span id="cb7-272"><a href="#cb7-272" aria-hidden="true" tabindex="-1"></a><span class="ss">               not killing it")</span></span>
+<span id="cb7-273"><a href="#cb7-273" aria-hidden="true" tabindex="-1"></a><span class="ss">Okilling-die &amp; Oabortion-die --- OL[Killing vs.\nletting die] -.-&gt; OLprecedence</span></span>
+<span id="cb7-274"><a href="#cb7-274" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb7-275"><a href="#cb7-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-276"><a href="#cb7-276" aria-hidden="true" tabindex="-1"></a><span class="ss">While this is a useful example for showing how we represent objections and replies in argument maps, I don</span><span class="ot">'</span>t think it<span class="ot">'</span><span class="ss">s a very compelling reply to the objection.  In my opinion, both premises have problems.  First, many homeless people in our society die of exposure and treatable diseases.  This is letting them die — we don</span><span class="ot">'</span>t actively hunt down homeless people who survive these challenges — but denying them access to housing <span class="ot">and</span> health care does, I think, violate their right to life.  Second, it<span class="ot">'</span><span class="ss">s not clear to me what the difference is supposed to be between ending a pregnancy and ending the life of the embryo or fetus involved in that pregnancy, i.e., killing it.  It seems to me like these are just two ways of describing the same action.  </span></span>
+<span id="cb7-277"><a href="#cb7-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-278"><a href="#cb7-278" aria-hidden="true" tabindex="-1"></a><span class="ss">::: {.exercises}</span></span>
+<span id="cb7-279"><a href="#cb7-279" aria-hidden="true" tabindex="-1"></a><span class="ss">Expand the argument map above to include my two objections to the killing vs. letting die reply. Are these objections to support or objections to premises? </span></span>
+<span id="cb7-280"><a href="#cb7-280" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
+<span id="cb7-281"><a href="#cb7-281" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

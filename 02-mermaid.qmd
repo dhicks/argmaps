@@ -10,17 +10,14 @@ Do not store any sensitive information in Obsidian.
 
 ## Using Mermaid Live
 
-::: todo
-all of this
-:::
+You don't need to download or install anything to use Mermaid Live:  simply open a web browser to <https://mermaid.live>, and you should see something like @fig-mermaid-live.  Since you'll be creating argument maps pretty regularly in this class, you'll probably want to bookmark that link.  
 
+![Mermaid Live: <https://mermaid.live/>](img/mermaid-live.png){#fig-mermaid-live}
 
-Using Mermaid Live is simple:  simply open a web browser to <https://mermaid.live>, and you should see the same thing as @fig-sandbox.  Since you'll be creating argument maps pretty regularly in this class, you'll probably want to bookmark that link.  
+We'll be focusing on the text pane (left) and preview pane (right).  For now you can minimize the actions pane.  Click anywhere in the text pane, hit ⌘+a (Control+a on Windows) to select all, then hit backspace or delete to clear out whatever default demo text Mermaid has for you.  Type the following:  
 
-![[The Argdown Sandbox: <https://argdown.org/sandbox/>]{.todo}](img/sandbox.png){#fig-sandbox}
-
-::: todo
-Most of the Sandbox is taken up by the text pane (left) and preview pane (right).  Notice that you can't click or do anything in the preview pane.  But click anywhere in the text pane, hit ⌘+a (Control+a on Windows) to select all, then hit backspace or delete to clear out the demo text.  Type the following, including at least two spaces or a tab at the start of the second line:  
+::: {.callout-important}
+Click "Show the code" to show the code to create this argument map
 :::
 
 ```{mermaid}
@@ -33,9 +30,6 @@ C(I'm the conclusion)
 P1 --> C
 ```
 
-::: {.callout-important}
-Click "Show the code" to show the code to create this argument map
-:::
 
 Except, the colors will probably be different.  This is because I'm using a special theme for argument maps, with highlighting for premises, conclusions, and objections.  Find the Config tab, just above the code box.  Clear out that tab, and copy and paste the following:  
 
@@ -49,24 +43,13 @@ Except, the colors will probably be different.  This is because I'm using a spec
 Mermaid Live doesn't have a sense of different "documents," so when you delete a previous map to create a new one the theming in Config should stay the same.  If your theming gets messed up somehow, you can try the History panel or just copy-and-paste the block up above. 
 :::
 
+Once you've created a map, bring up the "action" pane and hit the PNG button to download an image file that you can turn in with a quiz or other assignment.  
 
-
-
-::: todo
-At the very top-right, there's a list of rendering options (methods for representing the text in the text pane):  HTML, Map, and JSON, then two outgoing links for Documentation (the Argdown homepage) and the Argdown source code on GitHub.  
-
-If you're in HTML mode, you should see something like @fig-sandbox-html in the preview pane.  
-
-![Example output of the Argdown Sandbox in HTML mode](img/sandbox-html.png){#fig-sandbox-html}
-
-To view the argument map itself, select Map mode in the upper-right, then click Dagre D3 Map at the top of the preview pane.  The whole thing should look like @fig-sandbox-map.  
-
-![Example output of the Argdown Sandbox with Dagre D3 Map mode](img/sandbox-map.png){#fig-sandbox-map}
-:::
+Unfortunately, saving the text/source code for a Mermaid Live diagram is a little more complicated.  First we need to make sure you understand how your computer thinks about files and where they live. 
 
 ### How your computer is organized
 
-If you use your computer primarily through free-text search boxes — just type in a word or phrase and scroll through the results — you might not be used to thinking about how your computer is actually organized.  One side effect of Argdown is that you'll need to be deliberate about where your save your argument maps.  
+If you use your computer primarily through free-text search boxes — just type in a word or phrase and scroll through the results — you might not be used to thinking about how your computer is actually organized.  One side effect of Mermaid Live is that you'll need to be deliberate about where your save your argument maps.  
 
 Your computer is organized like a physical filing cabinet, with drawers containing folders containing (paper) files.  (Except the drawers are also called folders, and you can have folders inside of folders inside of folders inside of folders.)  Every file on your computer lives in its particular folder, and everything containing files is a folder.  This includes your desktop, which is a representation of a special folder tied to your user account on your computer.  Apps are also collections of files organized together into folders; installing an app means copying that folder structure into certain places on your device and configuring the operating system to interact with the app's files.  All computers are organized like this, including your phone, a smartwatch, an Alexa or Siri, a Ring doorbell, etc.  
 
@@ -82,18 +65,19 @@ There's also a technical reason for not leaving all of your files on your deskto
 
 
 
-### Saving your work in the Argdown Sandbox
+### Saving your work from Mermaid Live
 
 ::: {.callout-important}
-## The Argdown Sandbox has no way to save your work ##  
+## Mermaid saves your history, not separate maps
 
-It's meant to be a quick preview of what Argdown can do, not a space for you to regularly do important work.  You'll need to manually save your work by copying and pasting to a file on your computer.  
+The History pane in Mermaid can be used to save your history, as you create and edit argument maps.  But it doesn't have distinct files or maps, and you can't give the saves meaningful names.  
+
+You'll need to manually save your work by copying and pasting to a file on your computer.  
 :::
 
 ::: {.callout-tip}
 Before you save your work for the first time, create **a designated folder for all of the work for this course**.  I'm going to call this **the course folder**.  The Documents folder on your computer is a good place to do this.  If you don't know how to find your Documents folder and create a new folder there, your instructor and TA can help.  
 :::
-
 
 Once you've created the course folder, follow these steps to save a new argument map.  Try them out with the example you typed in to the text pane a few minutes ago.  
 
@@ -103,7 +87,7 @@ Once you've created the course folder, follow these steps to save a new argument
 You can use any [plaintext](https://en.wikipedia.org/wiki/Plain_text) editor of your choice.  But Microsoft Word and Google Docs *won't* work.
 :::
 
-2. Create a new file, and copy and paste the argument map text from the Argdown Sandbox into the new file. 
+2. Create a new file, and copy and paste the argument map text from Mermaid Live into the new file. 
 3. *On a Mac*: You may need to go to Format -> Make Plain Text.  See @fig-plaintext. 
 
 	![Changing TextEdit to plaintext mode](img/plaintext.png){#fig-plaintext} 
@@ -117,13 +101,8 @@ When you want to open up a saved argument map, you'll need to follow these steps
 
 1. Find the argument map file in the course folder, and open it with your text editor.  
 2. Select the entire argument map text, then copy it. 
-3. Open the Argdown Sandbox by navigating a web browser to <https://argdown.org/sandbox/>. 
+3. Open Mermaid Live. 
 3. Select the example text in the text pane, then paste the argument map text. 
-
-### Saving an image file from the Argdown Sandbox 
-
-After creating an argument map in the Argdown Sandbox, you can download an image file by clicking on png near the upper-right.  Hit "Create PNG" in the dialog box, and you'll automatically download an image file named `map.png`.  **Move this to the course folder, and give it the same name as the corresponding text file.**  
-
 
 
 
@@ -141,7 +120,7 @@ To install and setup Obsidian follow these steps:
 
 1. Navigate a web browser to <https://obsidian.md/> and click the download link for your operating system.  After the download finishes, run the installer.  
 2. Open Obsidian.  It should show you the "open vault" window in @fig-obsidian. 
-	- If you already created [a course folder](#saving-your-work-in-the-argdown-sandbox), choose "Open folder as vault," and select your course folder as an Obsidian vault.  This won't mess up your existing files in any way; Obsidian plays nicely with other apps.  
+	- If you already created [a course folder](#saving-your-work-from-mermaid-live), choose "Open folder as vault," and select your course folder as an Obsidian vault.  This won't mess up your existing files in any way; Obsidian plays nicely with other apps.  
 	- If you haven't already created a course folder, choose "Create new vault."  Give your vault/course folder a name like "Critical Reasoning" and set its location inside your Documents folder.
 	
 	![Obsidian's "open vault" window](img/obsidian.png){#fig-obsidian}
@@ -164,6 +143,10 @@ You can add multiple argument maps to any Obsidian note.  Your first time throug
 2. (Optional) Give the note a name, like "first argument map."  Obsidian automatically saves any changes to your files.  
 3. Type the following: 
 
+::: {.callout-important}
+Click "Show the code" to show the code to create this argument map
+:::
+
 ```{mermaid}
 %%| echo: fenced
 flowchart TB
@@ -173,10 +156,6 @@ C(I'm the conclusion)
 
 P1 --> C
 ```
-
-::: {.callout-important}
-Click "Show the code" to show the code to create this argument map
-:::
 
 ::: {.callout-note}
 If nothing seems to happen, try replacing the braces with spaces on the first line: ` ``` mermaid `

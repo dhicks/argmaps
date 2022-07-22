@@ -199,8 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#using-mermaid-live" id="toc-using-mermaid-live" class="nav-link active" data-scroll-target="#using-mermaid-live"> <span class="header-section-number">2.1</span> Using Mermaid Live</a>
   <ul class="collapse">
   <li><a href="#how-your-computer-is-organized" id="toc-how-your-computer-is-organized" class="nav-link" data-scroll-target="#how-your-computer-is-organized"> <span class="header-section-number">2.1.1</span> How your computer is organized</a></li>
-  <li><a href="#saving-your-work-in-the-argdown-sandbox" id="toc-saving-your-work-in-the-argdown-sandbox" class="nav-link" data-scroll-target="#saving-your-work-in-the-argdown-sandbox"> <span class="header-section-number">2.1.2</span> Saving your work in the Argdown Sandbox</a></li>
-  <li><a href="#saving-an-image-file-from-the-argdown-sandbox" id="toc-saving-an-image-file-from-the-argdown-sandbox" class="nav-link" data-scroll-target="#saving-an-image-file-from-the-argdown-sandbox"> <span class="header-section-number">2.1.3</span> Saving an image file from the Argdown Sandbox</a></li>
+  <li><a href="#saving-your-work-from-mermaid-live" id="toc-saving-your-work-from-mermaid-live" class="nav-link" data-scroll-target="#saving-your-work-from-mermaid-live"> <span class="header-section-number">2.1.2</span> Saving your work from Mermaid Live</a></li>
   </ul></li>
   <li><a href="#using-mermaid-with-obsidian" id="toc-using-mermaid-with-obsidian" class="nav-link" data-scroll-target="#using-mermaid-with-obsidian"> <span class="header-section-number">2.2</span> Using Mermaid with Obsidian</a>
   <ul class="collapse">
@@ -248,18 +247,26 @@ Important
 </div>
 <section id="using-mermaid-live" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="using-mermaid-live"><span class="header-section-number">2.1</span> Using Mermaid Live</h2>
-<div class="todo">
-<p>all of this</p>
-</div>
-<p>Using Mermaid Live is simple: simply open a web browser to <a href="https://mermaid.live" class="uri">https://mermaid.live</a>, and you should see the same thing as <a href="#fig-sandbox">Figure&nbsp;<span>2.1</span></a>. Since you’ll be creating argument maps pretty regularly in this class, you’ll probably want to bookmark that link.</p>
-<div id="fig-sandbox" class="quarto-figure quarto-figure-center anchored">
+<p>You don’t need to download or install anything to use Mermaid Live: simply open a web browser to <a href="https://mermaid.live" class="uri">https://mermaid.live</a>, and you should see something like <a href="#fig-mermaid-live">Figure&nbsp;<span>2.1</span></a>. Since you’ll be creating argument maps pretty regularly in this class, you’ll probably want to bookmark that link.</p>
+<div id="fig-mermaid-live" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="img/sandbox.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.1: <span class="todo">The Argdown Sandbox: <a href="https://argdown.org/sandbox/" class="uri">https://argdown.org/sandbox/</a></span></figcaption><p></p>
+<p><img src="img/mermaid-live.png" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.1: Mermaid Live: <a href="https://mermaid.live/" class="uri">https://mermaid.live/</a></figcaption><p></p>
 </figure>
 </div>
-<div class="todo">
-<p>Most of the Sandbox is taken up by the text pane (left) and preview pane (right). Notice that you can’t click or do anything in the preview pane. But click anywhere in the text pane, hit ⌘+a (Control+a on Windows) to select all, then hit backspace or delete to clear out the demo text. Type the following, including at least two spaces or a tab at the start of the second line:</p>
+<p>We’ll be focusing on the text pane (left) and preview pane (right). For now you can minimize the actions pane. Click anywhere in the text pane, hit ⌘+a (Control+a on Windows) to select all, then hit backspace or delete to clear out whatever default demo text Mermaid has for you. Type the following:</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Click “Show the code” to show the code to create this argument map</p>
+</div>
 </div>
 <div class="cell">
 <details>
@@ -288,19 +295,6 @@ P1 --&gt; C
 </div>
 </div>
 </div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Click “Show the code” to show the code to create this argument map</p>
-</div>
-</div>
 <p>Except, the colors will probably be different. This is because I’m using a special theme for argument maps, with highlighting for premises, conclusions, and objections. Find the Config tab, just above the code box. Clear out that tab, and copy and paste the following:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"themeCSS"</span><span class="fu">:</span> <span class="st">"#Argument rect {stroke:transparent;fill#e5e5e5!important;} #Argument span {color:transparent;} .edgeLabel {color:#888; font-size:0.9em; margin-right:3px} .edgeLabel i {color:crimson!important;} .edge-pattern-dotted {stroke:crimson!important;} .edge-pattern-solid {stroke:blue!important;} #flowchart-pointEnd {fill:blue;} g rect {fill:white!important;} g[id*='P'] * {stroke:blue!important;fill:white!important;} g[id*='O'] * {stroke:crimson!important; } g[id*='OL'] * {color:white!important;fill:red!important;} g[id*='A'] * {stroke:blue!important;fill:blue!important;color:white!important;} g[id*='C'] * {fill:black!important;color:white!important;font-weight:bold;}"</span></span>
@@ -318,51 +312,37 @@ Note
 <p>Mermaid Live doesn’t have a sense of different “documents,” so when you delete a previous map to create a new one the theming in Config should stay the same. If your theming gets messed up somehow, you can try the History panel or just copy-and-paste the block up above.</p>
 </div>
 </div>
-<div class="todo">
-<p>At the very top-right, there’s a list of rendering options (methods for representing the text in the text pane): HTML, Map, and JSON, then two outgoing links for Documentation (the Argdown homepage) and the Argdown source code on GitHub.</p>
-<p>If you’re in HTML mode, you should see something like <a href="#fig-sandbox-html">Figure&nbsp;<span>2.2</span></a> in the preview pane.</p>
-<div id="fig-sandbox-html" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/sandbox-html.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.2: Example output of the Argdown Sandbox in HTML mode</figcaption><p></p>
-</figure>
-</div>
-<p>To view the argument map itself, select Map mode in the upper-right, then click Dagre D3 Map at the top of the preview pane. The whole thing should look like <a href="#fig-sandbox-map">Figure&nbsp;<span>2.3</span></a>.</p>
-<div id="fig-sandbox-map" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="img/sandbox-map.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.3: Example output of the Argdown Sandbox with Dagre D3 Map mode</figcaption><p></p>
-</figure>
-</div>
-</div>
+<p>Once you’ve created a map, bring up the “action” pane and hit the PNG button to download an image file that you can turn in with a quiz or other assignment.</p>
+<p>Unfortunately, saving the text/source code for a Mermaid Live diagram is a little more complicated. First we need to make sure you understand how your computer thinks about files and where they live.</p>
 <section id="how-your-computer-is-organized" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="how-your-computer-is-organized"><span class="header-section-number">2.1.1</span> How your computer is organized</h3>
-<p>If you use your computer primarily through free-text search boxes — just type in a word or phrase and scroll through the results — you might not be used to thinking about how your computer is actually organized. One side effect of Argdown is that you’ll need to be deliberate about where your save your argument maps.</p>
+<p>If you use your computer primarily through free-text search boxes — just type in a word or phrase and scroll through the results — you might not be used to thinking about how your computer is actually organized. One side effect of Mermaid Live is that you’ll need to be deliberate about where your save your argument maps.</p>
 <p>Your computer is organized like a physical filing cabinet, with drawers containing folders containing (paper) files. (Except the drawers are also called folders, and you can have folders inside of folders inside of folders inside of folders.) Every file on your computer lives in its particular folder, and everything containing files is a folder. This includes your desktop, which is a representation of a special folder tied to your user account on your computer. Apps are also collections of files organized together into folders; installing an app means copying that folder structure into certain places on your device and configuring the operating system to interact with the app’s files. All computers are organized like this, including your phone, a smartwatch, an Alexa or Siri, a Ring doorbell, etc.</p>
-<p><a href="#fig-folders">Figure&nbsp;<span>2.4</span></a> shows you how I keep all the different files for our class organized into a collection of folders, as viewed using Mac OS’s Finder app in column mode. (Windows has a similar app called File Explorer.) The <code>Teaching</code> folder contains everything related to all of the classes I’ve taught, past and present. <code>critical reasoning</code> is dedicated to this specific class, with separate folders for each year. Inside I have further folders, for things like quizzes, the syllabus, writing assignments, and final grades. The <code>slides</code> folder contains all of the lecture slides. At the bottom of the window, I have Finder configured to show the path, or the location of the particular folder or file being highlighted. The path starts with my laptop’s hard drive (this might look like <code>C:</code> on Windows), then the <code>Users</code> folder. The <code>Users</code> folder contains files specific to each account on this computer. There’s only one user account on my laptop, <code>danhicks</code>, but some systems — like our campus email server — will have thousands of user accounts. Imagine how many user folders must be in the Gmail and Facebook servers.</p>
+<p><a href="#fig-folders">Figure&nbsp;<span>2.2</span></a> shows you how I keep all the different files for our class organized into a collection of folders, as viewed using Mac OS’s Finder app in column mode. (Windows has a similar app called File Explorer.) The <code>Teaching</code> folder contains everything related to all of the classes I’ve taught, past and present. <code>critical reasoning</code> is dedicated to this specific class, with separate folders for each year. Inside I have further folders, for things like quizzes, the syllabus, writing assignments, and final grades. The <code>slides</code> folder contains all of the lecture slides. At the bottom of the window, I have Finder configured to show the path, or the location of the particular folder or file being highlighted. The path starts with my laptop’s hard drive (this might look like <code>C:</code> on Windows), then the <code>Users</code> folder. The <code>Users</code> folder contains files specific to each account on this computer. There’s only one user account on my laptop, <code>danhicks</code>, but some systems — like our campus email server — will have thousands of user accounts. Imagine how many user folders must be in the Gmail and Facebook servers.</p>
 <div id="fig-folders" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/folders.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.4: Files organized into folders, as viewed by Mac OS’s Finder in column mode</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.2: Files organized into folders, as viewed by Mac OS’s Finder in column mode</figcaption><p></p>
 </figure>
 </div>
 <p>Inside my user folder, <code>danhicks</code>, is a specific folder that I sync to the cloud using <code>Google Drive</code>. All of my teaching files are contained in this folder, so that they’re synced automatically. I also backup my files to an external hard drive using the Mac app Time Machine, plus the cloud service Backblaze. Triple protection in case something happens to my computer! (The “cloud” is really just physical computers located somewhere else, usually in giant warehouse-like buildings near cheap sources of electricity.)</p>
 <p>Thanks to fast search software, we’ve gotten used to not having to interact with files and folder organization directly in a lot of cases. I don’t need to know exactly where a certain form is located on the campus website; a web search will turn it up in a few seconds. But deliberately organizing your own files into folders is important. For one thing, it makes it much easier to find related files, especially files with similar names or content. I’ve taught a lot of classes over the last 15+ years. So if I’m looking for the syllabus for the Fall 2020 version of Critical Reasoning, a search for <code>syllabus</code> is going to turn up a lot of results. It’s much faster to go to the folder for Critical Reasoning, then Fall 2020, and then the syllabus folder. Then, if I’m looking at that syllabus and want to look up the writing assignment I used in that course, I don’t need to remember exactly what I called the writing assignment file or what keywords might bring it up. I just click a couple of times to open the folder for the writing assignment.</p>
 <p>There’s also a technical reason for not leaving all of your files on your desktop. Your computer assumes that files on your desktop are important and frequently accessed. So it keeps a kind of pre-loaded copy of the file in memory, so that it can open the file quickly whenever you might need it. Having hundreds or even thousands of files on your desktop can seriously slow down your computer.</p>
 </section>
-<section id="saving-your-work-in-the-argdown-sandbox" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="saving-your-work-in-the-argdown-sandbox"><span class="header-section-number">2.1.2</span> Saving your work in the Argdown Sandbox</h3>
+<section id="saving-your-work-from-mermaid-live" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="saving-your-work-from-mermaid-live"><span class="header-section-number">2.1.2</span> Saving your work from Mermaid Live</h3>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-The Argdown Sandbox has no way to save your work
+Mermaid saves your history, not separate maps
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>It’s meant to be a quick preview of what Argdown can do, not a space for you to regularly do important work. You’ll need to manually save your work by copying and pasting to a file on your computer.</p>
+<p>The History pane in Mermaid can be used to save your history, as you create and edit argument maps. But it doesn’t have distinct files or maps, and you can’t give the saves meaningful names.</p>
+<p>You’ll need to manually save your work by copying and pasting to a file on your computer.</p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -396,12 +376,12 @@ Note
 </div>
 </div>
 <ol start="2" type="1">
-<li><p>Create a new file, and copy and paste the argument map text from the Argdown Sandbox into the new file.</p></li>
-<li><p><em>On a Mac</em>: You may need to go to Format -&gt; Make Plain Text. See <a href="#fig-plaintext">Figure&nbsp;<span>2.5</span></a>.</p>
+<li><p>Create a new file, and copy and paste the argument map text from Mermaid Live into the new file.</p></li>
+<li><p><em>On a Mac</em>: You may need to go to Format -&gt; Make Plain Text. See <a href="#fig-plaintext">Figure&nbsp;<span>2.3</span></a>.</p>
 <div id="fig-plaintext" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/plaintext.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.5: Changing TextEdit to plaintext mode</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.3: Changing TextEdit to plaintext mode</figcaption><p></p>
 </figure>
 </div></li>
 <li><p>Hit ⌘+s (Mac) or Control+s (Windows) to bring up the save dialog.</p>
@@ -416,13 +396,9 @@ Note
 <li>Find the argument map file in the course folder, and open it with your text editor.<br>
 </li>
 <li>Select the entire argument map text, then copy it.</li>
-<li>Open the Argdown Sandbox by navigating a web browser to <a href="https://argdown.org/sandbox/" class="uri">https://argdown.org/sandbox/</a>.</li>
+<li>Open Mermaid Live.</li>
 <li>Select the example text in the text pane, then paste the argument map text.</li>
 </ol>
-</section>
-<section id="saving-an-image-file-from-the-argdown-sandbox" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="saving-an-image-file-from-the-argdown-sandbox"><span class="header-section-number">2.1.3</span> Saving an image file from the Argdown Sandbox</h3>
-<p>After creating an argument map in the Argdown Sandbox, you can download an image file by clicking on png near the upper-right. Hit “Create PNG” in the dialog box, and you’ll automatically download an image file named <code>map.png</code>. <strong>Move this to the course folder, and give it the same name as the corresponding text file.</strong></p>
 </section>
 </section>
 <section id="using-mermaid-with-obsidian" class="level2" data-number="2.2">
@@ -447,16 +423,16 @@ Important
 <ol type="1">
 <li><p>Navigate a web browser to <a href="https://obsidian.md/" class="uri">https://obsidian.md/</a> and click the download link for your operating system. After the download finishes, run the installer.<br>
 </p></li>
-<li><p>Open Obsidian. It should show you the “open vault” window in <a href="#fig-obsidian">Figure&nbsp;<span>2.6</span></a>.</p>
+<li><p>Open Obsidian. It should show you the “open vault” window in <a href="#fig-obsidian">Figure&nbsp;<span>2.4</span></a>.</p>
 <ul>
-<li>If you already created <a href="#saving-your-work-in-the-argdown-sandbox">a course folder</a>, choose “Open folder as vault,” and select your course folder as an Obsidian vault. This won’t mess up your existing files in any way; Obsidian plays nicely with other apps.<br>
+<li>If you already created <a href="#saving-your-work-from-mermaid-live">a course folder</a>, choose “Open folder as vault,” and select your course folder as an Obsidian vault. This won’t mess up your existing files in any way; Obsidian plays nicely with other apps.<br>
 </li>
 <li>If you haven’t already created a course folder, choose “Create new vault.” Give your vault/course folder a name like “Critical Reasoning” and set its location inside your Documents folder.</li>
 </ul>
 <div id="fig-obsidian" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/obsidian.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.6: Obsidian’s “open vault” window</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.4: Obsidian’s “open vault” window</figcaption><p></p>
 </figure>
 </div></li>
 <li><p>While these two steps are all we need to create diagrams, we need one extra step to get the coloring of the diagrams right for argument maps. We’ll do this using a CSS theme. Download and unzip the file <a href="https://gist.github.com/dhicks/7929b170c666cba8cec322d62c22622a/archive/0d5e0470ed709385527d6c9b84b7e4348d7280dd.zip">mermaid.css</a>.<br>
@@ -470,7 +446,7 @@ Important
 <div id="fig-obsidian-themes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/obsidian-themes.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.7: Opening your vault’s themes folder</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.5: Opening your vault’s themes folder</figcaption><p></p>
 </figure>
 </div></li>
 <li><p>This should open a folder called <code>themes</code> in your computer’s file browser. Move <code>mermaid.css</code> (from step 3) into <code>themes</code>.</p></li>
@@ -488,6 +464,19 @@ Important
 </li>
 <li>Type the following:</li>
 </ol>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Click “Show the code” to show the code to create this argument map</p>
+</div>
+</div>
 <div class="cell">
 <details>
 <summary>Show the code</summary>
@@ -517,19 +506,6 @@ P1 --&gt; C
 </div>
 </div>
 </div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Click “Show the code” to show the code to create this argument map</p>
-</div>
-</div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -549,7 +525,7 @@ Note
 <div id="fig-obsidian-edit" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="img/obsidian-edit.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.8: Switching an Obsidian argument map back to edit mode</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2.6: Switching an Obsidian argument map back to edit mode</figcaption><p></p>
 </figure>
 </div>
 <div class="callout-important callout callout-style-default callout-captioned">
@@ -736,197 +712,176 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Using Mermaid Live</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>::: todo</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>all of this</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>You don't need to download or install anything to use Mermaid Live:  simply open a web browser to <span class="ot">&lt;https://mermaid.live&gt;</span>, and you should see something like @fig-mermaid-live.  Since you'll be creating argument maps pretty regularly in this class, you'll probably want to bookmark that link.  </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="al">![Mermaid Live: &lt;https://mermaid.live/&gt;](img/mermaid-live.png)</span>{#fig-mermaid-live}</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>Using Mermaid Live is simple:  simply open a web browser to <span class="ot">&lt;https://mermaid.live&gt;</span>, and you should see the same thing as @fig-sandbox.  Since you'll be creating argument maps pretty regularly in this class, you'll probably want to bookmark that link.  </span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>![<span class="co">[</span><span class="ot">The Argdown Sandbox: &lt;https://argdown.org/sandbox/&gt;</span><span class="co">]</span>{.todo}](img/sandbox.png){#fig-sandbox}</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>::: todo</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>Most of the Sandbox is taken up by the text pane (left) and preview pane (right).  Notice that you can't click or do anything in the preview pane.  But click anywhere in the text pane, hit ⌘+a (Control+a on Windows) to select all, then hit backspace or delete to clear out the demo text.  Type the following, including at least two spaces or a tab at the start of the second line:  </span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>We'll be focusing on the text pane (left) and preview pane (right).  For now you can minimize the actions pane.  Click anywhere in the text pane, hit ⌘+a (Control+a on Windows) to select all, then hit backspace or delete to clear out whatever default demo text Mermaid has for you.  Type the following:  </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>Click "Show the code" to show the code to create this argument map</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>P1(I<span class="ot">'</span><span class="ss">m a premise)</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="ss">C(I</span><span class="ot">'</span>m the conclusion)</span>
 <span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>P1(I<span class="ot">'</span><span class="ss">m a premise)</span></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="ss">C(I</span><span class="ot">'</span>m the conclusion)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>Except, the colors will probably be different.  This is because I'm using a special theme for argument maps, with highlighting for premises, conclusions, and objections.  Find the Config tab, just above the code box.  Clear out that tab, and copy and paste the following:  </span>
 <span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>Click "Show the code" to show the code to create this argument map</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>Except, the colors will probably be different.  This is because I'm using a special theme for argument maps, with highlighting for premises, conclusions, and objections.  Find the Config tab, just above the code box.  Clear out that tab, and copy and paste the following:  </span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="in">```json</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">"themeCSS"</span><span class="op">:</span> <span class="st">"#Argument rect {stroke:transparent;fill#e5e5e5!important;} #Argument span {color:transparent;} .edgeLabel {color:#888; font-size:0.9em; margin-right:3px} .edgeLabel i {color:crimson!important;} .edge-pattern-dotted {stroke:crimson!important;} .edge-pattern-solid {stroke:blue!important;} #flowchart-pointEnd {fill:blue;} g rect {fill:white!important;} g[id*='P'] * {stroke:blue!important;fill:white!important;} g[id*='O'] * {stroke:crimson!important; } g[id*='OL'] * {color:white!important;fill:red!important;} g[id*='A'] * {stroke:blue!important;fill:blue!important;color:white!important;} g[id*='C'] * {fill:black!important;color:white!important;font-weight:bold;}"</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="in">```json</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    <span class="st">"themeCSS"</span><span class="op">:</span> <span class="st">"#Argument rect {stroke:transparent;fill#e5e5e5!important;} #Argument span {color:transparent;} .edgeLabel {color:#888; font-size:0.9em; margin-right:3px} .edgeLabel i {color:crimson!important;} .edge-pattern-dotted {stroke:crimson!important;} .edge-pattern-solid {stroke:blue!important;} #flowchart-pointEnd {fill:blue;} g rect {fill:white!important;} g[id*='P'] * {stroke:blue!important;fill:white!important;} g[id*='O'] * {stroke:crimson!important; } g[id*='OL'] * {color:white!important;fill:red!important;} g[id*='A'] * {stroke:blue!important;fill:blue!important;color:white!important;} g[id*='C'] * {fill:black!important;color:white!important;font-weight:bold;}"</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>Mermaid Live doesn't have a sense of different "documents," so when you delete a previous map to create a new one the theming in Config should stay the same.  If your theming gets messed up somehow, you can try the History panel or just copy-and-paste the block up above. </span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>Once you've created a map, bring up the "action" pane and hit the PNG button to download an image file that you can turn in with a quiz or other assignment.  </span>
 <span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>Mermaid Live doesn't have a sense of different "documents," so when you delete a previous map to create a new one the theming in Config should stay the same.  If your theming gets messed up somehow, you can try the History panel or just copy-and-paste the block up above. </span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>Unfortunately, saving the text/source code for a Mermaid Live diagram is a little more complicated.  First we need to make sure you understand how your computer thinks about files and where they live. </span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### How your computer is organized</span></span>
 <span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>If you use your computer primarily through free-text search boxes — just type in a word or phrase and scroll through the results — you might not be used to thinking about how your computer is actually organized.  One side effect of Mermaid Live is that you'll need to be deliberate about where your save your argument maps.  </span>
 <span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>::: todo</span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>At the very top-right, there's a list of rendering options (methods for representing the text in the text pane):  HTML, Map, and JSON, then two outgoing links for Documentation (the Argdown homepage) and the Argdown source code on GitHub.  </span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>Your computer is organized like a physical filing cabinet, with drawers containing folders containing (paper) files.  (Except the drawers are also called folders, and you can have folders inside of folders inside of folders inside of folders.)  Every file on your computer lives in its particular folder, and everything containing files is a folder.  This includes your desktop, which is a representation of a special folder tied to your user account on your computer.  Apps are also collections of files organized together into folders; installing an app means copying that folder structure into certain places on your device and configuring the operating system to interact with the app's files.  All computers are organized like this, including your phone, a smartwatch, an Alexa or Siri, a Ring doorbell, etc.  </span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>@fig-folders shows you how I keep all the different files for our class organized into a collection of folders, as viewed using Mac OS's Finder app in column mode.  (Windows has a similar app called File Explorer.)  The <span class="in">`Teaching`</span> folder contains everything related to all of the classes I've taught, past and present.  <span class="in">`critical reasoning`</span> is dedicated to this specific class, with separate folders for each year.  Inside I have further folders, for things like quizzes, the syllabus, writing assignments, and final grades.  The <span class="in">`slides`</span> folder contains all of the lecture slides.  At the bottom of the window, I have Finder configured to show the path, or the location of the particular folder or file being highlighted.  The path starts with my laptop's hard drive (this might look like <span class="in">`C:`</span> on Windows), then the <span class="in">`Users`</span> folder.  The <span class="in">`Users`</span> folder contains files specific to each account on this computer.  There's only one user account on my laptop, <span class="in">`danhicks`</span>, but some systems — like our campus email server — will have thousands of user accounts.  Imagine how many user folders must be in the Gmail and Facebook servers.  </span>
 <span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>If you're in HTML mode, you should see something like @fig-sandbox-html in the preview pane.  </span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="al">![Files organized into folders, as viewed by Mac OS's Finder in column mode](img/folders.png)</span>{#fig-folders}</span>
 <span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a><span class="al">![Example output of the Argdown Sandbox in HTML mode](img/sandbox-html.png)</span>{#fig-sandbox-html}</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>Inside my user folder, <span class="in">`danhicks`</span>, is a specific folder that I sync to the cloud using <span class="in">`Google Drive`</span>.  All of my teaching files are contained in this folder, so that they're synced automatically.  I also backup my files to an external hard drive using the Mac app Time Machine, plus the cloud service Backblaze.  Triple protection in case something happens to my computer!  (The "cloud" is really just physical computers located somewhere else, usually in giant warehouse-like buildings near cheap sources of electricity.)  </span>
 <span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>To view the argument map itself, select Map mode in the upper-right, then click Dagre D3 Map at the top of the preview pane.  The whole thing should look like @fig-sandbox-map.  </span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>Thanks to fast search software, we've gotten used to not having to interact with files and folder organization directly in a lot of cases.  I don't need to know exactly where a certain form is located on the campus website; a web search will turn it up in a few seconds.  But deliberately organizing your own files into folders is important.  For one thing, it makes it much easier to find related files, especially files with similar names or content.  I've taught a lot of classes over the last 15+ years.  So if I'm looking for the syllabus for the Fall 2020 version of Critical Reasoning, a search for <span class="in">`syllabus`</span> is going to turn up a lot of results.  It's much faster to go to the folder for Critical Reasoning, then Fall 2020, and then the syllabus folder.  Then, if I'm looking at that syllabus and want to look up the writing assignment I used in that course, I don't need to remember exactly what I called the writing assignment file or what keywords might bring it up.  I just click a couple of times to open the folder for the writing assignment.  </span>
 <span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a><span class="al">![Example output of the Argdown Sandbox with Dagre D3 Map mode](img/sandbox-map.png)</span>{#fig-sandbox-map}</span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>There's also a technical reason for not leaving all of your files on your desktop.  Your computer assumes that files on your desktop are important and frequently accessed.  So it keeps a kind of pre-loaded copy of the file in memory, so that it can open the file quickly whenever you might need it.  Having hundreds or even thousands of files on your desktop can seriously slow down your computer.  </span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### How your computer is organized</span></span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>If you use your computer primarily through free-text search boxes — just type in a word or phrase and scroll through the results — you might not be used to thinking about how your computer is actually organized.  One side effect of Argdown is that you'll need to be deliberate about where your save your argument maps.  </span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>Your computer is organized like a physical filing cabinet, with drawers containing folders containing (paper) files.  (Except the drawers are also called folders, and you can have folders inside of folders inside of folders inside of folders.)  Every file on your computer lives in its particular folder, and everything containing files is a folder.  This includes your desktop, which is a representation of a special folder tied to your user account on your computer.  Apps are also collections of files organized together into folders; installing an app means copying that folder structure into certain places on your device and configuring the operating system to interact with the app's files.  All computers are organized like this, including your phone, a smartwatch, an Alexa or Siri, a Ring doorbell, etc.  </span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### Saving your work from Mermaid Live</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mermaid saves your history, not separate maps</span></span>
 <span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>@fig-folders shows you how I keep all the different files for our class organized into a collection of folders, as viewed using Mac OS's Finder app in column mode.  (Windows has a similar app called File Explorer.)  The <span class="in">`Teaching`</span> folder contains everything related to all of the classes I've taught, past and present.  <span class="in">`critical reasoning`</span> is dedicated to this specific class, with separate folders for each year.  Inside I have further folders, for things like quizzes, the syllabus, writing assignments, and final grades.  The <span class="in">`slides`</span> folder contains all of the lecture slides.  At the bottom of the window, I have Finder configured to show the path, or the location of the particular folder or file being highlighted.  The path starts with my laptop's hard drive (this might look like <span class="in">`C:`</span> on Windows), then the <span class="in">`Users`</span> folder.  The <span class="in">`Users`</span> folder contains files specific to each account on this computer.  There's only one user account on my laptop, <span class="in">`danhicks`</span>, but some systems — like our campus email server — will have thousands of user accounts.  Imagine how many user folders must be in the Gmail and Facebook servers.  </span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>The History pane in Mermaid can be used to save your history, as you create and edit argument maps.  But it doesn't have distinct files or maps, and you can't give the saves meaningful names.  </span>
 <span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="al">![Files organized into folders, as viewed by Mac OS's Finder in column mode](img/folders.png)</span>{#fig-folders}</span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>Inside my user folder, <span class="in">`danhicks`</span>, is a specific folder that I sync to the cloud using <span class="in">`Google Drive`</span>.  All of my teaching files are contained in this folder, so that they're synced automatically.  I also backup my files to an external hard drive using the Mac app Time Machine, plus the cloud service Backblaze.  Triple protection in case something happens to my computer!  (The "cloud" is really just physical computers located somewhere else, usually in giant warehouse-like buildings near cheap sources of electricity.)  </span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>Thanks to fast search software, we've gotten used to not having to interact with files and folder organization directly in a lot of cases.  I don't need to know exactly where a certain form is located on the campus website; a web search will turn it up in a few seconds.  But deliberately organizing your own files into folders is important.  For one thing, it makes it much easier to find related files, especially files with similar names or content.  I've taught a lot of classes over the last 15+ years.  So if I'm looking for the syllabus for the Fall 2020 version of Critical Reasoning, a search for <span class="in">`syllabus`</span> is going to turn up a lot of results.  It's much faster to go to the folder for Critical Reasoning, then Fall 2020, and then the syllabus folder.  Then, if I'm looking at that syllabus and want to look up the writing assignment I used in that course, I don't need to remember exactly what I called the writing assignment file or what keywords might bring it up.  I just click a couple of times to open the folder for the writing assignment.  </span>
-<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>There's also a technical reason for not leaving all of your files on your desktop.  Your computer assumes that files on your desktop are important and frequently accessed.  So it keeps a kind of pre-loaded copy of the file in memory, so that it can open the file quickly whenever you might need it.  Having hundreds or even thousands of files on your desktop can seriously slow down your computer.  </span>
-<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>You'll need to manually save your work by copying and pasting to a file on your computer.  </span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>Before you save your work for the first time, create **a designated folder for all of the work for this course**.  I'm going to call this **the course folder**.  The Documents folder on your computer is a good place to do this.  If you don't know how to find your Documents folder and create a new folder there, your instructor and TA can help.  </span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>Once you've created the course folder, follow these steps to save a new argument map.  Try them out with the example you typed in to the text pane a few minutes ago.  </span>
 <span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="fu">### Saving your work in the Argdown Sandbox</span></span>
-<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Argdown Sandbox has no way to save your work ##  </span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open the app TextEdit (on a Mac) or Notepad (on Windows).</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>You can use any <span class="co">[</span><span class="ot">plaintext</span><span class="co">](https://en.wikipedia.org/wiki/Plain_text)</span> editor of your choice.  But Microsoft Word and Google Docs *won't* work.</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>It's meant to be a quick preview of what Argdown can do, not a space for you to regularly do important work.  You'll need to manually save your work by copying and pasting to a file on your computer.  </span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a new file, and copy and paste the argument map text from Mermaid Live into the new file. </span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>*On a Mac*: You may need to go to Format -&gt; Make Plain Text.  See @fig-plaintext. </span>
 <span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>Before you save your work for the first time, create **a designated folder for all of the work for this course**.  I'm going to call this **the course folder**.  The Documents folder on your computer is a good place to do this.  If you don't know how to find your Documents folder and create a new folder there, your instructor and TA can help.  </span>
-<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>Once you've created the course folder, follow these steps to save a new argument map.  Try them out with the example you typed in to the text pane a few minutes ago.  </span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>    <span class="al">![Changing TextEdit to plaintext mode](img/plaintext.png)</span>{#fig-plaintext} </span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Hit ⌘+s (Mac) or Control+s (Windows) to bring up the save dialog.  </span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Make sure you're saving to the course folder.**</span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Make sure the file type is set to "plain text" or "txt".**  </span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>    <span class="al">![The Mac save dialog, showing that I'm saving this to the course folder and that the file type is plain text](img/save.png)</span>{#fig-save}</span>
 <span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open the app TextEdit (on a Mac) or Notepad (on Windows).</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>When you want to open up a saved argument map, you'll need to follow these steps. </span>
 <span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>You can use any <span class="co">[</span><span class="ot">plaintext</span><span class="co">](https://en.wikipedia.org/wiki/Plain_text)</span> editor of your choice.  But Microsoft Word and Google Docs *won't* work.</span>
-<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a new file, and copy and paste the argument map text from the Argdown Sandbox into the new file. </span>
-<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>*On a Mac*: You may need to go to Format -&gt; Make Plain Text.  See @fig-plaintext. </span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Find the argument map file in the course folder, and open it with your text editor.  </span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Select the entire argument map text, then copy it. </span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Open Mermaid Live. </span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Select the example text in the text pane, then paste the argument map text. </span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>    <span class="al">![Changing TextEdit to plaintext mode](img/plaintext.png)</span>{#fig-plaintext} </span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a><span class="fu">## Using Mermaid with Obsidian</span></span>
 <span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Hit ⌘+s (Mac) or Control+s (Windows) to bring up the save dialog.  </span>
-<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Make sure you're saving to the course folder.**</span>
-<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Make sure the file type is set to "plain text" or "txt".**  </span>
-<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>    <span class="al">![The Mac save dialog, showing that I'm saving this to the course folder and that the file type is plain text](img/save.png)</span>{#fig-save}</span>
-<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>When you want to open up a saved argument map, you'll need to follow these steps. </span>
-<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Find the argument map file in the course folder, and open it with your text editor.  </span>
-<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Select the entire argument map text, then copy it. </span>
-<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Open the Argdown Sandbox by navigating a web browser to <span class="ot">&lt;https://argdown.org/sandbox/&gt;</span>. </span>
-<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Select the example text in the text pane, then paste the argument map text. </span>
-<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a><span class="fu">### Saving an image file from the Argdown Sandbox </span></span>
-<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>After creating an argument map in the Argdown Sandbox, you can download an image file by clicking on png near the upper-right.  Hit "Create PNG" in the dialog box, and you'll automatically download an image file named <span class="in">`map.png`</span>.  **Move this to the course folder, and give it the same name as the corresponding text file.**  </span>
-<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## Using Mermaid with Obsidian</span></span>
-<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Obsidian</span><span class="co">](https://obsidian.md/)</span> is notetaking and <span class="co">[</span><span class="ot">knowledge base</span><span class="co">](https://en.wikipedia.org/wiki/Knowledge_base)</span> software.  If you've used the website Notion, it's somewhat similar.  Obsidian has built-in support for Mermaid.  Creating argument maps is just a little more complicated than using Mermaid Live, but as an app on your computer it's simple to save and open argument maps.  </span>
-<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>If you're going with this option, remember that OIT has *not* vetted Obsidian for security and privacy.  Be sure not to store any sensitive information in Obsidian. </span>
-<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Obsidian</span><span class="co">](https://obsidian.md/)</span> is notetaking and <span class="co">[</span><span class="ot">knowledge base</span><span class="co">](https://en.wikipedia.org/wiki/Knowledge_base)</span> software.  If you've used the website Notion, it's somewhat similar.  Obsidian has built-in support for Mermaid.  Creating argument maps is just a little more complicated than using Mermaid Live, but as an app on your computer it's simple to save and open argument maps.  </span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>If you're going with this option, remember that OIT has *not* vetted Obsidian for security and privacy.  Be sure not to store any sensitive information in Obsidian. </span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a><span class="fu">### Installing Obsidian</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>To install and setup Obsidian follow these steps:  </span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Navigate a web browser to <span class="ot">&lt;https://obsidian.md/&gt;</span> and click the download link for your operating system.  After the download finishes, run the installer.  </span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Open Obsidian.  It should show you the "open vault" window in @fig-obsidian. </span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>If you already created <span class="co">[</span><span class="ot">a course folder</span><span class="co">](#saving-your-work-from-mermaid-live)</span>, choose "Open folder as vault," and select your course folder as an Obsidian vault.  This won't mess up your existing files in any way; Obsidian plays nicely with other apps.  </span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>If you haven't already created a course folder, choose "Create new vault."  Give your vault/course folder a name like "Critical Reasoning" and set its location inside your Documents folder.</span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>    <span class="al">![Obsidian's "open vault" window](img/obsidian.png)</span>{#fig-obsidian}</span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>While these two steps are all we need to create diagrams, we need one extra step to get the coloring of the diagrams right for argument maps.  We'll do this using a CSS theme.  Download and unzip the file <span class="co">[</span><span class="ot">mermaid.css</span><span class="co">](https://gist.github.com/dhicks/7929b170c666cba8cec322d62c22622a/archive/0d5e0470ed709385527d6c9b84b7e4348d7280dd.zip)</span>.  </span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>In Obsidian, open Settings (gear in the lower-left), then Appearance.  </span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Look for Themes, then the folder icon.  </span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Click on it to open the themes folder. </span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>    <span class="al">![Opening your vault's themes folder](img/obsidian-themes.png)</span>{#fig-obsidian-themes}</span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>This should open a folder called <span class="in">`themes`</span> in your computer's file browser.  Move <span class="in">`mermaid.css`</span> (from step 3) into <span class="in">`themes`</span>. </span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Back in Obsidian, click on the Manage button in Themes.  Select <span class="in">`mermaid`</span>. </span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>All ready to go! </span>
 <span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a><span class="fu">### Installing Obsidian</span></span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating an argument map in Obsidian</span></span>
 <span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>To install and setup Obsidian follow these steps:  </span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>You can add multiple argument maps to any Obsidian note.  Your first time through, follow these steps.  </span>
 <span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Navigate a web browser to <span class="ot">&lt;https://obsidian.md/&gt;</span> and click the download link for your operating system.  After the download finishes, run the installer.  </span>
-<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Open Obsidian.  It should show you the "open vault" window in @fig-obsidian. </span>
-<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>If you already created <span class="co">[</span><span class="ot">a course folder</span><span class="co">](#saving-your-work-in-the-argdown-sandbox)</span>, choose "Open folder as vault," and select your course folder as an Obsidian vault.  This won't mess up your existing files in any way; Obsidian plays nicely with other apps.  </span>
-<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>If you haven't already created a course folder, choose "Create new vault."  Give your vault/course folder a name like "Critical Reasoning" and set its location inside your Documents folder.</span>
-<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>    <span class="al">![Obsidian's "open vault" window](img/obsidian.png)</span>{#fig-obsidian}</span>
-<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>While these two steps are all we need to create diagrams, we need one extra step to get the coloring of the diagrams right for argument maps.  We'll do this using a CSS theme.  Download and unzip the file <span class="co">[</span><span class="ot">mermaid.css</span><span class="co">](https://gist.github.com/dhicks/7929b170c666cba8cec322d62c22622a/archive/0d5e0470ed709385527d6c9b84b7e4348d7280dd.zip)</span>.  </span>
-<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>In Obsidian, open Settings (gear in the lower-left), then Appearance.  </span>
-<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Look for Themes, then the folder icon.  </span>
-<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Click on it to open the themes folder. </span>
-<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>    <span class="al">![Opening your vault's themes folder](img/obsidian-themes.png)</span>{#fig-obsidian-themes}</span>
-<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>This should open a folder called <span class="in">`themes`</span> in your computer's file browser.  Move <span class="in">`mermaid.css`</span> (from step 3) into <span class="in">`themes`</span>. </span>
-<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Back in Obsidian, click on the Manage button in Themes.  Select <span class="in">`mermaid`</span>. </span>
-<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a>All ready to go! </span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a new note (you can click the "New Note" icon on the upper-left, or hit ⌘+n on a Mac or Control-N on Windows).  </span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>(Optional) Give the note a name, like "first argument map."  Obsidian automatically saves any changes to your files.  </span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Type the following: </span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>Click "Show the code" to show the code to create this argument map</span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>%%| echo: fenced</span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a>P1(I<span class="ot">'</span><span class="ss">m a premise)</span></span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a><span class="ss">C(I</span><span class="ot">'</span>m the conclusion)</span>
 <span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating an argument map in Obsidian</span></span>
-<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a>You can add multiple argument maps to any Obsidian note.  Your first time through, follow these steps.  </span>
-<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a new note (you can click the "New Note" icon on the upper-left, or hit ⌘+n on a Mac or Control-N on Windows).  </span>
-<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>(Optional) Give the note a name, like "first argument map."  Obsidian automatically saves any changes to your files.  </span>
-<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Type the following: </span>
-<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>%%| echo: fenced</span>
-<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
-<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>P1(I<span class="ot">'</span><span class="ss">m a premise)</span></span>
-<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a><span class="ss">C(I</span><span class="ot">'</span>m the conclusion)</span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>If nothing seems to happen, try replacing the braces with spaces on the first line: ` ``<span class="in">` mermaid `</span></span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Hover over the image of your argument map.  Click the <span class="in">`&lt;/&gt;`</span> icon to switch back to editing the text of your map. </span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a><span class="al">![Switching an Obsidian argument map back to edit mode](img/obsidian-edit.png)</span>{#fig-obsidian-edit}</span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>In the rest of this tutorial, I won't include the ` ``<span class="in">`{mermaid}`</span> line at the top or the ` ``<span class="in">` `</span> at the end.  You need to use these special symbols (called *code fencing*) to tell Obsidian that it needs to run this chunk through Mermaid. </span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
-<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a>Click "Show the code" to show the code to create this argument map</span>
-<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>If nothing seems to happen, try replacing the braces with spaces on the first line: ` ``<span class="in">` mermaid `</span></span>
-<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Hover over the image of your argument map.  Click the <span class="in">`&lt;/&gt;`</span> icon to switch back to editing the text of your map. </span>
-<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a><span class="al">![Switching an Obsidian argument map back to edit mode](img/obsidian-edit.png)</span>{#fig-obsidian-edit}</span>
-<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a>In the rest of this tutorial, I won't include the ` ``<span class="in">`{mermaid}`</span> line at the top or the ` ``<span class="in">` `</span> at the end.  You need to use these special symbols (called *code fencing*) to tell Obsidian that it needs to run this chunk through Mermaid. </span>
-<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a><span class="fu">### Saving an argument map as a PDF file</span></span>
-<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a>Obsidian doesn't have a built-in way to generate image files or Word docx files.  (I haven't tested it, but it looks like the plugin <span class="co">[</span><span class="ot">Obsidian Pandoc</span><span class="co">](obsidian://show-plugin?id=obsidian-pandoc)</span> can do this for you.)  But it can generate PDF files, which will work just fine for our class.  </span>
-<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>To export a note as PDF, click on the three dots icon (upper right) to open the More Options menu.  Export to PDF is at the bottom.  After clicking the Export to PDF button, a save dialog will pop up.  I recommend saving it in the same folder as the argument map itself, so that you can always find them together.  </span>
-<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a><span class="fu">### Doing more with Obsidian</span></span>
-<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>For this class, this is pretty much all you need to know about Obsidian.  But it's much more powerful:  you can add formatting (including emphasis, bold, headings, lists), insert images and links, and visualize a folder of notes as a network, without adding any other plugins.  There are lots of tutorials for Obsidian online.  </span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Saving an argument map as a PDF file</span></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a>Obsidian doesn't have a built-in way to generate image files or Word docx files.  (I haven't tested it, but it looks like the plugin <span class="co">[</span><span class="ot">Obsidian Pandoc</span><span class="co">](obsidian://show-plugin?id=obsidian-pandoc)</span> can do this for you.)  But it can generate PDF files, which will work just fine for our class.  </span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a>To export a note as PDF, click on the three dots icon (upper right) to open the More Options menu.  Export to PDF is at the bottom.  After clicking the Export to PDF button, a save dialog will pop up.  I recommend saving it in the same folder as the argument map itself, so that you can always find them together.  </span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a><span class="fu">### Doing more with Obsidian</span></span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>For this class, this is pretty much all you need to know about Obsidian.  But it's much more powerful:  you can add formatting (including emphasis, bold, headings, lists), insert images and links, and visualize a folder of notes as a network, without adding any other plugins.  There are lots of tutorials for Obsidian online.  </span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
