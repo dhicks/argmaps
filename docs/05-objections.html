@@ -118,6 +118,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -204,7 +207,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Opposing arguments and objections</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Opposing arguments and objections</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -221,90 +224,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>An <strong>opposing argument</strong> is an argument whose conclusion is the opposite of another argument. An <strong>objection</strong> is an argument whose conclusion is that (a) another argument has a false premise (<strong>challenging a premise</strong>), or (b) another argument’s premises don’t support its conclusion (<strong>challenging support</strong>). In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument. We can represent both opposing arguments and objections in Argdown, which enables us to represent complex debates.</p>
 <section id="opposing-arguments" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="opposing-arguments"><span class="header-section-number">5.1</span> Opposing arguments</h2>
-<p>Consider two arguments on the legality of abortion, one from the pro-choice side and one from the anti-abortion side. In Argdown, we use <code>+&gt;</code> to indicate support and <code>-&gt;</code> to indicate opposition. Notice that the opposing argument (the right-to-life or anti-abortion argument) has a red arrow instead of a blue/green one, indicating that it’s an argument for the opposite conclusion (abortion <em>shouldn’t</em> be legal).</p>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.css"><script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-bundle.js" type="module"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.js"></script><figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-meta">===
-color:
-    relationColors:
-        support: "#0096FF"
-===</span>
+<p>Consider two arguments on the legality of abortion, one from the pro-choice side and one from the anti-abortion side. In Mermaid, we’ll use a regular arrow <code>--&gt;</code> to indicate support for a claim (it gets colored blue in our custom theme) and a dashed arrow <code>-.-&gt;</code> to indicate opposition (it gets colored red). We’ll also label opposing arguments and objections with <code>O</code> rather than <code>P</code>, which will color their boxes red instead of blue in our custom theme.</p>
+<div class="cell" data-code-folding="show">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Oright-to-life(An embryo has a right to life from conception)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Oright-to-life -.-&gt; C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart TB
 
-<span class="hljs-statement-title">[abortion]:</span> Abortion should be legal
+Pautonomy(Everyone has a right to bodily autonomy)
+Pautonomy --&gt; C(Abortion should be legal)
 
-<span class="hljs-statement-title">[bodily autonomy]:</span> Everyone has a right to bodily autonomy
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-statement-title">[right to life]:</span> An embryo has a right to life from conception
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-statement-title">[abortion]</span></code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="420pt" height="136pt" viewbox="0.00 0.00 420.00 136.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 132)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M292,-128C292,-128 120,-128 120,-128 114,-128 108,-122 108,-116 108,-116 108,-100 108,-100 108,-94 114,-88 120,-88 120,-88 292,-88 292,-88 298,-88 304,-94 304,-100 304,-100 304,-116 304,-116 304,-122 298,-128 292,-128"></path>
-<text text-anchor="start" x="187.94" y="-114" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">abortion</text>
-<text text-anchor="start" x="152.37" y="-97" font-family="arial" font-size="10.00" fill="#000000">Abortion should be legal</text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M186,-46C186,-46 12,-46 12,-46 6,-46 0,-40 0,-34 0,-34 0,-18 0,-18 0,-12 6,-6 12,-6 12,-6 186,-6 186,-6 192,-6 198,-12 198,-18 198,-18 198,-34 198,-34 198,-40 192,-46 186,-46"></path>
-<text text-anchor="start" x="62.6" y="-32" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bodily autonomy</text>
-<text text-anchor="start" x="9.81" y="-15" font-family="arial" font-size="10.00" fill="#000000">Everyone has a right to bodily autonomy</text>
-</g>
-<!-- n1&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n1-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M124.63,-46.16C138.92,-56.85 156.9,-70.29 172.32,-81.82"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="170.48,-84.81 180.58,-87.99 174.67,-79.2 170.48,-84.81"></polygon>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M400,-52C400,-52 228,-52 228,-52 222,-52 216,-46 216,-40 216,-40 216,-12 216,-12 216,-6 222,0 228,0 228,0 400,0 400,0 406,0 412,-6 412,-12 412,-12 412,-40 412,-40 412,-46 406,-52 400,-52"></path>
-<text text-anchor="start" x="290.94" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">right to life</text>
-<text text-anchor="start" x="240.38" y="-21" font-family="arial" font-size="10.00" fill="#000000">An embryo has a right to life from</text>
-<text text-anchor="start" x="288.43" y="-9" font-family="arial" font-size="10.00" fill="#000000"> conception</text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge2" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#ff0000" d="M280.12,-52.09C267.34,-61.57 252.79,-72.34 239.99,-81.82"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="237.82,-79.07 231.87,-87.84 241.99,-84.7 237.82,-79.07"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+Oright-to-life(An embryo has a right to life from conception)
+Oright-to-life -.-&gt; C
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
 </div>
-<div class="callout-caption-container flex-fill">
-Colorblindness
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Unfortunately, argdown’s default color scheme isn’t accessible to folks with red-green colorblindness. For this reason, throughout this tutorial I’m using blue instead of the default green to indicate support. You can do this too in Obsidian, by adding a header above each map:</p>
-<pre><code>===
-color:
-    relationColors:
-        support: "#0096FF"
-===
-
-[abortion]: Abortion should be legal
-
-[bodily autonomy]: Everyone has a right to bodily autonomy
-    +&gt; [abortion]
-    
-[right to life]: An embryo has a right to life from conception
-    -&gt; [abortion]</code></pre>
-<p>Obnoxiously, this change to the color scheme doesn’t appear to work in the Argdown Sandbox.</p>
+<p></p>
 </div>
 </div>
 </div>
@@ -330,500 +276,261 @@ Note
 <blockquote class="blockquote">
 <p>An embryo lacks consciousness, the capacity to feel pain, self-motivated activity, the capacity to community, and self-awareness. But only beings with these capacities have a right to life. So an embryo does not have a right to life.</p>
 </blockquote>
-<p>This argument has two interdependent premises, so we use premise-conclusion form, as in the previous section. Remember to label the premises of Warren’s argument. To show that the conclusion of Warren’s argument is <em>opposed</em> to <code>[right to life]</code>, leave the conclusion line blank and put <code>-&gt; [right to life]</code> on the next line (check the Source code if you’re confused).</p>
-<figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[abortion]:</span> Abortion should be legal
+<p>This argument has two interdependent premises, so we’ll collect them together using the argument label <code>Warren's objection</code>. To color the argument label red, give it the type <code>OL</code> instead of <code>A</code>.</p>
+<div class="cell" data-code-folding="show">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Oright-to-life(An embryo has a right to life from conception)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Oright-to-life -.-&gt; C</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>OWarren1("Only beings with the capacity for </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>     consciousness, the capacity to feel pain, </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>     self-motivated activity, the capacity to </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>     communicate, and self-awareness have </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>     a right to life.")</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>OWarren2("An embryo lacks these capacities.")</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-2">flowchart TB
 
-<span class="hljs-statement-title">[bodily autonomy]:</span> Everyone has a right to bodily autonomy
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-statement-title">[right to life]:</span> An embryo has a right to life from conception
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-argument-title">&lt;Warren's objection&gt;</span>
+Pautonomy(Everyone has a right to bodily autonomy)
+Pautonomy --&gt; C(Abortion should be legal)
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[W1]:</span> An embryo lacks these capacities.
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[W2]:</span> Only beings with the capacity for consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness have a right to life. 
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span> 
-  -&gt; <span class="hljs-statement-title">[right to life]</span></code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="527pt" height="332pt" viewbox="0.00 0.00 527.00 332.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M292,-324C292,-324 120,-324 120,-324 114,-324 108,-318 108,-312 108,-312 108,-296 108,-296 108,-290 114,-284 120,-284 120,-284 292,-284 292,-284 298,-284 304,-290 304,-296 304,-296 304,-312 304,-312 304,-318 298,-324 292,-324"></path>
-<text text-anchor="start" x="187.94" y="-310" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">abortion</text>
-<text text-anchor="start" x="152.37" y="-293" font-family="arial" font-size="10.00" fill="#000000">Abortion should be legal</text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M186,-242C186,-242 12,-242 12,-242 6,-242 0,-236 0,-230 0,-230 0,-214 0,-214 0,-208 6,-202 12,-202 12,-202 186,-202 186,-202 192,-202 198,-208 198,-214 198,-214 198,-230 198,-230 198,-236 192,-242 186,-242"></path>
-<text text-anchor="start" x="62.6" y="-228" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bodily autonomy</text>
-<text text-anchor="start" x="9.81" y="-211" font-family="arial" font-size="10.00" fill="#000000">Everyone has a right to bodily autonomy</text>
-</g>
-<!-- n1&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n1-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M124.63,-242.16C138.92,-252.85 156.9,-266.29 172.32,-277.82"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="170.48,-280.81 180.58,-283.99 174.67,-275.2 170.48,-280.81"></polygon>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M400,-248C400,-248 228,-248 228,-248 222,-248 216,-242 216,-236 216,-236 216,-208 216,-208 216,-202 222,-196 228,-196 228,-196 400,-196 400,-196 406,-196 412,-202 412,-208 412,-208 412,-236 412,-236 412,-242 406,-248 400,-248"></path>
-<text text-anchor="start" x="290.94" y="-234" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">right to life</text>
-<text text-anchor="start" x="240.38" y="-217" font-family="arial" font-size="10.00" fill="#000000">An embryo has a right to life from</text>
-<text text-anchor="start" x="288.43" y="-205" font-family="arial" font-size="10.00" fill="#000000"> conception</text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge2" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#ff0000" d="M280.12,-248.09C267.34,-257.57 252.79,-268.34 239.99,-277.82"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="237.82,-275.07 231.87,-283.84 241.99,-280.7 237.82,-275.07"></polygon>
-</g>
-<!-- n3 -->
-<g id="node4" class="node">
-<title>n3</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M293,-64C293,-64 121,-64 121,-64 115,-64 109,-58 109,-52 109,-52 109,-36 109,-36 109,-30 115,-24 121,-24 121,-24 293,-24 293,-24 299,-24 305,-30 305,-36 305,-36 305,-52 305,-52 305,-58 299,-64 293,-64"></path>
-<text text-anchor="start" x="199.5" y="-50" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">W1</text>
-<text text-anchor="start" x="131.43" y="-33" font-family="arial" font-size="10.00" fill="#000000">An embryo lacks these capacities.</text>
-</g>
-<!-- n5 -->
-<g id="node6" class="node">
-<title>n5</title>
-<path fill="#1b9e77" stroke="black" d="M400,-160C400,-160 228,-160 228,-160 222,-160 216,-154 216,-148 216,-148 216,-136 216,-136 216,-130 222,-124 228,-124 228,-124 400,-124 400,-124 406,-124 412,-130 412,-136 412,-136 412,-148 412,-148 412,-154 406,-160 400,-160"></path>
-<text text-anchor="start" x="272.61" y="-140" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Warren's objection</text>
-</g>
-<!-- n3&#45;&gt;n5 -->
-<g id="edge4" class="edge">
-<title>n3-&gt;n5</title>
-<path fill="none" stroke="#0096ff" d="M228.4,-64.2C245.21,-79.29 268.75,-100.4 286.89,-116.67"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="285.02,-119.7 294.8,-123.77 289.69,-114.49 285.02,-119.7"></polygon>
-</g>
-<!-- n4 -->
-<g id="node5" class="node">
-<title>n4</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M507,-88C507,-88 335,-88 335,-88 329,-88 323,-82 323,-76 323,-76 323,-12 323,-12 323,-6 329,0 335,0 335,0 507,0 507,0 513,0 519,-6 519,-12 519,-12 519,-76 519,-76 519,-82 513,-88 507,-88"></path>
-<text text-anchor="start" x="413.5" y="-74" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">W2</text>
-<text text-anchor="start" x="349.04" y="-57" font-family="arial" font-size="10.00" fill="#000000">Only beings with the capacity for</text>
-<text text-anchor="start" x="342.36" y="-45" font-family="arial" font-size="10.00" fill="#000000"> consciousness, the capacity to feel</text>
-<text text-anchor="start" x="349.88" y="-33" font-family="arial" font-size="10.00" fill="#000000"> pain, self-motivated activity, the</text>
-<text text-anchor="start" x="353.48" y="-21" font-family="arial" font-size="10.00" fill="#000000"> capacity to communicate, and</text>
-<text text-anchor="start" x="342.37" y="-9" font-family="arial" font-size="10.00" fill="#000000"> self-awareness have a right to life. </text>
-</g>
-<!-- n4&#45;&gt;n5 -->
-<g id="edge5" class="edge">
-<title>n4-&gt;n5</title>
-<path fill="none" stroke="#0096ff" d="M372.82,-88.23C361.7,-98.2 350.28,-108.45 340.49,-117.24"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="338.13,-114.65 333.02,-123.93 342.8,-119.86 338.13,-114.65"></polygon>
-</g>
-<!-- n5&#45;&gt;n2 -->
-<g id="edge3" class="edge">
-<title>n5-&gt;n2</title>
-<path fill="none" stroke="#ff0000" d="M314,-160.31C314,-167.79 314,-176.84 314,-185.64"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="310.5,-185.74 314,-195.74 317.5,-185.74 310.5,-185.74"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
+Oright-to-life(An embryo has a right to life from conception)
+Oright-to-life -.-&gt; C
+
+OWarren1("Only beings with the capacity for 
+     consciousness, the capacity to feel pain, 
+     self-motivated activity, the capacity to 
+     communicate, and self-awareness have 
+     a right to life.")
+OWarren2("An embryo lacks these capacities.")
+
+OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>When you’re reading this, remember that solid/blue indicates support and dashed/red indicates opposition. So Warren’s two premises support (solid blue line) her objection, and the objection opposes (dashed red line) the right-to-life premise. In turn, the right-to-life premise opposes (dashed red line) the conclusion that abortion should be legal.</p>
 <p>An opposing argument is not much better than <strong>mere disagreement</strong> (where one side makes a claim and the other side says the opposite, without any arguments). Opposing arguments give us some insight into how each side of a debate thinks about the issue. But objections help us understand what one side thinks of the other side’s arguments. This can lead to deeper insights: What’s the fundamental disagreement between the two sides? Where do they agree? Tracing out a complex debate, using tools like argument maps, might not resolve a controversy, but they can help us understand it better.</p>
-<p>A number of philosophers and other writers, including the <a href="https://drive.google.com/file/d/0B6oYmzobonqoWTJqeUhxSm5XcWM/view?usp=sharing&amp;resourcekey=0-VNrlLS4h6Iz1txoiA9swGA">ethicist Don Marquis</a>, responded to Warren’s argument by pointing out that coma patients have a right to life.</p>
-<figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[abortion]:</span> Abortion should be legal
+<p>A number of philosophers and other writers, including the <a href="https://drive.google.com/file/d/0B6oYmzobonqoWTJqeUhxSm5XcWM/view?usp=sharing&amp;resourcekey=0-VNrlLS4h6Iz1txoiA9swGA">ethicist Don Marquis</a>, responded to Warren’s argument by pointing out that coma patients have a right to life, despite lacking the capacities Warren points to.</p>
+<div class="cell" data-code-folding="show">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Oright-to-life(An embryo has a right to life from conception)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Oright-to-life -.-&gt; C</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>OWarren1("Only beings with the capacity for </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>     consciousness, the capacity to feel pain, </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>     self-motivated activity, the capacity to </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>     communicate, and self-awareness have </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>     a right to life.")</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>OWarren2("An embryo lacks these capacities.")</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>OMarquis1("Coma patients also lack these capacities.")</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>OMarquis2("Coma patients have a right to life.")</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-3">flowchart TB
 
-<span class="hljs-statement-title">[bodily autonomy]:</span> Everyone has a right to bodily autonomy
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-statement-title">[right to life]:</span> An embryo has a right to life from conception
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-argument-title">&lt;Warren's objection&gt;</span>
+Pautonomy(Everyone has a right to bodily autonomy)
+Pautonomy --&gt; C(Abortion should be legal)
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[W1]:</span> An embryo lacks these capacities.
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[W2]:</span> Only beings with the capacity for consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness have a right to life. 
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span> 
-  -&gt; <span class="hljs-statement-title">[right to life]</span>
-  
-<span class="hljs-argument-title">&lt;Marquis' reply&gt;</span>
+Oright-to-life(An embryo has a right to life from conception)
+Oright-to-life -.-&gt; C
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[M1]:</span> Coma patients lack consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness.  
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[M2]:</span> Coma patients have a right to life. 
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span>
-  -&gt; <span class="hljs-statement-title">[W2]</span></code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="634pt" height="516pt" viewbox="0.00 0.00 634.00 516.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 512)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M292,-508C292,-508 120,-508 120,-508 114,-508 108,-502 108,-496 108,-496 108,-480 108,-480 108,-474 114,-468 120,-468 120,-468 292,-468 292,-468 298,-468 304,-474 304,-480 304,-480 304,-496 304,-496 304,-502 298,-508 292,-508"></path>
-<text text-anchor="start" x="187.94" y="-494" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">abortion</text>
-<text text-anchor="start" x="152.37" y="-477" font-family="arial" font-size="10.00" fill="#000000">Abortion should be legal</text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M186,-426C186,-426 12,-426 12,-426 6,-426 0,-420 0,-414 0,-414 0,-398 0,-398 0,-392 6,-386 12,-386 12,-386 186,-386 186,-386 192,-386 198,-392 198,-398 198,-398 198,-414 198,-414 198,-420 192,-426 186,-426"></path>
-<text text-anchor="start" x="62.6" y="-412" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bodily autonomy</text>
-<text text-anchor="start" x="9.81" y="-395" font-family="arial" font-size="10.00" fill="#000000">Everyone has a right to bodily autonomy</text>
-</g>
-<!-- n1&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n1-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M124.63,-426.16C138.92,-436.85 156.9,-450.29 172.32,-461.82"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="170.48,-464.81 180.58,-467.99 174.67,-459.2 170.48,-464.81"></polygon>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M400,-432C400,-432 228,-432 228,-432 222,-432 216,-426 216,-420 216,-420 216,-392 216,-392 216,-386 222,-380 228,-380 228,-380 400,-380 400,-380 406,-380 412,-386 412,-392 412,-392 412,-420 412,-420 412,-426 406,-432 400,-432"></path>
-<text text-anchor="start" x="290.94" y="-418" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">right to life</text>
-<text text-anchor="start" x="240.38" y="-401" font-family="arial" font-size="10.00" fill="#000000">An embryo has a right to life from</text>
-<text text-anchor="start" x="288.43" y="-389" font-family="arial" font-size="10.00" fill="#000000"> conception</text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge2" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#ff0000" d="M280.12,-432.09C267.34,-441.57 252.79,-452.34 239.99,-461.82"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="237.82,-459.07 231.87,-467.84 241.99,-464.7 237.82,-459.07"></polygon>
-</g>
-<!-- n3 -->
-<g id="node4" class="node">
-<title>n3</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M293,-248C293,-248 121,-248 121,-248 115,-248 109,-242 109,-236 109,-236 109,-220 109,-220 109,-214 115,-208 121,-208 121,-208 293,-208 293,-208 299,-208 305,-214 305,-220 305,-220 305,-236 305,-236 305,-242 299,-248 293,-248"></path>
-<text text-anchor="start" x="199.5" y="-234" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">W1</text>
-<text text-anchor="start" x="131.43" y="-217" font-family="arial" font-size="10.00" fill="#000000">An embryo lacks these capacities.</text>
-</g>
-<!-- n7 -->
-<g id="node8" class="node">
-<title>n7</title>
-<path fill="#1b9e77" stroke="black" d="M400,-344C400,-344 228,-344 228,-344 222,-344 216,-338 216,-332 216,-332 216,-320 216,-320 216,-314 222,-308 228,-308 228,-308 400,-308 400,-308 406,-308 412,-314 412,-320 412,-320 412,-332 412,-332 412,-338 406,-344 400,-344"></path>
-<text text-anchor="start" x="272.61" y="-324" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Warren's objection</text>
-</g>
-<!-- n3&#45;&gt;n7 -->
-<g id="edge5" class="edge">
-<title>n3-&gt;n7</title>
-<path fill="none" stroke="#0096ff" d="M228.4,-248.2C245.21,-263.29 268.75,-284.4 286.89,-300.67"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="285.02,-303.7 294.8,-307.77 289.69,-298.49 285.02,-303.7"></polygon>
-</g>
-<!-- n4 -->
-<g id="node5" class="node">
-<title>n4</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M507,-272C507,-272 335,-272 335,-272 329,-272 323,-266 323,-260 323,-260 323,-196 323,-196 323,-190 329,-184 335,-184 335,-184 507,-184 507,-184 513,-184 519,-190 519,-196 519,-196 519,-260 519,-260 519,-266 513,-272 507,-272"></path>
-<text text-anchor="start" x="413.5" y="-258" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">W2</text>
-<text text-anchor="start" x="349.04" y="-241" font-family="arial" font-size="10.00" fill="#000000">Only beings with the capacity for</text>
-<text text-anchor="start" x="342.36" y="-229" font-family="arial" font-size="10.00" fill="#000000"> consciousness, the capacity to feel</text>
-<text text-anchor="start" x="349.88" y="-217" font-family="arial" font-size="10.00" fill="#000000"> pain, self-motivated activity, the</text>
-<text text-anchor="start" x="353.48" y="-205" font-family="arial" font-size="10.00" fill="#000000"> capacity to communicate, and</text>
-<text text-anchor="start" x="342.37" y="-193" font-family="arial" font-size="10.00" fill="#000000"> self-awareness have a right to life. </text>
-</g>
-<!-- n4&#45;&gt;n7 -->
-<g id="edge6" class="edge">
-<title>n4-&gt;n7</title>
-<path fill="none" stroke="#0096ff" d="M372.82,-272.23C361.7,-282.2 350.28,-292.45 340.49,-301.24"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="338.13,-298.65 333.02,-307.93 342.8,-303.86 338.13,-298.65"></polygon>
-</g>
-<!-- n5 -->
-<g id="node6" class="node">
-<title>n5</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M400,-76C400,-76 228,-76 228,-76 222,-76 216,-70 216,-64 216,-64 216,-12 216,-12 216,-6 222,0 228,0 228,0 400,0 400,0 406,0 412,-6 412,-12 412,-12 412,-64 412,-64 412,-70 406,-76 400,-76"></path>
-<text text-anchor="start" x="307.06" y="-62" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">M1</text>
-<text text-anchor="start" x="227.59" y="-45" font-family="arial" font-size="10.00" fill="#000000">Coma patients lack consciousness, the</text>
-<text text-anchor="start" x="234.54" y="-33" font-family="arial" font-size="10.00" fill="#000000"> capacity to feel pain, self-motivated</text>
-<text text-anchor="start" x="229.82" y="-21" font-family="arial" font-size="10.00" fill="#000000"> activity, the capacity to communicate,</text>
-<text text-anchor="start" x="266.49" y="-9" font-family="arial" font-size="10.00" fill="#000000"> and self-awareness. </text>
-</g>
-<!-- n8 -->
-<g id="node9" class="node">
-<title>n8</title>
-<path fill="#1b9e77" stroke="black" d="M507,-148C507,-148 335,-148 335,-148 329,-148 323,-142 323,-136 323,-136 323,-124 323,-124 323,-118 329,-112 335,-112 335,-112 507,-112 507,-112 513,-112 519,-118 519,-124 519,-124 519,-136 519,-136 519,-142 513,-148 507,-148"></path>
-<text text-anchor="start" x="389.9" y="-128" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Marquis' reply</text>
-</g>
-<!-- n5&#45;&gt;n8 -->
-<g id="edge7" class="edge">
-<title>n5-&gt;n8</title>
-<path fill="none" stroke="#0096ff" d="M358.14,-76.13C369.88,-86 382.25,-96.4 392.87,-105.34"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="390.72,-108.1 400.62,-111.86 395.22,-102.74 390.72,-108.1"></polygon>
-</g>
-<!-- n6 -->
-<g id="node7" class="node">
-<title>n6</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M614,-58C614,-58 442,-58 442,-58 436,-58 430,-52 430,-46 430,-46 430,-30 430,-30 430,-24 436,-18 442,-18 442,-18 614,-18 614,-18 620,-18 626,-24 626,-30 626,-30 626,-46 626,-46 626,-52 620,-58 614,-58"></path>
-<text text-anchor="start" x="521.06" y="-44" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">M2</text>
-<text text-anchor="start" x="452.15" y="-27" font-family="arial" font-size="10.00" fill="#000000">Coma patients have a right to life. </text>
-</g>
-<!-- n6&#45;&gt;n8 -->
-<g id="edge8" class="edge">
-<title>n6-&gt;n8</title>
-<path fill="none" stroke="#0096ff" d="M505.31,-58.09C488.92,-71.87 466.69,-90.57 449.17,-105.31"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="446.89,-102.65 441.49,-111.77 451.39,-108.01 446.89,-102.65"></polygon>
-</g>
-<!-- n7&#45;&gt;n2 -->
-<g id="edge3" class="edge">
-<title>n7-&gt;n2</title>
-<path fill="none" stroke="#ff0000" d="M314,-344.31C314,-351.79 314,-360.84 314,-369.64"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="310.5,-369.74 314,-379.74 317.5,-369.74 310.5,-369.74"></polygon>
-</g>
-<!-- n8&#45;&gt;n4 -->
-<g id="edge4" class="edge">
-<title>n8-&gt;n4</title>
-<path fill="none" stroke="#ff0000" d="M421,-148.16C421,-155.45 421,-164.38 421,-173.58"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="417.5,-173.61 421,-183.61 424.5,-173.61 417.5,-173.61"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
-<p>This kind of objection to a previous objection is called a <strong>reply</strong>. In philosophy classes, you’ll often be asked to write papers where you present an argument, an objection, and finally a reply to that objection.</p>
+OWarren1("Only beings with the capacity for 
+     consciousness, the capacity to feel pain, 
+     self-motivated activity, the capacity to 
+     communicate, and self-awareness have 
+     a right to life.")
+OWarren2("An embryo lacks these capacities.")
+
+OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life
+
+OMarquis1("Coma patients also lack these capacities.")
+OMarquis2("Coma patients have a right to life.")
+
+OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1
+</pre>
+<div id="mermaid-tooltip-3" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>Marquis’ argument doesn’t deny that an embryo lacks the capacities for consciousness, pain, and so on. Instead he’s criticizing Warren’s claim that only beings with these capacities have a right to life. So his argument is another example of an objection to a premise. Specifically, this kind of objection to a previous objection is called a <strong>reply</strong>. In philosophy classes, you’ll often be asked to write papers where you present an argument, an objection, and finally a reply to that objection.</p>
 <p>Marquis didn’t just give a reply to Warren’s objection. He offered his own argument for an embryo’s right to life. He calls it the “future-like-ours” argument, because it appeals to the idea that “The future of a standard fetus includes a set of experiences, projects, activities, and such which are identical with the futures of adult human beings and are identical with the futures of young children,” and that a fetus has a right to life because it has the potential for this kind of future. Marquis also argues that this “future-like-ours” view explains why temporary coma patients, at least, have a right to life: because they have the potential to awaken and lead a more-or-less typical adult human life.</p>
-<figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[abortion]:</span> Abortion should be legal
+<div class="cell" data-code-folding="show">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Oright-to-life(An embryo has a right to life from conception)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Oright-to-life -.-&gt; C</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>%% Warren's objection to the right-to-life argument</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>subgraph Warren's objection</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>OWarren1("Only beings with the capacity for </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>     consciousness, the capacity to feel pain, </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>     self-motivated activity, the capacity to </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>     communicate, and self-awareness have </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>     a right to life.")</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>OWarren2("An embryo lacks these capacities.")</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>end</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>%% Marquis' reply to Warren's objection</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>subgraph Marquis' reply</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>OMarquis1("Coma patients also lack these capacities.")</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>OMarquis2("Coma patients have a right to life.")</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>end</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>%% Marquis' future-like-ours account of the right to life</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>subgraph Marquis' future-like-ours account</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>Pfuture("Any being with the potential to </span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>         lead a future-like-ours has a </span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>         right to life.")</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>Pcoma("Temporary coma patients have the potential</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>       to lead a future-like-ours.")</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>Pfuture &amp; Pcoma --- Acoma[Marquis: Coma patient] --&gt; OMarquis2</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>Pembryo("An embryo has the potential</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>         to lead a future-like-ours.")</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>Pfuture &amp; Pembryo --- Aembryo[Marquis: Embryo] --&gt; Oright-to-life</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>end</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-4">flowchart TB
 
-<span class="hljs-statement-title">[bodily autonomy]:</span> Everyone has a right to bodily autonomy
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-statement-title">[right to life]:</span> An embryo has a right to life from conception
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-argument-title">&lt;Warren's objection&gt;</span>
+Pautonomy(Everyone has a right to bodily autonomy)
+Pautonomy --&gt; C(Abortion should be legal)
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[W1]:</span> An embryo lacks these capacities.
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[W2]:</span> Only beings with the capacity for consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness have a right to life. <span class="hljs-tag">#right-to-life-condition</span>
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span> 
-  -&gt; <span class="hljs-statement-title">[right to life]</span>
-  
-<span class="hljs-argument-title">&lt;Marquis' reply&gt;</span>
+Oright-to-life(An embryo has a right to life from conception)
+Oright-to-life -.-&gt; C
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[M1]:</span> Coma patients lack consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness.  
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[M2]:</span> Coma patients have a right to life. 
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span>
-  -&gt; <span class="hljs-statement-title">[W2]</span>
-  
+%% Warren's objection to the right-to-life argument
+subgraph Warren's objection
+OWarren1("Only beings with the capacity for 
+     consciousness, the capacity to feel pain, 
+     self-motivated activity, the capacity to 
+     communicate, and self-awareness have 
+     a right to life.")
+OWarren2("An embryo lacks these capacities.")
 
-<span class="hljs-statement-title">[future-like-ours]:</span> Any being with the potential to lead a future-like-ours has a right to life. <span class="hljs-tag">#right-to-life-condition</span>
+OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life
+end
 
-<span class="hljs-argument-title">&lt;Future-like-ours argument: Coma patient&gt;</span>
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[future-like-ours]</span>
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[future-coma]:</span> Temporary coma patients have this potential
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span> <span class="hljs-statement-title">[M2]</span>
+%% Marquis' reply to Warren's objection
+subgraph Marquis' reply
+OMarquis1("Coma patients also lack these capacities.")
+OMarquis2("Coma patients have a right to life.")
 
-<span class="hljs-argument-title">&lt;Future-like-ours argument: Embryo&gt;</span>
+OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1
+end
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[future-like-ours]</span>
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[future-embryo]:</span> An embryo has this potential
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span> <span class="hljs-statement-title">[right to life]</span></code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="720pt" height="692pt" viewbox="0.00 0.00 720.00 692.31" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(0.99 0.99) rotate(0) translate(4 696)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M386,-692C386,-692 214,-692 214,-692 208,-692 202,-686 202,-680 202,-680 202,-664 202,-664 202,-658 208,-652 214,-652 214,-652 386,-652 386,-652 392,-652 398,-658 398,-664 398,-664 398,-680 398,-680 398,-686 392,-692 386,-692"></path>
-<text text-anchor="start" x="281.94" y="-678" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">abortion</text>
-<text text-anchor="start" x="246.37" y="-661" font-family="arial" font-size="10.00" fill="#000000">Abortion should be legal</text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M280,-610C280,-610 106,-610 106,-610 100,-610 94,-604 94,-598 94,-598 94,-582 94,-582 94,-576 100,-570 106,-570 106,-570 280,-570 280,-570 286,-570 292,-576 292,-582 292,-582 292,-598 292,-598 292,-604 286,-610 280,-610"></path>
-<text text-anchor="start" x="156.6" y="-596" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bodily autonomy</text>
-<text text-anchor="start" x="103.81" y="-579" font-family="arial" font-size="10.00" fill="#000000">Everyone has a right to bodily autonomy</text>
-</g>
-<!-- n1&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n1-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M218.63,-610.16C232.92,-620.85 250.9,-634.29 266.32,-645.82"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="264.48,-648.81 274.58,-651.99 268.67,-643.2 264.48,-648.81"></polygon>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M494,-616C494,-616 322,-616 322,-616 316,-616 310,-610 310,-604 310,-604 310,-576 310,-576 310,-570 316,-564 322,-564 322,-564 494,-564 494,-564 500,-564 506,-570 506,-576 506,-576 506,-604 506,-604 506,-610 500,-616 494,-616"></path>
-<text text-anchor="start" x="384.94" y="-602" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">right to life</text>
-<text text-anchor="start" x="334.38" y="-585" font-family="arial" font-size="10.00" fill="#000000">An embryo has a right to life from</text>
-<text text-anchor="start" x="382.43" y="-573" font-family="arial" font-size="10.00" fill="#000000"> conception</text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge2" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#ff0000" d="M374.12,-616.09C361.34,-625.57 346.79,-636.34 333.99,-645.82"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="331.82,-643.07 325.87,-651.84 335.99,-648.7 331.82,-643.07"></polygon>
-</g>
-<!-- n3 -->
-<g id="node4" class="node">
-<title>n3</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M195,-426C195,-426 23,-426 23,-426 17,-426 11,-420 11,-414 11,-414 11,-398 11,-398 11,-392 17,-386 23,-386 23,-386 195,-386 195,-386 201,-386 207,-392 207,-398 207,-398 207,-414 207,-414 207,-420 201,-426 195,-426"></path>
-<text text-anchor="start" x="101.5" y="-412" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">W1</text>
-<text text-anchor="start" x="33.43" y="-395" font-family="arial" font-size="10.00" fill="#000000">An embryo lacks these capacities.</text>
-</g>
-<!-- n10 -->
-<g id="node11" class="node">
-<title>n10</title>
-<path fill="#1b9e77" stroke="black" d="M409,-528C409,-528 237,-528 237,-528 231,-528 225,-522 225,-516 225,-516 225,-504 225,-504 225,-498 231,-492 237,-492 237,-492 409,-492 409,-492 415,-492 421,-498 421,-504 421,-504 421,-516 421,-516 421,-522 415,-528 409,-528"></path>
-<text text-anchor="start" x="281.61" y="-508" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Warren's objection</text>
-</g>
-<!-- n3&#45;&gt;n10 -->
-<g id="edge7" class="edge">
-<title>n3-&gt;n10</title>
-<path fill="none" stroke="#0096ff" d="M149,-426.07C185.58,-443.5 239.64,-469.27 277.78,-487.45"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="276.58,-490.75 287.11,-491.89 279.59,-484.43 276.58,-490.75"></polygon>
-</g>
-<!-- n4 -->
-<g id="node5" class="node">
-<title>n4</title>
-<path fill="white" stroke="#d95f02" stroke-width="2" d="M409,-456C409,-456 237,-456 237,-456 231,-456 225,-450 225,-444 225,-444 225,-368 225,-368 225,-362 231,-356 237,-356 237,-356 409,-356 409,-356 415,-356 421,-362 421,-368 421,-368 421,-444 421,-444 421,-450 415,-456 409,-456"></path>
-<text text-anchor="start" x="315.5" y="-442" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">W2</text>
-<text text-anchor="start" x="251.04" y="-425" font-family="arial" font-size="10.00" fill="#000000">Only beings with the capacity for</text>
-<text text-anchor="start" x="244.36" y="-413" font-family="arial" font-size="10.00" fill="#000000"> consciousness, the capacity to feel</text>
-<text text-anchor="start" x="251.88" y="-401" font-family="arial" font-size="10.00" fill="#000000"> pain, self-motivated activity, the</text>
-<text text-anchor="start" x="255.48" y="-389" font-family="arial" font-size="10.00" fill="#000000"> capacity to communicate, and</text>
-<text text-anchor="start" x="245.76" y="-377" font-family="arial" font-size="10.00" fill="#000000"> self-awareness have a right to life.</text>
-<text text-anchor="start" x="273.55" y="-365" font-family="arial" font-size="10.00" fill="#000000"> #right-to-life-condition</text>
-</g>
-<!-- n4&#45;&gt;n10 -->
-<g id="edge8" class="edge">
-<title>n4-&gt;n10</title>
-<path fill="none" stroke="#0096ff" d="M323,-456.21C323,-465.03 323,-473.93 323,-481.84"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="319.5,-481.92 323,-491.92 326.5,-481.92 319.5,-481.92"></polygon>
-</g>
-<!-- n5 -->
-<g id="node6" class="node">
-<title>n5</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M184,-248C184,-248 12,-248 12,-248 6,-248 0,-242 0,-236 0,-236 0,-184 0,-184 0,-178 6,-172 12,-172 12,-172 184,-172 184,-172 190,-172 196,-178 196,-184 196,-184 196,-236 196,-236 196,-242 190,-248 184,-248"></path>
-<text text-anchor="start" x="91.06" y="-234" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">M1</text>
-<text text-anchor="start" x="11.59" y="-217" font-family="arial" font-size="10.00" fill="#000000">Coma patients lack consciousness, the</text>
-<text text-anchor="start" x="18.54" y="-205" font-family="arial" font-size="10.00" fill="#000000"> capacity to feel pain, self-motivated</text>
-<text text-anchor="start" x="13.82" y="-193" font-family="arial" font-size="10.00" fill="#000000"> activity, the capacity to communicate,</text>
-<text text-anchor="start" x="50.49" y="-181" font-family="arial" font-size="10.00" fill="#000000"> and self-awareness. </text>
-</g>
-<!-- n11 -->
-<g id="node12" class="node">
-<title>n11</title>
-<path fill="#1b9e77" stroke="black" d="M398,-320C398,-320 226,-320 226,-320 220,-320 214,-314 214,-308 214,-308 214,-296 214,-296 214,-290 220,-284 226,-284 226,-284 398,-284 398,-284 404,-284 410,-290 410,-296 410,-296 410,-308 410,-308 410,-314 404,-320 398,-320"></path>
-<text text-anchor="start" x="280.9" y="-300" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Marquis' reply</text>
-</g>
-<!-- n5&#45;&gt;n11 -->
-<g id="edge9" class="edge">
-<title>n5-&gt;n11</title>
-<path fill="none" stroke="#0096ff" d="M186.28,-248.13C212.17,-259.01 239.57,-270.54 262.16,-280.04"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="260.95,-283.33 271.53,-283.98 263.67,-276.88 260.95,-283.33"></polygon>
-</g>
-<!-- n6 -->
-<g id="node7" class="node">
-<title>n6</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M398,-230C398,-230 226,-230 226,-230 220,-230 214,-224 214,-218 214,-218 214,-202 214,-202 214,-196 220,-190 226,-190 226,-190 398,-190 398,-190 404,-190 410,-196 410,-202 410,-202 410,-218 410,-218 410,-224 404,-230 398,-230"></path>
-<text text-anchor="start" x="305.06" y="-216" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">M2</text>
-<text text-anchor="start" x="236.15" y="-199" font-family="arial" font-size="10.00" fill="#000000">Coma patients have a right to life. </text>
-</g>
-<!-- n6&#45;&gt;n11 -->
-<g id="edge10" class="edge">
-<title>n6-&gt;n11</title>
-<path fill="none" stroke="#0096ff" d="M312,-230.09C312,-242.75 312,-259.57 312,-273.65"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="308.5,-273.77 312,-283.77 315.5,-273.77 308.5,-273.77"></polygon>
-</g>
-<!-- n7 -->
-<g id="node8" class="node">
-<title>n7</title>
-<path fill="white" stroke="#d95f02" stroke-width="2" d="M494,-64C494,-64 322,-64 322,-64 316,-64 310,-58 310,-52 310,-52 310,-12 310,-12 310,-6 316,0 322,0 322,0 494,0 494,0 500,0 506,-6 506,-12 506,-12 506,-52 506,-52 506,-58 500,-64 494,-64"></path>
-<text text-anchor="start" x="374.67" y="-50" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">future-like-ours</text>
-<text text-anchor="start" x="326.3" y="-33" font-family="arial" font-size="10.00" fill="#000000">Any being with the potential to lead a</text>
-<text text-anchor="start" x="333.82" y="-21" font-family="arial" font-size="10.00" fill="#000000"> future-like-ours has a right to life.</text>
-<text text-anchor="start" x="358.55" y="-9" font-family="arial" font-size="10.00" fill="#000000"> #right-to-life-condition</text>
-</g>
-<!-- n12 -->
-<g id="node13" class="node">
-<title>n12</title>
-<path fill="#1b9e77" stroke="black" d="M388,-136C388,-136 212,-136 212,-136 206,-136 200,-130 200,-124 200,-124 200,-112 200,-112 200,-106 206,-100 212,-100 212,-100 388,-100 388,-100 394,-100 400,-106 400,-112 400,-112 400,-124 400,-124 400,-130 394,-136 388,-136"></path>
-<text text-anchor="start" x="209.99" y="-116" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Future-like-ours argument: Coma patient</text>
-</g>
-<!-- n7&#45;&gt;n12 -->
-<g id="edge11" class="edge">
-<title>n7-&gt;n12</title>
-<path fill="none" stroke="#0096ff" d="M368.09,-64.04C355.52,-73.82 341.85,-84.45 330.08,-93.6"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="327.64,-91.07 321.89,-99.97 331.94,-96.59 327.64,-91.07"></polygon>
-</g>
-<!-- n13 -->
-<g id="node14" class="node">
-<title>n13</title>
-<path fill="#1b9e77" stroke="black" d="M602,-136C602,-136 430,-136 430,-136 424,-136 418,-130 418,-124 418,-124 418,-112 418,-112 418,-106 424,-100 430,-100 430,-100 602,-100 602,-100 608,-100 614,-106 614,-112 614,-112 614,-124 614,-124 614,-130 608,-136 602,-136"></path>
-<text text-anchor="start" x="438.5" y="-116" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Future-like-ours argument: Embryo</text>
-</g>
-<!-- n7&#45;&gt;n13 -->
-<g id="edge12" class="edge">
-<title>n7-&gt;n13</title>
-<path fill="none" stroke="#0096ff" d="M447.91,-64.04C460.48,-73.82 474.15,-84.45 485.92,-93.6"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="484.06,-96.59 494.11,-99.97 488.36,-91.07 484.06,-96.59"></polygon>
-</g>
-<!-- n8 -->
-<g id="node9" class="node">
-<title>n8</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M280,-58C280,-58 108,-58 108,-58 102,-58 96,-52 96,-46 96,-46 96,-18 96,-18 96,-12 102,-6 108,-6 108,-6 280,-6 280,-6 286,-6 292,-12 292,-18 292,-18 292,-46 292,-46 292,-52 286,-58 280,-58"></path>
-<text text-anchor="start" x="167.33" y="-44" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">future-coma</text>
-<text text-anchor="start" x="115.93" y="-27" font-family="arial" font-size="10.00" fill="#000000">Temporary coma patients have this</text>
-<text text-anchor="start" x="173.72" y="-15" font-family="arial" font-size="10.00" fill="#000000"> potential</text>
-</g>
-<!-- n8&#45;&gt;n12 -->
-<g id="edge13" class="edge">
-<title>n8-&gt;n12</title>
-<path fill="none" stroke="#0096ff" d="M225.8,-58.2C239.84,-69.33 256.26,-82.34 270.07,-93.28"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="268.28,-96.33 278.3,-99.8 272.63,-90.85 268.28,-96.33"></polygon>
-</g>
-<!-- n9 -->
-<g id="node10" class="node">
-<title>n9</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M708,-52C708,-52 536,-52 536,-52 530,-52 524,-46 524,-40 524,-40 524,-24 524,-24 524,-18 530,-12 536,-12 536,-12 708,-12 708,-12 714,-12 720,-18 720,-24 720,-24 720,-40 720,-40 720,-46 714,-52 708,-52"></path>
-<text text-anchor="start" x="590.89" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">future-embryo</text>
-<text text-anchor="start" x="558.93" y="-21" font-family="arial" font-size="10.00" fill="#000000">An embryo has this potential</text>
-</g>
-<!-- n9&#45;&gt;n13 -->
-<g id="edge14" class="edge">
-<title>n9-&gt;n13</title>
-<path fill="none" stroke="#0096ff" d="M597.95,-52.06C582.55,-64.26 562.45,-80.19 546.01,-93.22"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="543.46,-90.77 537.79,-99.73 547.81,-96.26 543.46,-90.77"></polygon>
-</g>
-<!-- n10&#45;&gt;n2 -->
-<g id="edge3" class="edge">
-<title>n10-&gt;n2</title>
-<path fill="none" stroke="#ff0000" d="M341.86,-528.31C351,-536.69 362.26,-547.03 372.89,-556.78"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="370.74,-559.56 380.48,-563.74 375.47,-554.4 370.74,-559.56"></polygon>
-</g>
-<!-- n11&#45;&gt;n4 -->
-<g id="edge4" class="edge">
-<title>n11-&gt;n4</title>
-<path fill="none" stroke="#ff0000" d="M313.87,-320.3C314.65,-327.57 315.61,-336.48 316.61,-345.77"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="313.16,-346.36 317.71,-355.93 320.12,-345.61 313.16,-346.36"></polygon>
-</g>
-<!-- n12&#45;&gt;n6 -->
-<g id="edge5" class="edge">
-<title>n12-&gt;n6</title>
-<path fill="none" stroke="#0096ff" d="M302.31,-136.35C303.96,-148.68 306.2,-165.54 308.12,-179.91"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="304.65,-180.38 309.44,-189.83 311.59,-179.46 304.65,-180.38"></polygon>
-</g>
-<!-- n13&#45;&gt;n2 -->
-<g id="edge6" class="edge">
-<title>n13-&gt;n2</title>
-<path fill="none" stroke="#0096ff" d="M508.77,-136.22C496.05,-168.12 471,-238.83 471,-301 471,-301 471,-301 471,-407 471,-460.87 446.05,-519.01 427.55,-554.72"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="424.36,-553.26 422.77,-563.74 430.55,-556.54 424.36,-553.26"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
-<p>Reviewing this argument map, we can identify a fundamental disagreement between the pro-choice and pro-life positions on abortion (at least as those positions are represented by Warren and Marquis). I’ve highlighted two key claims using the hashtag <code>#right-to-life-condition</code>. Warren’s view connects the right to life to <em>actually</em> having certain capacities <em>now</em>, while Marquis’ view connects the right to life to the <em>potential</em> to have certain capacities in the <em>future</em>.</p>
+
+%% Marquis' future-like-ours account of the right to life
+subgraph Marquis' future-like-ours account
+Pfuture("Any being with the potential to 
+         lead a future-like-ours has a 
+         right to life.")
+
+Pcoma("Temporary coma patients have the potential
+       to lead a future-like-ours.")
+Pfuture &amp; Pcoma --- Acoma[Marquis: Coma patient] --&gt; OMarquis2
+
+Pembryo("An embryo has the potential
+         to lead a future-like-ours.")
+Pfuture &amp; Pembryo --- Aembryo[Marquis: Embryo] --&gt; Oright-to-life
+end
+</pre>
+<div id="mermaid-tooltip-4" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Adding boxes using subgraphs
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You can draw a box around a section of the debate by putting <code>subgraph [name]</code> at the beginning of the section and <code>end</code> at the end. Check the source code to see how.</p>
+</div>
+</div>
+</div>
+<p>Initially, this map of the debate over abortion might not seem that helpful. We’ve taken a complex moral and political debate, and turned it into a complex diagram.</p>
+<p>But examining the map does help us understand a few aspects of the debate. First, no one is denying that embryos lack the capacity to feel pain or consciousness or the like. And no one is denying that (typically) embryos have the potential for a future-like-ours.</p>
+<p>Second, this debate has stepped back from the concrete issue of abortion itself, to focus on the abstract question <em>who has a right to life?</em> The interlocutors give two very different answers to this question — Warren says a right to life requires certain cognitive capacities, Marquis says it’s based on a “future-like-ours” — and there’s no neutral way to determine which answer is right. Abortion proponents have a strong incentive to favor Warren’s account, and abortion opponents have an equally strong incentive to favor Marquis’ account. This is a common feature of philosophical debate, and in my opinion one reason people often find philosophy useless and frustrating.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<a href="https://en.wiktionary.org/wiki/interlocutor">interlocutor</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A person who takes part in dialogue or conversation.</p>
+</div>
+</div>
+</div>
+<p>But this abstract philosophical debate can still be useful, for helping us understand the deeper disagreement between abortion defenders and opponents. This is the third point. Anti-abortion advocates, like Marquis, often think of embryos and fetuses as (soon-to-be, more-or-less) infants. They’ll acknowledge that, in the early stages of pregnancy, an embryo or fetus is biologically pretty far off from a newborn. But they emphasize what the embryo or fetus might be like, months or even years later. Pro-choice advocates, like Warren, instead tend to focus on what the embryo or fetus is in itself at that early stage of development, setting aside what it might be like in the future. When they do think about what the embryo might be in the future, they emphasize the effort and risk that pregnant people experience on the way.</p>
+<p>In her essay <a href="https://drive.google.com/file/d/0B6oYmzobonqoZHBrNGpBcWx5aDQ/view?usp=sharing&amp;resourcekey=0-MCEVK23t5bKtI2IGFVi41g">“Virtue Theory and Abortion,”</a> the ethicist Rosalind Hursthouse looks at this debate, and acknowledges that both of these perspectives on an embryo/fetus are important.</p>
+<blockquote class="blockquote">
+<p>[T]he premature termination of a pregnancy is, in some sense, the cutting off of a new human life, and thereby … connects with all our thoughts about human life and death, parenthood, and family relationships ….</p>
+<p>[But also, many women] view pregnancy only as eight months of misery, followed by hours if not days of agony and exhaustion, and abortion only as the blessed escape from this prospect[. This point of view] is entirely understandable and does not manifest any lack of serious respect for human life or a shallow attitude to motherhood. (237, 240)</p>
+</blockquote>
+<p>Hursthouse goes on to argue that an abstract debate over whether an embryo has a right to life is less useful than a concrete discussion of the many factors — financial, personal, cultural, medical — that play a role in whether someone chooses to carry a pregnancy to term or to have an abortion. Rather than the high-profile pro-choice vs.&nbsp;anti-abortion positions, Hursthouse’s view fits better with the <a href="https://en.wikipedia.org/wiki/Reproductive_justice">reproductive justice movement</a>, which advocates for legalized abortion but also the need for free, high-quality healthcare and childcare and living wages.</p>
 <div class="exercises">
 <p>Consider this argument, which we met earlier in <a href="03-simple.html"><span>Chapter&nbsp;3</span></a>:</p>
 <blockquote class="blockquote">
@@ -849,92 +556,62 @@ Note
 </div>
 </div>
 <p>To illustrate objecting to support, let’s go back to our basic opposition between bodily autonomy and an embryo’s right to life. A pro-life person might agree that bodily autonomy — the right to do what you want with your own body — is important. But, they might continue, not all rights are equally important. Specifically, someone’s right to life takes precedence over other rights. As <a href="https://quoteinvestigator.com/2011/10/15/liberty-fist-nose/">a nineteenth-century aphorism</a> put it, “My right to swing my fist ends where your nose begins.”</p>
-<p>This objection challenges the pro-choice argument, but it doesn’t challenge the premise of bodily autonomy. Instead it challenges the support, the link, between that premise and the conclusion of legal abortion. In Argdown, we can represent this by opposing an argument label, rather than a premise. To do this, we’ll need to label the bodily autonomy argument and present it in premise-conclusion form.</p>
-<figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[abortion]:</span> Abortion should be legal
+<p>This objection challenges the pro-choice argument, but it doesn’t challenge the premise of bodily autonomy. Instead it challenges the support, the link, between that premise and the conclusion of legal abortion. In Mermaid, we can represent this by opposing an argument label, rather than a premise. So we’ll add label for the pro-choice “autonomy argument,” then the objection targeting it.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-5">flowchart TB
 
-<span class="hljs-argument-title">&lt;Bodily autonomy argument&gt;</span> 
+Pautonomy(Everyone has a right to bodily autonomy.)
+Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[bodily autonomy]:</span> Everyone has a right to bodily autonomy
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-statement-title">[right to life]:</span> An embryo has a right to life from conception
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-statement-title">[abortion]</span>
+Oright-to-life(An embryo has a right to life from conception.) 
+Oright-to-life -.-&gt; C
 
-<span class="hljs-statement-title">[precedence]:</span> Someone's right to life takes precedence over another person's right to bodily autonomy
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-argument-title">&lt;Bodily autonomy argument&gt;</span>
-</code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="525pt" height="236pt" viewbox="0.00 0.00 525.00 236.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 232)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M291,-228C291,-228 119,-228 119,-228 113,-228 107,-222 107,-216 107,-216 107,-200 107,-200 107,-194 113,-188 119,-188 119,-188 291,-188 291,-188 297,-188 303,-194 303,-200 303,-200 303,-216 303,-216 303,-222 297,-228 291,-228"></path>
-<text text-anchor="start" x="186.94" y="-214" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">abortion</text>
-<text text-anchor="start" x="151.37" y="-197" font-family="arial" font-size="10.00" fill="#000000">Abortion should be legal</text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M291,-52C291,-52 117,-52 117,-52 111,-52 105,-46 105,-40 105,-40 105,-24 105,-24 105,-18 111,-12 117,-12 117,-12 291,-12 291,-12 297,-12 303,-18 303,-24 303,-24 303,-40 303,-40 303,-46 297,-52 291,-52"></path>
-<text text-anchor="start" x="167.6" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bodily autonomy</text>
-<text text-anchor="start" x="114.81" y="-21" font-family="arial" font-size="10.00" fill="#000000">Everyone has a right to bodily autonomy</text>
-</g>
-<!-- n4 -->
-<g id="node5" class="node">
-<title>n4</title>
-<path fill="#1b9e77" stroke="black" d="M398,-144C398,-144 226,-144 226,-144 220,-144 214,-138 214,-132 214,-132 214,-120 214,-120 214,-114 220,-108 226,-108 226,-108 398,-108 398,-108 404,-108 410,-114 410,-120 410,-120 410,-132 410,-132 410,-138 404,-144 398,-144"></path>
-<text text-anchor="start" x="252.54" y="-124" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Bodily autonomy argument</text>
-</g>
-<!-- n1&#45;&gt;n4 -->
-<g id="edge4" class="edge">
-<title>n1-&gt;n4</title>
-<path fill="none" stroke="#0096ff" d="M226.38,-52.06C243.09,-66.3 266.05,-85.86 283.99,-101.14"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="281.95,-104 291.84,-107.82 286.49,-98.67 281.95,-104"></polygon>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M184,-152C184,-152 12,-152 12,-152 6,-152 0,-146 0,-140 0,-140 0,-112 0,-112 0,-106 6,-100 12,-100 12,-100 184,-100 184,-100 190,-100 196,-106 196,-112 196,-112 196,-140 196,-140 196,-146 190,-152 184,-152"></path>
-<text text-anchor="start" x="74.94" y="-138" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">right to life</text>
-<text text-anchor="start" x="24.38" y="-121" font-family="arial" font-size="10.00" fill="#000000">An embryo has a right to life from</text>
-<text text-anchor="start" x="72.43" y="-109" font-family="arial" font-size="10.00" fill="#000000"> conception</text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#ff0000" d="M131.56,-152.09C144.23,-161.57 158.64,-172.34 171.32,-181.82"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="169.26,-184.65 179.37,-187.84 173.46,-179.05 169.26,-184.65"></polygon>
-</g>
-<!-- n3 -->
-<g id="node4" class="node">
-<title>n3</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M505,-64C505,-64 333,-64 333,-64 327,-64 321,-58 321,-52 321,-52 321,-12 321,-12 321,-6 327,0 333,0 333,0 505,0 505,0 511,0 517,-6 517,-12 517,-12 517,-52 517,-52 517,-58 511,-64 505,-64"></path>
-<text text-anchor="start" x="392.88" y="-50" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">precedence</text>
-<text text-anchor="start" x="356.21" y="-33" font-family="arial" font-size="10.00" fill="#000000">Someone's right to life takes</text>
-<text text-anchor="start" x="330.65" y="-21" font-family="arial" font-size="10.00" fill="#000000"> precedence over another person's right</text>
-<text text-anchor="start" x="375.65" y="-9" font-family="arial" font-size="10.00" fill="#000000"> to bodily autonomy</text>
-</g>
-<!-- n3&#45;&gt;n4 -->
-<g id="edge2" class="edge">
-<title>n3-&gt;n4</title>
-<path fill="none" stroke="#ff0000" d="M382.77,-64.15C368.72,-76.23 352.88,-89.85 339.75,-101.14"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="337.27,-98.66 331.97,-107.83 341.83,-103.96 337.27,-98.66"></polygon>
-</g>
-<!-- n4&#45;&gt;n0 -->
-<g id="edge3" class="edge">
-<title>n4-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M289.05,-144.16C274.4,-155.11 255.17,-169.49 238.8,-181.73"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="236.45,-179.11 230.54,-187.9 240.64,-184.72 236.45,-179.11"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
-<p>One way a pro-choice person might reply to this argument is to make a distinction between killing someone and letting them die. Many people would say there’s a difference between letting a young child drown in a bathtub and actively holding them underwater until they drown. One version of this distinction is in terms of intentions: if the child managed to save themselves, you wouldn’t reach down and push them back under. Someone might go on to argue that letting someone die doesn’t violate their right to life — it was sort of an accident or unintended consequence — and that abortion is letting an embryo die — if the embryo someone managed to survive the procedure, you wouldn’t actively try to kill it.</p>
+Oprecedence("Someone's right to life takes precedence
+             over another person's right to bodily
+             autonomy.")
+Oprecedence &amp; Oright-to-life --- OL[Precedence obj.] -.-&gt; Aautonomy
+</pre>
+<div id="mermaid-tooltip-5" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p>The premise that an embryo has a right to life is playing two roles in this debate. First, on its own, it provides an argument that abortion should not be legal. But also, when combined with the claim about the precedence of a right to life, it gives an objection to the autonomy argument. If an embryo doesn’t have a right to life, then it doesn’t matter if a right to life takes precedence over bodily autonomy. So someone might give a reply to the precedence objection in three ways:</p>
+<ol type="1">
+<li>Challenge the premise that an embryo has a right to life.</li>
+<li>Challenge the premise that a right to life takes precedence over bodily autonomy.</li>
+<li>Challenge the support of the precedence objection.</li>
+</ol>
+<p>Warren’s objection could be used to take strategy (1). The ethicist Judith Jarvis Thomson took strategy (2) in her 1971 paper <a href="https://drive.google.com/file/d/0B6oYmzobonqoR2Fka0FJbjZYMzQ/view?usp=sharing&amp;resourcekey=0-sKH9_nhlpTXfCizCcVQBiA">“A Defense of Abortion”</a>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Thomson’s defense of abortion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In her paper, Thomson grants (at least for the sake of argument) that an embryo has a right to life. She defense of abortion is to argue that this right to life does not take precedence over bodily autonomy. She introduces a famous thought experiment, in which you’re kidnapped and surgically connected to a world-famous violinist, who’s in a coma and will die if you don’t act as his life support system for the next nine months. The violinist has a right to life, she says, but <em>not</em> a right to the use of your body.</p>
+<p>In my opinion, Thomson’s argument is based on an excessively strong form of individualism. Later in the paper, in another thought experiment, she imagines that she’s dying in bed, and the actor Henry Fonda is standing in the doorway of her room, just a few feet away. If Fonda walks over and touches her forehead, she’ll be instantly cured of her disease and her life will be saved. She writes:</p>
+<blockquote class="blockquote">
+<p>Suppose he has only to walk across the room, place a hand briefly on my brow-and lo, my life is saved. Then surely he ought to do it, it would be indecent to refuse. Is it to be said “Ah,well, it follows that in this case she has a right to the touch of his hand on her brow, and so it would be an injustice in him to refuse”? … It’s rather a shocking idea that anyone’s rights should fade away and disappear as it gets harder and harder to accord them to him. (61)</p>
+</blockquote>
+<p>In other words, Thomson says that Fonda <em>morally should</em> do this trivial thing to save her life. But she has no moral (or legal) <em>right</em> to demand that he does so.</p>
+<p>My objection is that Thomson’s view would undermine any use of taxpayer funds to provide social benefits: public roads, education, clean air and water, shelter, health care, food, and so on. There are people who will die today because of lack of access to shelter or health care. Does justice require that wealthy people be taxed, and those funds use to pay for things like homeless shelters and universal health insurance? I think it does. In other words, vulnerable people do have a <em>right</em> to demand that wealthy people pay for these kinds of things.</p>
+</div>
+</div>
+</div>
+<p>The third strategy amounts to saying: Okay, at least for the sake of argument, I’ll agree that an embryo has a right to life; and a right to life takes precedence over a right to bodily autonomy. But <em>even then</em> the precedence objection doesn’t work. Those premises aren’t enough to conclude that the bodily autonomy argument is flawed.</p>
+<p>One way to take this third strategy is to make a distinction between killing someone and letting them die. Many people would say there’s a difference between letting a young child drown in a bathtub and actively holding them underwater until they drown. One version of this distinction is in terms of intentions: if the child managed to save themselves, you wouldn’t reach down and push them back under. Someone might go on to argue that letting someone die doesn’t violate their right to life — it was sort of an accident or unintended consequence — and that abortion is letting an embryo die — if the embryo someone managed to survive the procedure, you wouldn’t actively try to kill it.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -949,167 +626,44 @@ Note
 </div>
 </div>
 <p>This reply to the precedence objection again targets the support of the argument. The objection can agree that the right to life takes precedence over bodily autonomy. But, they claim, the right to life isn’t violated in abortion, because abortion is letting an embryo die rather than killing it.</p>
-<figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[abortion]:</span> Abortion should be legal
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-6">flowchart TB
 
-<span class="hljs-argument-title">&lt;Bodily autonomy argument&gt;</span> 
+Pautonomy(Everyone has a right to bodily autonomy.)
+Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[bodily autonomy]:</span> Everyone has a right to bodily autonomy
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[abortion]</span>
-    
-<span class="hljs-statement-title">[right to life]:</span> An embryo has a right to life from conception
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-statement-title">[abortion]</span>
+Oright-to-life(An embryo has a right to life from conception.) 
+Oright-to-life -.-&gt; C
 
-<span class="hljs-argument-title">&lt;Precedence objection&gt;</span>
+Oprecedence("Someone's right to life takes precedence
+             over another person's right to bodily
+             autonomy.")
+Oprecedence &amp; Oright-to-life --- OLprecedence[Precedence obj.] -.-&gt; Aautonomy
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[precedence]:</span> Someone's right to life takes precedence over another person's right to bodily autonomy
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(2)</span> 
-    -&gt; <span class="hljs-argument-title">&lt;Bodily autonomy argument&gt;</span>
+Okilling-die("Unlike killing, letting someone die 
+              does not violate their right to life.")
+Oabortion-die("Abortion is letting an embryo die, 
+               not killing it")
+Okilling-die &amp; Oabortion-die --- OL[Killing vs.\nletting die] -.-&gt; OLprecedence
+</pre>
+<div id="mermaid-tooltip-6" class="mermaidTooltip">
 
-<span class="hljs-argument-title">&lt;Killing vs. letting die reply&gt;</span>
+</div>
+<p></p>
+</div>
+</div>
+</div>
+<p><span class="todo">start here</span></p>
+<pre class="argdown-map" data-mode="web-component"><code>&lt;Killing vs. letting die reply&gt;
 
-<span class="hljs-argument-statement-nr">(1)</span> <span class="hljs-statement-title">[killing vs. letting die]:</span> Unlike killing, letting someone die does not violate their right to life
-<span class="hljs-argument-statement-nr">(2)</span> <span class="hljs-statement-title">[abortion is letting die]:</span> Abortion is letting an embryo die, not killing it
-<span class="hljs-inference">----</span>
-<span class="hljs-argument-statement-nr">(3)</span> <span class="hljs-statement-title">[C]:</span> Abortion does not violate an embryo's right to life
-<span class="hljs-attack">    -&gt;</span> <span class="hljs-argument-title">&lt;Precedence objection&gt;</span></code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="720pt" height="460pt" viewbox="0.00 0.00 720.00 459.86" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(0.97 0.97) rotate(0) translate(4 468)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M291,-464C291,-464 119,-464 119,-464 113,-464 107,-458 107,-452 107,-452 107,-436 107,-436 107,-430 113,-424 119,-424 119,-424 291,-424 291,-424 297,-424 303,-430 303,-436 303,-436 303,-452 303,-452 303,-458 297,-464 291,-464"></path>
-<text text-anchor="start" x="186.94" y="-450" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">abortion</text>
-<text text-anchor="start" x="151.37" y="-433" font-family="arial" font-size="10.00" fill="#000000">Abortion should be legal</text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M291,-300C291,-300 117,-300 117,-300 111,-300 105,-294 105,-288 105,-288 105,-272 105,-272 105,-266 111,-260 117,-260 117,-260 291,-260 291,-260 297,-260 303,-266 303,-272 303,-272 303,-288 303,-288 303,-294 297,-300 291,-300"></path>
-<text text-anchor="start" x="167.6" y="-286" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bodily autonomy</text>
-<text text-anchor="start" x="114.81" y="-269" font-family="arial" font-size="10.00" fill="#000000">Everyone has a right to bodily autonomy</text>
-</g>
-<!-- n7 -->
-<g id="node8" class="node">
-<title>n7</title>
-<path fill="#1b9e77" stroke="black" d="M398,-380C398,-380 226,-380 226,-380 220,-380 214,-374 214,-368 214,-368 214,-356 214,-356 214,-350 220,-344 226,-344 226,-344 398,-344 398,-344 404,-344 410,-350 410,-356 410,-356 410,-368 410,-368 410,-374 404,-380 398,-380"></path>
-<text text-anchor="start" x="252.54" y="-360" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Bodily autonomy argument</text>
-</g>
-<!-- n1&#45;&gt;n7 -->
-<g id="edge6" class="edge">
-<title>n1-&gt;n7</title>
-<path fill="none" stroke="#0096ff" d="M229.87,-300.16C245.17,-311.5 264.66,-325.93 280.81,-337.9"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="278.8,-340.76 288.91,-343.9 282.96,-335.13 278.8,-340.76"></polygon>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M184,-388C184,-388 12,-388 12,-388 6,-388 0,-382 0,-376 0,-376 0,-348 0,-348 0,-342 6,-336 12,-336 12,-336 184,-336 184,-336 190,-336 196,-342 196,-348 196,-348 196,-376 196,-376 196,-382 190,-388 184,-388"></path>
-<text text-anchor="start" x="74.94" y="-374" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">right to life</text>
-<text text-anchor="start" x="24.38" y="-357" font-family="arial" font-size="10.00" fill="#000000">An embryo has a right to life from</text>
-<text text-anchor="start" x="72.43" y="-345" font-family="arial" font-size="10.00" fill="#000000"> conception</text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#ff0000" d="M131.56,-388.09C144.23,-397.57 158.64,-408.34 171.32,-417.82"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="169.26,-420.65 179.37,-423.84 173.46,-415.05 169.26,-420.65"></polygon>
-</g>
-<!-- n3 -->
-<g id="node4" class="node">
-<title>n3</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M398,-224C398,-224 226,-224 226,-224 220,-224 214,-218 214,-212 214,-212 214,-172 214,-172 214,-166 220,-160 226,-160 226,-160 398,-160 398,-160 404,-160 410,-166 410,-172 410,-172 410,-212 410,-212 410,-218 404,-224 398,-224"></path>
-<text text-anchor="start" x="285.88" y="-210" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">precedence</text>
-<text text-anchor="start" x="249.21" y="-193" font-family="arial" font-size="10.00" fill="#000000">Someone's right to life takes</text>
-<text text-anchor="start" x="223.65" y="-181" font-family="arial" font-size="10.00" fill="#000000"> precedence over another person's right</text>
-<text text-anchor="start" x="268.65" y="-169" font-family="arial" font-size="10.00" fill="#000000"> to bodily autonomy</text>
-</g>
-<!-- n8 -->
-<g id="node9" class="node">
-<title>n8</title>
-<path fill="#1b9e77" stroke="black" d="M505,-298C505,-298 333,-298 333,-298 327,-298 321,-292 321,-286 321,-286 321,-274 321,-274 321,-268 327,-262 333,-262 333,-262 505,-262 505,-262 511,-262 517,-268 517,-274 517,-274 517,-286 517,-286 517,-292 511,-298 505,-298"></path>
-<text text-anchor="start" x="370.93" y="-278" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Precedence objection</text>
-</g>
-<!-- n3&#45;&gt;n8 -->
-<g id="edge7" class="edge">
-<title>n3-&gt;n8</title>
-<path fill="none" stroke="#0096ff" d="M350.63,-224.05C363.57,-234.45 377.76,-245.86 389.85,-255.57"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="387.86,-258.46 397.84,-262 392.24,-253 387.86,-258.46"></polygon>
-</g>
-<!-- n4 -->
-<g id="node5" class="node">
-<title>n4</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M505,-52C505,-52 333,-52 333,-52 327,-52 321,-46 321,-40 321,-40 321,-12 321,-12 321,-6 327,0 333,0 333,0 505,0 505,0 511,0 517,-6 517,-12 517,-12 517,-40 517,-40 517,-46 511,-52 505,-52"></path>
-<text text-anchor="start" x="375.94" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">killing vs. letting die</text>
-<text text-anchor="start" x="345.1" y="-21" font-family="arial" font-size="10.00" fill="#000000">Unlike killing, letting someone die</text>
-<text text-anchor="start" x="347.04" y="-9" font-family="arial" font-size="10.00" fill="#000000"> does not violate their right to life</text>
-</g>
-<!-- n9 -->
-<g id="node10" class="node">
-<title>n9</title>
-<path fill="#1b9e77" stroke="black" d="M612,-124C612,-124 440,-124 440,-124 434,-124 428,-118 428,-112 428,-112 428,-100 428,-100 428,-94 434,-88 440,-88 440,-88 612,-88 612,-88 618,-88 624,-94 624,-100 624,-100 624,-112 624,-112 624,-118 618,-124 612,-124"></path>
-<text text-anchor="start" x="469.88" y="-104" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">Killing vs. letting die reply</text>
-</g>
-<!-- n4&#45;&gt;n9 -->
-<g id="edge8" class="edge">
-<title>n4-&gt;n9</title>
-<path fill="none" stroke="#0096ff" d="M453.44,-52.11C466.57,-61.68 481.47,-72.54 494.33,-81.91"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="492.3,-84.77 502.45,-87.83 496.43,-79.11 492.3,-84.77"></polygon>
-</g>
-<!-- n5 -->
-<g id="node6" class="node">
-<title>n5</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M719,-52C719,-52 547,-52 547,-52 541,-52 535,-46 535,-40 535,-40 535,-12 535,-12 535,-6 541,0 547,0 547,0 719,0 719,0 725,0 731,-6 731,-12 731,-12 731,-40 731,-40 731,-46 725,-52 719,-52"></path>
-<text text-anchor="start" x="587.16" y="-38" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">abortion is letting die</text>
-<text text-anchor="start" x="551.87" y="-21" font-family="arial" font-size="10.00" fill="#000000">Abortion is letting an embryo die, not</text>
-<text text-anchor="start" x="615.23" y="-9" font-family="arial" font-size="10.00" fill="#000000"> killing it</text>
-</g>
-<!-- n5&#45;&gt;n9 -->
-<g id="edge9" class="edge">
-<title>n5-&gt;n9</title>
-<path fill="none" stroke="#0096ff" d="M598.56,-52.11C585.43,-61.68 570.53,-72.54 557.67,-81.91"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="555.57,-79.11 549.55,-87.83 559.7,-84.77 555.57,-79.11"></polygon>
-</g>
-<!-- n6 -->
-<g id="node7" class="node">
-<title>n6</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M612,-218C612,-218 440,-218 440,-218 434,-218 428,-212 428,-206 428,-206 428,-178 428,-178 428,-172 434,-166 440,-166 440,-166 612,-166 612,-166 618,-166 624,-172 624,-178 624,-178 624,-206 624,-206 624,-212 618,-218 612,-218"></path>
-<text text-anchor="start" x="522.39" y="-204" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">C</text>
-<text text-anchor="start" x="442.37" y="-187" font-family="arial" font-size="10.00" fill="#000000">Abortion does not violate an embryo's</text>
-<text text-anchor="start" x="501.55" y="-175" font-family="arial" font-size="10.00" fill="#000000"> right to life</text>
-</g>
-<!-- n6&#45;&gt;n8 -->
-<g id="edge3" class="edge">
-<title>n6-&gt;n8</title>
-<path fill="none" stroke="#ff0000" d="M494.76,-218.11C480.12,-229.88 462.77,-243.82 448.37,-255.4"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="445.87,-252.91 440.27,-261.9 450.26,-258.37 445.87,-252.91"></polygon>
-</g>
-<!-- n7&#45;&gt;n0 -->
-<g id="edge4" class="edge">
-<title>n7-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M289.05,-380.16C274.4,-391.11 255.17,-405.49 238.8,-417.73"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="236.45,-415.11 230.54,-423.9 240.64,-420.72 236.45,-415.11"></polygon>
-</g>
-<!-- n8&#45;&gt;n7 -->
-<g id="edge2" class="edge">
-<title>n8-&gt;n7</title>
-<path fill="none" stroke="#ff0000" d="M396.05,-298.16C380.67,-309.66 360.24,-324.93 343.37,-337.55"></path>
-<polygon fill="#ff0000" stroke="#ff0000" points="340.83,-335.08 334.92,-343.87 345.02,-340.68 340.83,-335.08"></polygon>
-</g>
-<!-- n9&#45;&gt;n6 -->
-<g id="edge5" class="edge">
-<title>n9-&gt;n6</title>
-<path fill="none" stroke="#0096ff" d="M526,-124.4C526,-133.51 526,-144.99 526,-155.85"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="522.5,-155.97 526,-165.97 529.5,-155.97 522.5,-155.97"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
+(1) [killing vs. letting die]: Unlike killing, letting someone die does not violate their right to life
+(2) [abortion is letting die]: Abortion is letting an embryo die, not killing it
+----
+(3) [C]: Abortion does not violate an embryo's right to life
+    -&gt; &lt;Precedence objection&gt;</code></pre>
 <p>While this is a useful example for showing how we represent objections and replies in argument maps, I don’t think it’s a very compelling reply to the objection. In my opinion, both premises have problems. First, many homeless people in our society die of exposure and treatable diseases. This is letting them die — we don’t actively hunt down homeless people who survive these challenges — but denying them access to housing and health care does, I think, violate their right to life. Second, it’s not clear to me what the difference is supposed to be between ending a pregnancy and ending the life of the embryo or fetus involved in that pregnancy, i.e., killing it. It seems to me like these are just two ways of describing the same action.</p>
 <div class="exercises">
 <p>Expand the argument map above to include my two objections to the killing vs.&nbsp;letting die reply. Are these objections to support or objections to premises?</p>
@@ -1263,248 +817,287 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Opposing arguments and objections </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>An **opposing argument** is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise (**challenging a premise**), or (b) another argument's premises don't support its conclusion (**challenging support**).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Argdown, which enables us to represent complex debates. </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Opposing arguments</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Consider two arguments on the legality of abortion, one from the pro-choice side and one from the anti-abortion side.  In Argdown, we use <span class="in">`+&gt;`</span> to indicate support and <span class="in">`-&gt;`</span> to indicate opposition.  Notice that the opposing argument (the right-to-life or anti-abortion argument) has a red arrow instead of a blue/green one, indicating that it's an argument for the opposite conclusion (abortion *shouldn't* be legal).  </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```{.argdown-map mode="web-component"}</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">===</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">color:</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">    relationColors:</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in">        support: "#0096FF"</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in">===</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in">[abortion]: Abortion should be legal</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in">[bodily autonomy]: Everyone has a right to bodily autonomy</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">    +&gt; [abortion]</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in">[right to life]: An embryo has a right to life from conception</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; [abortion]</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>::: {.callout-important collapse="true"}</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Colorblindness ##</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>Unfortunately, argdown's default color scheme isn't accessible to folks with red-green colorblindness.  For this reason, throughout this tutorial I'm using blue instead of the default green to indicate support.  You can do this too in Obsidian, by adding a header above each map:  </span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="in">===</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="in">color:</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="in">    relationColors:</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="in">        support: "#0096FF"</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="in">===</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="in">[abortion]: Abortion should be legal</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="in">[bodily autonomy]: Everyone has a right to bodily autonomy</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="in">    +&gt; [abortion]</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="in">[right to life]: An embryo has a right to life from conception</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; [abortion]</span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>Obnoxiously, this change to the color scheme doesn't appear to work in the Argdown Sandbox. </span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">*Embryo*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span> is the term for the first 8-9 weeks of development, starting with conception (unification of an egg cell and sperm cell).  After that it's a <span class="co">[</span><span class="ot">*fetus*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span>, though according to the Wikipedia article "Prenatal development is a continuum, with no clear defining feature distinguishing an embryo from a fetus."  *Length of pregnancy* is usually measured from the last menstrual period, which is typically 9-20 days before conception.  "Fetus" seems to be more common in the abortin debate than "embryo." But a six-week abortion ban is a prohibition on abortion during part of the embryonic stage.  So here I'm using "embryo." </span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>These two arguments form a pair, each opposing the other.  They also don't engage with each other.  The pro-choice side appeals to the right to bodily autonomy, while the anti-abortion side appeals to the right to life.  Because they don't address each others' arguments, the debate doesn't go anywhere.  </span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objecting to a premise</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>Again, an **objection** is an argument whose conclusion is that (a) another argument has a false premise, or (b) another argument's premises don't support its conclusion. Let's start with the first kind of objection, which challenges a premise.  </span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>A premise in an argument is just a claim, like any other, which means it can be supported or opposed with arguments.  In her 1973 article <span class="co">[</span><span class="ot">"On the Moral and Legal Status of Abortion,"</span><span class="co">](https://drive.google.com/file/d/0B6oYmzobonqodjBuRTN5Qmdwb0E/view?usp=sharing&amp;resourcekey=0-1WqVWQZio3z9oV4w8gsHyw)</span> the ethicist Mary Anne Warren gave a critique of the pro-life claim that an embryo has a right to life from conception.  Here's my paraphrase of her critique:  </span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; An embryo lacks consciousness, the capacity to feel pain, self-motivated activity, the capacity to community, and self-awareness.  But only beings with these capacities have a right to life.  So an embryo does not have a right to life.</span>  </span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>This argument has two interdependent premises, so we use premise-conclusion form, as in the previous section.  Remember to label the premises of Warren's argument.  To show that the conclusion of Warren's argument is *opposed* to <span class="in">`[right to life]`</span>, leave the conclusion line blank and put <span class="in">`-&gt; [right to life]`</span> on the next line (check the Source code if you're confused).  </span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{.argdown-map mode="web-component"}</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="in">[abortion]: Abortion should be legal</span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="in">[bodily autonomy]: Everyone has a right to bodily autonomy</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="in">    +&gt; [abortion]</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="in">[right to life]: An embryo has a right to life from conception</span></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; [abortion]</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Warren's objection&gt;</span></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [W1]: An embryo lacks these capacities.</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [W2]: Only beings with the capacity for consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness have a right to life. </span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="in">(3) </span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="in">  -&gt; [right to life]</span></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>An opposing argument is not much better than **mere disagreement** (where one side makes a claim and the other side says the opposite, without any arguments).  Opposing arguments give us some insight into how each side of a debate thinks about the issue.  But objections help us understand what one side thinks of the other side's arguments.  This can lead to deeper insights:  What's the fundamental disagreement between the two sides?  Where do they agree?  Tracing out a complex debate, using tools like argument maps, might not resolve a controversy, but they can help us understand it better.  </span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>A number of philosophers and other writers, including the <span class="co">[</span><span class="ot">ethicist Don Marquis</span><span class="co">](https://drive.google.com/file/d/0B6oYmzobonqoWTJqeUhxSm5XcWM/view?usp=sharing&amp;resourcekey=0-VNrlLS4h6Iz1txoiA9swGA)</span>, responded to Warren's argument by pointing out that coma patients have a right to life. </span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="in">```{.argdown-map mode="web-component"}</span></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="in">[abortion]: Abortion should be legal</span></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="in">[bodily autonomy]: Everyone has a right to bodily autonomy</span></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="in">    +&gt; [abortion]</span></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="in">[right to life]: An embryo has a right to life from conception</span></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; [abortion]</span></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Warren's objection&gt;</span></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [W1]: An embryo lacks these capacities.</span></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [W2]: Only beings with the capacity for consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness have a right to life. </span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="in">(3) </span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="in">  -&gt; [right to life]</span></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Marquis' reply&gt;</span></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [M1]: Coma patients lack consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness.  </span></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [M2]: Coma patients have a right to life. </span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="in">(3)</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="in">  -&gt; [W2]</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>This kind of objection to a previous objection is called a **reply**.  In philosophy classes, you'll often be asked to write papers where you present an argument, an objection, and finally a reply to that objection.  </span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>Marquis didn't just give a reply to Warren's objection.  He offered his own argument for an embryo's right to life.  He calls it the "future-like-ours" argument, because it appeals to the idea that "The future of a standard fetus includes a set of experiences, projects, activities, and such which are identical with the futures of adult human beings and are identical with the futures of young children," and that a fetus has a right to life because it has the potential for this kind of future.  Marquis also argues that this "future-like-ours" view explains why temporary coma patients, at least, have a right to life: because they have the potential to awaken and lead a more-or-less typical adult human life.  </span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{.argdown-map mode="web-component"}</span></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="in">[abortion]: Abortion should be legal</span></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="in">[bodily autonomy]: Everyone has a right to bodily autonomy</span></span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="in">    +&gt; [abortion]</span></span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="in">[right to life]: An embryo has a right to life from conception</span></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; [abortion]</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Warren's objection&gt;</span></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [W1]: An embryo lacks these capacities.</span></span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [W2]: Only beings with the capacity for consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness have a right to life. #right-to-life-condition</span></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="in">(3) </span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="in">  -&gt; [right to life]</span></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Marquis' reply&gt;</span></span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [M1]: Coma patients lack consciousness, the capacity to feel pain, self-motivated activity, the capacity to communicate, and self-awareness.  </span></span>
-<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [M2]: Coma patients have a right to life. </span></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="in">(3)</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="in">  -&gt; [W2]</span></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="in">[future-like-ours]: Any being with the potential to lead a future-like-ours has a right to life. #right-to-life-condition</span></span>
-<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Future-like-ours argument: Coma patient&gt;</span></span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [future-like-ours]</span></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [future-coma]: Temporary coma patients have this potential</span></span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="in">(3) [M2]</span></span>
-<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Future-like-ours argument: Embryo&gt;</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [future-like-ours]</span></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [future-embryo]: An embryo has this potential</span></span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="in">(3) [right to life]</span></span>
-<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>Reviewing this argument map, we can identify a fundamental disagreement between the pro-choice and pro-life positions on abortion (at least as those positions are represented by Warren and Marquis).  I've highlighted two key claims using the hashtag <span class="in">`#right-to-life-condition`</span>.  Warren's view connects the right to life to *actually* having certain capacities *now*, while Marquis' view connects the right to life to the *potential* to have certain capacities in the *future*.  </span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>::: {.exercises}</span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>Consider this argument, which we met earlier in @sec-simple: </span>
-<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Animal agriculture is not bad for the environment and it is not bad for people.** </span><span class="co">[</span><span class="ot">The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.</span><span class="co">]</span><span class="at">{.red} </span><span class="co">[</span><span class="ot">Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.</span><span class="co">]</span><span class="at">{.blue} Furthermore, </span><span class="co">[</span><span class="ot">new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.</span><span class="co">]</span><span class="at">{.purple} (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)</span></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>Using the rules from Chapter 1 of *Rulebook for Arguments*, develop an objection to one of the premises of this argument, and then a reply to your objection.  Present your objection and reply using an argument map.  </span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objecting to support</span></span>
-<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>The other way that we can object to an argument is to challenge the support relationship between premises and conclusion.  That is, we might accept all of an argument's premises, but still think that they don't give a good reason to accept the conclusion.  In the rest of this semester, we'll learn lots of different tools to assess support for different kinds of arguments.  For instance, when we talk about generalizations, or arguments by example, we'll introduce a rule that *generalizations need more than one example*.  A generalization with a single example can have a true premise — this thing did happen in this one particular case — but, because it violates the rule, it doesn't give much support to the conclusion.  </span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>Students often have a lot of trouble with the idea of support.  It's okay if you don't get it at first.  Think of this course as teaching how to recognize how support works for different kinds of arguments.  </span>
-<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>To illustrate objecting to support, let's go back to our basic opposition between bodily autonomy and an embryo's right to life.  A pro-life person might agree that bodily autonomy — the right to do what you want with your own body — is important.  But, they might continue, not all rights are equally important.  Specifically, someone's right to life takes precedence over other rights.  As <span class="co">[</span><span class="ot">a nineteenth-century aphorism</span><span class="co">](https://quoteinvestigator.com/2011/10/15/liberty-fist-nose/)</span> put it, "My right to swing my fist ends where your nose begins."  </span>
-<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>This objection challenges the pro-choice argument, but it doesn't challenge the premise of bodily autonomy.  Instead it challenges the support, the link, between that premise and the conclusion of legal abortion.  In Argdown, we can represent this by opposing an argument label, rather than a premise.  To do this, we'll need to label the bodily autonomy argument and present it in premise-conclusion form. </span>
-<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{.argdown-map mode="web-component"}</span></span>
-<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="in">[abortion]: Abortion should be legal</span></span>
-<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Bodily autonomy argument&gt; </span></span>
-<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [bodily autonomy]: Everyone has a right to bodily autonomy</span></span>
-<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [abortion]</span></span>
-<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a><span class="in">[right to life]: An embryo has a right to life from conception</span></span>
-<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; [abortion]</span></span>
-<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a><span class="in">[precedence]: Someone's right to life takes precedence over another person's right to bodily autonomy</span></span>
-<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; &lt;Bodily autonomy argument&gt;</span></span>
-<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>One way a pro-choice person might reply to this argument is to make a distinction between killing someone and letting them die.  Many people would say there's a difference between letting a young child drown in a bathtub and actively holding them underwater until they drown.  One version of this distinction is in terms of intentions: if the child managed to save themselves, you wouldn't reach down and push them back under.  Someone might go on to argue that letting someone die doesn't violate their right to life — it was sort of an accident or unintended consequence — and that abortion is letting an embryo die — if the embryo someone managed to survive the procedure, you wouldn't actively try to kill it.  </span>
-<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>The drowning children example comes from a paper by the ethicist James Rachels.  Rachels' point was to challenge the distinction: he claims that there's actually no morally significant difference between these two cases.  </span>
-<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>This reply to the precedence objection again targets the support of the argument.  The objection can agree that the right to life takes precedence over bodily autonomy.  But, they claim, the right to life isn't violated in abortion, because abortion is letting an embryo die rather than killing it.  </span>
-<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{.argdown-map mode="web-component"}</span></span>
-<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a><span class="in">[abortion]: Abortion should be legal</span></span>
-<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Bodily autonomy argument&gt; </span></span>
-<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [bodily autonomy]: Everyone has a right to bodily autonomy</span></span>
-<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [abortion]</span></span>
-<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a><span class="in">[right to life]: An embryo has a right to life from conception</span></span>
-<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; [abortion]</span></span>
-<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Precedence objection&gt;</span></span>
-<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [precedence]: Someone's right to life takes precedence over another person's right to bodily autonomy</span></span>
-<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a><span class="in">(2) </span></span>
-<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; &lt;Bodily autonomy argument&gt;</span></span>
-<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;Killing vs. letting die reply&gt;</span></span>
-<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a><span class="in">(1) [killing vs. letting die]: Unlike killing, letting someone die does not violate their right to life</span></span>
-<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a><span class="in">(2) [abortion is letting die]: Abortion is letting an embryo die, not killing it</span></span>
-<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a><span class="in">----</span></span>
-<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a><span class="in">(3) [C]: Abortion does not violate an embryo's right to life</span></span>
-<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a><span class="in">    -&gt; &lt;Precedence objection&gt;</span></span>
-<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>While this is a useful example for showing how we represent objections and replies in argument maps, I don't think it's a very compelling reply to the objection.  In my opinion, both premises have problems.  First, many homeless people in our society die of exposure and treatable diseases.  This is letting them die — we don't actively hunt down homeless people who survive these challenges — but denying them access to housing and health care does, I think, violate their right to life.  Second, it's not clear to me what the difference is supposed to be between ending a pregnancy and ending the life of the embryo or fetus involved in that pregnancy, i.e., killing it.  It seems to me like these are just two ways of describing the same action.  </span>
-<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>::: {.exercises}</span>
-<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>Expand the argument map above to include my two objections to the killing vs. letting die reply. Are these objections to support or objections to premises? </span>
-<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Opposing arguments and objections </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>An **opposing argument** is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise (**challenging a premise**), or (b) another argument's premises don't support its conclusion (**challenging support**).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Argdown, which enables us to represent complex debates. </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Opposing arguments</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>Consider two arguments on the legality of abortion, one from the pro-choice side and one from the anti-abortion side.  In Mermaid, we'll use a regular arrow <span class="in">`--&gt;`</span> to indicate support for a claim (it gets colored blue in our custom theme) and a dashed arrow <span class="in">`-.-&gt;`</span> to indicate opposition (it gets colored red).  We'll also label opposing arguments and objections with <span class="in">`O`</span> rather than <span class="in">`P`</span>, which will color their boxes red instead of blue in our custom theme.  </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>%%| code<span class="ot">-f</span>olding: show</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife(An embryo has a right to life from conception)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife -.-&gt; C</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">*Embryo*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span> is the term for the first 8-9 weeks of development, starting with conception (unification of an egg cell and sperm cell).  After that it's a <span class="co">[</span><span class="ot">*fetus*</span><span class="co">](https://en.wikipedia.org/wiki/Embryo)</span>, though according to the Wikipedia article "Prenatal development is a continuum, with no clear defining feature distinguishing an embryo from a fetus."  *Length of pregnancy* is usually measured from the last menstrual period, which is typically 9-20 days before conception.  "Fetus" seems to be more common in the abortin debate than "embryo." But a six-week abortion ban is a prohibition on abortion during part of the embryonic stage.  So here I'm using "embryo." </span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>These two arguments form a pair, each opposing the other.  They also don't engage with each other.  The pro-choice side appeals to the right to bodily autonomy, while the anti-abortion side appeals to the right to life.  Because they don't address each others' arguments, the debate doesn't go anywhere.  </span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objecting to a premise</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>Again, an **objection** is an argument whose conclusion is that (a) another argument has a false premise, or (b) another argument's premises don't support its conclusion. Let's start with the first kind of objection, which challenges a premise.  </span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>A premise in an argument is just a claim, like any other, which means it can be supported or opposed with arguments.  In her 1973 article <span class="co">[</span><span class="ot">"On the Moral and Legal Status of Abortion,"</span><span class="co">](https://drive.google.com/file/d/0B6oYmzobonqodjBuRTN5Qmdwb0E/view?usp=sharing&amp;resourcekey=0-1WqVWQZio3z9oV4w8gsHyw)</span> the ethicist Mary Anne Warren gave a critique of the pro-life claim that an embryo has a right to life from conception.  Here's my paraphrase of her critique:  </span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; An embryo lacks consciousness, the capacity to feel pain, self-motivated activity, the capacity to community, and self-awareness.  But only beings with these capacities have a right to life.  So an embryo does not have a right to life.</span>  </span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>This argument has two interdependent premises, so we'll collect them together using the argument label <span class="in">`Warren's objection`</span>.  To color the argument label red, give it the type <span class="in">`OL`</span> instead of <span class="in">`A`</span>.  </span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>%%| code<span class="ot">-f</span>olding: show</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>Pautonomy(Everyone has a right to bodily autonomy)</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>Pautonomy --&gt; C(Abortion should be legal)</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife(An embryo has a right to life from conception)</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>Oright<span class="ot">-t</span>o<span class="ot">-l</span>ife -.-&gt; C</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>OWarren1(<span class="ot">"</span><span class="st">Only beings with the capacity for </span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.</span><span class="ot">"</span>)</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>OWarren2(<span class="ot">"</span><span class="st">An embryo lacks these capacities.</span><span class="ot">"</span>)</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>OWarren1 &amp; OWarren2 --- OL[Warren<span class="ot">'</span><span class="ss">s objection] -.-&gt; Oright-to-life</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="ss">When you</span><span class="ot">'</span>re reading this, remember that solid/blue indicates support <span class="ot">and</span> dashed/red indicates opposition.  So Warren<span class="ot">'</span><span class="ss">s two premises support (solid blue line) her objection, and the objection opposes (dashed red line) the right-to-life premise.  In turn, the right-to-life premise opposes (dashed red line) the conclusion that abortion should be legal.  </span></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="ss">An opposing argument is not much better than **mere disagreement** (where one side makes a claim and the other side says the opposite, without any arguments).  Opposing arguments give us some insight into how each side of a debate thinks about the issue.  But objections help us understand what one side thinks of the other side</span><span class="ot">'</span>s arguments.  This can lead to deeper insights:  What<span class="ot">'</span><span class="ss">s the fundamental disagreement between the two sides?  Where do they agree?  Tracing out a complex debate, using tools like argument maps, might not resolve a controversy, but they can help us understand it better.  </span></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="ss">A number of philosophers and other writers, including the [ethicist Don Marquis](https://drive.google.com/file/d/0B6oYmzobonqoWTJqeUhxSm5XcWM/view?usp=sharing&amp;resourcekey=0-VNrlLS4h6Iz1txoiA9swGA), responded to Warren</span><span class="ot">'</span>s argument by pointing out that coma patients have a right to life, despite lacking the capacities Warren points to. </span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span><span class="st">mermaid</span></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="st">%%| echo: true</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="st">%%| code-folding: show</span></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="st">flowchart TB</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy(Everyone has a right to bodily autonomy)</span></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy --&gt; C(Abortion should be legal)</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life(An embryo has a right to life from conception)</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life -.-&gt; C</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1("Only beings with the capacity for </span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.")</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren2("An embryo lacks these capacities.")</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1("Coma patients also lack these capacities.")</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis2("Coma patients have a right to life.")</span></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span></span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>Marquis<span class="ot">'</span><span class="ss"> argument doesn</span><span class="ot">'</span>t deny that an embryo lacks the capacities <span class="kw">for</span> consciousness, pain, <span class="ot">and</span> so on.  Instead he<span class="ot">'</span><span class="ss">s criticizing Warren</span><span class="ot">'</span>s claim that only beings with these capacities have a right to life.  So his argument is another example of an objection to a premise.  Specifically, this kind of objection to a previous objection is called a *<span class="dt">*reply</span>*<span class="wa">*.</span>  In philosophy classes, you<span class="ot">'</span><span class="ss">ll often be asked to write papers where you present an argument, an objection, and finally a reply to that objection.  </span></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a><span class="ss">Marquis didn</span><span class="ot">'</span>t just give a reply to Warren<span class="ot">'</span><span class="ss">s objection.  He offered his own argument for an embryo</span><span class="ot">'</span>s right to life.  He calls it the <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> argument, because it appeals to the idea that <span class="ot">"</span><span class="st">The future of a standard fetus includes a set of experiences, projects, activities, and such which are identical with the futures of adult human beings and are identical with the futures of young children,</span><span class="ot">"</span> <span class="ot">and</span> that a fetus has a right to life because it has the potential <span class="kw">for</span> this kind of future.  Marquis also argues that this <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> view explains why temporary coma patients, at least, have a right to life: because they have the potential to awaken <span class="ot">and</span> lead a more<span class="ot">-o</span>r<span class="ot">-l</span>ess typical adult human life.  </span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span><span class="st">mermaid</span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="st">%%| echo: true</span></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a><span class="st">%%| code-folding: show</span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a><span class="st">flowchart TB</span></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy(Everyone has a right to bodily autonomy)</span></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a><span class="st">Pautonomy --&gt; C(Abortion should be legal)</span></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life(An embryo has a right to life from conception)</span></span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a><span class="st">Oright-to-life -.-&gt; C</span></span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a><span class="st">%% Warren's objection to the right-to-life argument</span></span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Warren's objection</span></span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1("Only beings with the capacity for </span></span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a><span class="st">     consciousness, the capacity to feel pain, </span></span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a><span class="st">     self-motivated activity, the capacity to </span></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a><span class="st">     communicate, and self-awareness have </span></span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a><span class="st">     a right to life.")</span></span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren2("An embryo lacks these capacities.")</span></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a><span class="st">OWarren1 &amp; OWarren2 --- OL[Warren's objection] -.-&gt; Oright-to-life</span></span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a><span class="st">%% Marquis' reply to Warren's objection</span></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Marquis' reply</span></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1("Coma patients also lack these capacities.")</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis2("Coma patients have a right to life.")</span></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a><span class="st">OMarquis1 &amp; OMarquis2 --- OLMarquis[Marquis' reply] -.-&gt; OWarren1</span></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a><span class="st">%% Marquis' future-like-ours account of the right to life</span></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a><span class="st">subgraph Marquis' future-like-ours account</span></span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture("Any being with the potential to </span></span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a><span class="st">         lead a future-like-ours has a </span></span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a><span class="st">         right to life.")</span></span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a><span class="st">Pcoma("Temporary coma patients have the potential</span></span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a><span class="st">       to lead a future-like-ours.")</span></span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture &amp; Pcoma --- Acoma[Marquis: Coma patient] --&gt; OMarquis2</span></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a><span class="st">Pembryo("An embryo has the potential</span></span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a><span class="st">         to lead a future-like-ours.")</span></span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a><span class="st">Pfuture &amp; Pembryo --- Aembryo[Marquis: Embryo] --&gt; Oright-to-life</span></span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a><span class="st">end</span></span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a>::: {.callout<span class="ot">-t</span>ip collapse=true}</span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a><span class="co">## Adding boxes using subgraphs</span></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>You can draw a box around a section of the debate by putting <span class="ot">`</span><span class="st">subgraph [name]</span><span class="ot">`</span> at the beginning of the section <span class="ot">and</span> <span class="ot">`</span><span class="st">end</span><span class="ot">`</span> at the end.  Check the source code to see how.</span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>Initially, this <span class="fu">map</span> of the debate over abortion might <span class="ot">not</span> seem that helpful.  We<span class="ot">'</span><span class="ss">ve taken a complex moral and political debate, and turned it into a complex diagram.  </span></span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a><span class="ss">But examining the map does help us understand a few aspects of the debate.  First, no one is denying that embryos lack the capacity to feel pain or consciousness or the like.  And no one is denying that (typically) embryos have the potential for a future-like-ours.  </span></span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a><span class="ss">Second, this debate has stepped back from the concrete issue of abortion itself, to focus on the abstract question *who has a right to life?*  The interlocutors give two very different answers to this question — Warren says a right to life requires certain cognitive capacities, Marquis says it</span><span class="ot">'</span>s based on a <span class="ot">"</span><span class="st">future-like-ours</span><span class="ot">"</span> — <span class="ot">and</span> there<span class="ot">'</span><span class="ss">s no neutral way to determine which answer is right.  Abortion proponents have a strong incentive to favor Warren</span><span class="ot">'</span>s account, <span class="ot">and</span> abortion opponents have an equally strong incentive to favor Marquis<span class="ot">'</span><span class="ss"> account.  This is a common feature of philosophical debate, and in my opinion one reason people often find philosophy useless and frustrating.  </span></span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="ss">::: {.callout-note collapse=true}</span></span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a><span class="ss">## [interlocutor](https://en.wiktionary.org/wiki/interlocutor)</span></span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a><span class="ss">A person who takes part in dialogue or conversation. </span></span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a><span class="ss">But this abstract philosophical debate can still be useful, for helping us understand the deeper disagreement between abortion defenders and opponents.  This is the third point.  Anti-abortion advocates, like Marquis, often think of embryos and fetuses as (soon-to-be, more-or-less) infants.  They</span><span class="ot">'</span>ll acknowledge that, in the early stages of pregnancy, an embryo <span class="ot">or</span> fetus is biologically pretty far off from a newborn.  But they emphasize what the embryo <span class="ot">or</span> fetus might be like, months <span class="ot">or</span> even years later.  Pro<span class="ot">-c</span>hoice advocates, like Warren, instead tend to focus on what the embryo <span class="ot">or</span> fetus is in itself at that early stage of development, setting aside what it might be like in the future.  When they <span class="kw">do</span> think about what the embryo might be in the future, they emphasize the effort <span class="ot">and</span> risk that pregnant people experience on the way.  </span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a>In her essay [<span class="ot">"</span><span class="st">Virtue Theory and Abortion,</span><span class="ot">"</span>](https://drive.google.com/file/d/0B6oYmzobonqoZHBrNGpBcWx5aDQ/view?usp=sharing&amp;resourcekey=<span class="dv">0</span><span class="ot">-M</span>CEVK23t5bKtI2IGFVi41g) the ethicist Rosalind Hursthouse looks at this debate, <span class="ot">and</span> acknowledges that both of these perspectives on an embryo/fetus are important.  </span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a>&gt; [T]he premature termination of a pregnancy is, in some sense, the cutting off of a new human life, <span class="ot">and</span> thereby ... connects with all <span class="kw">our</span> thoughts about human life <span class="ot">and</span> death, parenthood, <span class="ot">and</span> family relationships .... </span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a>&gt; </span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a>&gt; [But also, many women] view pregnancy only as eight months of misery, followed by hours <span class="kw">if</span> <span class="ot">not</span> days of agony <span class="ot">and</span> exhaustion, <span class="ot">and</span> abortion only as the blessed escape from this prospect[.  This point of view] is entirely understandable <span class="ot">and</span> does <span class="ot">not</span> manifest any lack of serious respect <span class="kw">for</span> human life <span class="ot">or</span> a shallow attitude to motherhood. (<span class="dv">237</span>, <span class="dv">240</span>)</span>
+<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a>Hursthouse goes on to argue that an abstract debate over whether an embryo has a right to life is <span class="kw">less</span> useful than a concrete discussion of the many factors — financial, personal, cultural, medical — that play a role in whether someone chooses to carry a pregnancy to term <span class="ot">or</span> to have an abortion.  Rather than the high<span class="ot">-p</span>rofile pro<span class="ot">-c</span>hoice vs. anti-abortion positions, Hursthouse<span class="ot">'</span><span class="ss">s view fits better with the [reproductive justice movement](https://en.wikipedia.org/wiki/Reproductive_justice), which advocates for legalized abortion but also the need for free, high-quality healthcare and childcare and living wages.  </span></span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-180"><a href="#cb6-180" aria-hidden="true" tabindex="-1"></a><span class="ss">::: {.exercises}</span></span>
+<span id="cb6-181"><a href="#cb6-181" aria-hidden="true" tabindex="-1"></a><span class="ss">Consider this argument, which we met earlier in @sec-simple: </span></span>
+<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a><span class="ss">&gt; **Animal agriculture is not bad for the environment and it is not bad for people.** [The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.]{.red} [Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.]{.blue} Furthermore, [new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.]{.purple} (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)</span></span>
+<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a><span class="ss">Using the rules from Chapter 1 of *Rulebook for Arguments*, develop an objection to one of the premises of this argument, and then a reply to your objection.  Present your objection and reply using an argument map.  </span></span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a><span class="ss">## Objecting to support</span></span>
+<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a><span class="ss">The other way that we can object to an argument is to challenge the support relationship between premises and conclusion.  That is, we might accept all of an argument</span><span class="ot">'</span>s premises, but still think that they don<span class="ot">'</span><span class="ss">t give a good reason to accept the conclusion.  In the rest of this semester, we</span><span class="ot">'</span>ll learn lots of different tools to assess support <span class="kw">for</span> different kinds of arguments.  For instance, <span class="kw">when</span> we talk about generalizations, <span class="ot">or</span> arguments by example, we<span class="ot">'</span><span class="ss">ll introduce a rule that *generalizations need more than one example*.  A generalization with a single example can have a true premise — this thing did happen in this one particular case — but, because it violates the rule, it doesn</span><span class="ot">'</span>t give much support to the conclusion.  </span>
+<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a>Students often have a lot of trouble with the idea of support.  It<span class="ot">'</span><span class="ss">s okay if you don</span><span class="ot">'</span>t get it at first.  Think of this course as teaching how to recognize how support works <span class="kw">for</span> different kinds of arguments.  </span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a>To illustrate objecting to support, let<span class="ot">'</span><span class="ss">s go back to our basic opposition between bodily autonomy and an embryo</span><span class="ot">'</span>s right to life.  A pro<span class="ot">-l</span>ife person might agree that bodily autonomy — the right to <span class="kw">do</span> what you want with your own body — is important.  But, they might <span class="kw">continue</span>, <span class="ot">not</span> all rights are equally important.  Specifically, someone<span class="ot">'</span><span class="ss">s right to life takes precedence over other rights.  As [a nineteenth-century aphorism](https://quoteinvestigator.com/2011/10/15/liberty-fist-nose/) put it, "My right to swing my fist ends where your nose begins."  </span></span>
+<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a><span class="ss">This objection challenges the pro-choice argument, but it doesn</span><span class="ot">'</span>t challenge the premise of bodily autonomy.  Instead it challenges the support, the <span class="fu">link</span>, between that premise <span class="ot">and</span> the conclusion of legal abortion.  In Mermaid, we can represent this by opposing an argument label, rather than a premise.  So we<span class="ot">'</span><span class="ss">ll add label for the pro-choice "autonomy argument," then the objection targeting it. </span></span>
+<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a><span class="ss">```{mermaid}</span></span>
+<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a><span class="ss">flowchart TB</span></span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy(Everyone has a right to bodily autonomy.)</span></span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span></span>
+<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life(An embryo has a right to life from conception.) </span></span>
+<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life -.-&gt; C</span></span>
+<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence("Someone</span><span class="ot">'</span>s right to life takes precedence</span>
+<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a>             over another person<span class="ot">'</span><span class="ss">s right to bodily</span></span>
+<span id="cb6-215"><a href="#cb6-215" aria-hidden="true" tabindex="-1"></a><span class="ss">             autonomy.")</span></span>
+<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence &amp; Oright-to-life --- OL[Precedence obj.] -.-&gt; Aautonomy</span></span>
+<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a><span class="ss">The premise that an embryo has a right to life is playing two roles in this debate.  First, on its own, it provides an argument that abortion should not be legal.  But also, when combined with the claim about the precedence of a right to life, it gives an objection to the autonomy argument.  If an embryo doesn</span><span class="ot">'</span>t have a right to life, then it doesn<span class="ot">'</span><span class="ss">t matter if a right to life takes precedence over bodily autonomy.  So someone might give a reply to the precedence objection in three ways:  </span></span>
+<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a><span class="ss">1. Challenge the premise that an embryo has a right to life. </span></span>
+<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a><span class="ss">2. Challenge the premise that a right to life takes precedence over bodily autonomy. </span></span>
+<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a><span class="ss">3. Challenge the support of the precedence objection.  </span></span>
+<span id="cb6-224"><a href="#cb6-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-225"><a href="#cb6-225" aria-hidden="true" tabindex="-1"></a><span class="ss">Warren</span><span class="ot">'</span>s objection could be used to take strategy (<span class="dv">1</span>).  The ethicist Judith Jarvis Thomson took strategy (<span class="dv">2</span>) in her <span class="dv">1971</span> paper [<span class="ot">"</span><span class="st">A Defense of Abortion</span><span class="ot">"</span>](https://drive.google.com/file/d/0B6oYmzobonqoR2Fka0FJbjZYMzQ/view?usp=sharing&amp;resourcekey=<span class="dv">0</span><span class="ot">-s</span>KH9_nhlpTXfCizCcVQBiA). </span>
+<span id="cb6-226"><a href="#cb6-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-227"><a href="#cb6-227" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=true}</span>
+<span id="cb6-228"><a href="#cb6-228" aria-hidden="true" tabindex="-1"></a><span class="co">## Thomson's defense of abortion</span></span>
+<span id="cb6-229"><a href="#cb6-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-230"><a href="#cb6-230" aria-hidden="true" tabindex="-1"></a>In her paper, Thomson grants (at least <span class="kw">for</span> the sake of argument) that an embryo has a right to life.  She defense of abortion is to argue that this right to life does <span class="ot">not</span> take precedence over bodily autonomy.  She introduces a famous thought experiment, in which you<span class="ot">'</span><span class="ss">re kidnapped and surgically connected to a world-famous violinist, who</span><span class="ot">'</span>s in a coma <span class="ot">and</span> will <span class="fu">die</span> <span class="kw">if</span> you don<span class="ot">'</span><span class="ss">t act as his life support system for the next nine months.  The violinist has a right to life, she says, but *not* a right to the use of your body.  </span></span>
+<span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-232"><a href="#cb6-232" aria-hidden="true" tabindex="-1"></a><span class="ss">In my opinion, Thomson</span><span class="ot">'</span>s argument is based on an excessively strong form of individualism.  Later in the paper, in another thought experiment, she imagines that she<span class="ot">'</span><span class="ss">s dying in bed, and the actor Henry Fonda is standing in the doorway of her room, just a few feet away.  If Fonda walks over and touches her forehead, she</span><span class="ot">'</span>ll be instantly cured of her disease <span class="ot">and</span> her life will be saved.  She writes: </span>
+<span id="cb6-233"><a href="#cb6-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-234"><a href="#cb6-234" aria-hidden="true" tabindex="-1"></a>&gt; Suppose he has only to walk across the room, place a hand briefly on <span class="kw">my</span> brow-<span class="ot">and</span> lo, <span class="kw">my</span> life is saved. Then surely he ought to <span class="kw">do</span> it, it would be indecent to refuse. Is it to be said <span class="ot">"</span><span class="st">Ah,well, it follows that in this case she has a right to the touch of his hand on her brow, and so it would be an injustice in him to refuse</span><span class="ot">"</span>? ... It<span class="ot">'</span><span class="ss">s rather a shocking idea that anyone</span><span class="ot">'</span>s rights should fade away <span class="ot">and</span> disappear as it gets harder <span class="ot">and</span> harder to accord them to him. (<span class="dv">61</span>)</span>
+<span id="cb6-235"><a href="#cb6-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-236"><a href="#cb6-236" aria-hidden="true" tabindex="-1"></a>In other words, Thomson says that Fonda <span class="dt">*morally</span> should<span class="ot">*</span> <span class="kw">do</span> this trivial thing to save her life.  But she has <span class="fu">no</span> moral (<span class="ot">or</span> legal) <span class="dt">*right</span><span class="ot">*</span> to demand that he does so.  </span>
+<span id="cb6-237"><a href="#cb6-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-238"><a href="#cb6-238" aria-hidden="true" tabindex="-1"></a>My objection is that Thomson<span class="ot">'</span><span class="ss">s view would undermine any use of taxpayer funds to provide social benefits:  public roads, education, clean air and water, shelter, health care, food, and so on.  There are people who will die today because of lack of access to shelter or health care.  Does justice require that wealthy people be taxed, and those funds use to pay for things like homeless shelters and universal health insurance?  I think it does.  In other words, vulnerable people do have a *right* to demand that wealthy people pay for these kinds of things.  </span></span>
+<span id="cb6-239"><a href="#cb6-239" aria-hidden="true" tabindex="-1"></a><span class="ss">:::</span></span>
+<span id="cb6-240"><a href="#cb6-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-241"><a href="#cb6-241" aria-hidden="true" tabindex="-1"></a><span class="ss">The third strategy amounts to saying:  Okay, at least for the sake of argument, I</span><span class="ot">'</span>ll agree that an embryo has a right to life; <span class="ot">and</span> a right to life takes precedence over a right to bodily autonomy.  But <span class="dt">*even</span> then<span class="ot">*</span> the precedence objection doesn<span class="ot">'</span><span class="ss">t work.  Those premises aren</span><span class="ot">'</span>t enough to conclude that the bodily autonomy argument is flawed.  </span>
+<span id="cb6-242"><a href="#cb6-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-243"><a href="#cb6-243" aria-hidden="true" tabindex="-1"></a>One way to take this third strategy is to make a distinction between killing someone <span class="ot">and</span> letting them <span class="fu">die</span>.  Many people would <span class="fu">say</span> there<span class="ot">'</span><span class="ss">s a difference between letting a young child drown in a bathtub and actively holding them underwater until they drown.  One version of this distinction is in terms of intentions: if the child managed to save themselves, you wouldn</span><span class="ot">'</span>t reach down <span class="ot">and</span> <span class="fu">push</span> them back under.  Someone might go on to argue that letting someone <span class="fu">die</span> doesn<span class="ot">'</span><span class="ss">t violate their right to life — it was sort of an accident or unintended consequence — and that abortion is letting an embryo die — if the embryo someone managed to survive the procedure, you wouldn</span><span class="ot">'</span>t actively try to <span class="fu">kill</span> it.  </span>
+<span id="cb6-244"><a href="#cb6-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-245"><a href="#cb6-245" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb6-246"><a href="#cb6-246" aria-hidden="true" tabindex="-1"></a>The drowning children example comes from a paper by the ethicist James Rachels.  Rachels<span class="ot">'</span><span class="ss"> point was to challenge the distinction: he claims that there</span><span class="ot">'</span>s actually <span class="fu">no</span> morally significant difference between these two cases.  </span>
+<span id="cb6-247"><a href="#cb6-247" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-248"><a href="#cb6-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-249"><a href="#cb6-249" aria-hidden="true" tabindex="-1"></a>This reply to the precedence objection again targets the support of the argument.  The objection can agree that the right to life takes precedence over bodily autonomy.  But, they claim, the right to life isn<span class="ot">'</span><span class="ss">t violated in abortion, because abortion is letting an embryo die rather than killing it.  </span></span>
+<span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-253"><a href="#cb6-253" aria-hidden="true" tabindex="-1"></a><span class="ss">```{mermaid}</span></span>
+<span id="cb6-254"><a href="#cb6-254" aria-hidden="true" tabindex="-1"></a><span class="ss">flowchart TB</span></span>
+<span id="cb6-255"><a href="#cb6-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-256"><a href="#cb6-256" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy(Everyone has a right to bodily autonomy.)</span></span>
+<span id="cb6-257"><a href="#cb6-257" aria-hidden="true" tabindex="-1"></a><span class="ss">Pautonomy --- Aautonomy[Autonomy arg.] --&gt; C(Abortion should be legal.)</span></span>
+<span id="cb6-258"><a href="#cb6-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-259"><a href="#cb6-259" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life(An embryo has a right to life from conception.) </span></span>
+<span id="cb6-260"><a href="#cb6-260" aria-hidden="true" tabindex="-1"></a><span class="ss">Oright-to-life -.-&gt; C</span></span>
+<span id="cb6-261"><a href="#cb6-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-262"><a href="#cb6-262" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence("Someone</span><span class="ot">'</span>s right to life takes precedence</span>
+<span id="cb6-263"><a href="#cb6-263" aria-hidden="true" tabindex="-1"></a>             over another person<span class="ot">'</span><span class="ss">s right to bodily</span></span>
+<span id="cb6-264"><a href="#cb6-264" aria-hidden="true" tabindex="-1"></a><span class="ss">             autonomy.")</span></span>
+<span id="cb6-265"><a href="#cb6-265" aria-hidden="true" tabindex="-1"></a><span class="ss">Oprecedence &amp; Oright-to-life --- OLprecedence[Precedence obj.] -.-&gt; Aautonomy</span></span>
+<span id="cb6-266"><a href="#cb6-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-267"><a href="#cb6-267" aria-hidden="true" tabindex="-1"></a><span class="ss">Okilling-die("Unlike killing, letting someone die </span></span>
+<span id="cb6-268"><a href="#cb6-268" aria-hidden="true" tabindex="-1"></a><span class="ss">              does not violate their right to life.")</span></span>
+<span id="cb6-269"><a href="#cb6-269" aria-hidden="true" tabindex="-1"></a><span class="ss">Oabortion-die("Abortion is letting an embryo die, </span></span>
+<span id="cb6-270"><a href="#cb6-270" aria-hidden="true" tabindex="-1"></a><span class="ss">               not killing it")</span></span>
+<span id="cb6-271"><a href="#cb6-271" aria-hidden="true" tabindex="-1"></a><span class="ss">Okilling-die &amp; Oabortion-die --- OL[Killing vs.\nletting die] -.-&gt; OLprecedence</span></span>
+<span id="cb6-272"><a href="#cb6-272" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span>
+<span id="cb6-273"><a href="#cb6-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-274"><a href="#cb6-274" aria-hidden="true" tabindex="-1"></a><span class="ss">[start here]{.todo}</span></span>
+<span id="cb6-275"><a href="#cb6-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-276"><a href="#cb6-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-277"><a href="#cb6-277" aria-hidden="true" tabindex="-1"></a><span class="ss">```{.argdown-map mode="web-component"}</span></span>
+<span id="cb6-278"><a href="#cb6-278" aria-hidden="true" tabindex="-1"></a><span class="ss">&lt;Killing vs. letting die reply&gt;</span></span>
+<span id="cb6-279"><a href="#cb6-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-280"><a href="#cb6-280" aria-hidden="true" tabindex="-1"></a><span class="ss">(1) [killing vs. letting die]: Unlike killing, letting someone die does not violate their right to life</span></span>
+<span id="cb6-281"><a href="#cb6-281" aria-hidden="true" tabindex="-1"></a><span class="ss">(2) [abortion is letting die]: Abortion is letting an embryo die, not killing it</span></span>
+<span id="cb6-282"><a href="#cb6-282" aria-hidden="true" tabindex="-1"></a><span class="ss">----</span></span>
+<span id="cb6-283"><a href="#cb6-283" aria-hidden="true" tabindex="-1"></a><span class="ss">(3) [C]: Abortion does not violate an embryo</span><span class="ot">'</span>s right to life</span>
+<span id="cb6-284"><a href="#cb6-284" aria-hidden="true" tabindex="-1"></a>    -&gt; &lt;Precedence objection&gt;</span>
+<span id="cb6-285"><a href="#cb6-285" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb6-286"><a href="#cb6-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-287"><a href="#cb6-287" aria-hidden="true" tabindex="-1"></a><span class="st">While this is a useful example for showing how we represent objections and replies in argument maps, I don't think it's a very compelling reply to the objection.  In my opinion, both premises have problems.  First, many homeless people in our society die of exposure and treatable diseases.  This is letting them die — we don't actively hunt down homeless people who survive these challenges — but denying them access to housing and health care does, I think, violate their right to life.  Second, it's not clear to me what the difference is supposed to be between ending a pregnancy and ending the life of the embryo or fetus involved in that pregnancy, i.e., killing it.  It seems to me like these are just two ways of describing the same action.  </span></span>
+<span id="cb6-288"><a href="#cb6-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-289"><a href="#cb6-289" aria-hidden="true" tabindex="-1"></a><span class="st">::: {.exercises}</span></span>
+<span id="cb6-290"><a href="#cb6-290" aria-hidden="true" tabindex="-1"></a><span class="st">Expand the argument map above to include my two objections to the killing vs. letting die reply. Are these objections to support or objections to premises? </span></span>
+<span id="cb6-291"><a href="#cb6-291" aria-hidden="true" tabindex="-1"></a><span class="st">:::</span></span>
+<span id="cb6-292"><a href="#cb6-292" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
