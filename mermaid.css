@@ -1,0 +1,66 @@
+/*-- scss:rules --*/
+.mermaid svg {
+	max-width: 100%;
+	height: auto;
+}
+
+#Argument rect {
+	stroke:transparent; 
+	fill:#e5e5e5!important;
+} 
+
+#Argument span {
+	color:transparent;
+}
+
+.edgeLabel {
+	color:#888; 
+	font-size:0.9em; 
+	margin-right:3px
+} 
+
+.edgeLabel i {
+	color:crimson!important;
+} 
+
+.edge-pattern-dotted {
+	stroke:crimson!important;
+} 
+
+.edge-pattern-solid {
+	stroke:blue!important;
+} 
+
+#flowchart-pointEnd {
+	fill:blue;
+} 
+
+g rect {
+	fill:white!important;
+}
+
+g[id*="P"] * {
+	stroke:blue!important;
+	fill:white!important;
+}
+
+g[id*="O"] * {
+	stroke:crimson!important; 
+} 
+
+g[id*="OL"] * {
+	color:white!important;
+	fill:red!important;
+}
+
+g[id*="A"] * {
+	stroke:blue!important;
+	fill:blue!important;
+	color:white!important;
+}
+
+g[id*="C"] * {
+	fill:black!important;
+	color:white!important;
+	font-weight:bold;
+}

@@ -3,12 +3,12 @@ project:
   output-dir: docs
 
 book:
-  title: "Mapping Arguments and Debates with Argdown"
+  title: "Mapping Arguments and Debates with Mermaid"
   author: "Dan Hicks"
   chapters:
     - index.md
-    - 02-argdown.md
-    - 03-simple.md
+    - 02-mermaid.qmd
+    - 03-simple.qmd
     - 04-interdependent.md
     - 05-objections.md
     - 06-biofuels.md
@@ -18,10 +18,14 @@ format:
   html:
     theme: 
         - cosmo
+        - mermaid.css
         - theming.scss
-
-filters:
-    - argdown-filter
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: true
+    
+execute:
+    echo: true
 
 number-sections: true
 

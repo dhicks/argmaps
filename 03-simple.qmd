@@ -1,0 +1,146 @@
+# Simple argument maps {#sec-simple}
+
+## A first map ##
+
+Let's start with a simple argument for a campus mask mandate:  
+
+> [Masks are effective at preventing people from spreading Covid-19.]{.blue}  [So our campus should have a mask mandate.]{.green}
+
+This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word **so**.  The structure is basically the same as the "first argument map" we created in the previous chapter. 
+
+```{mermaid}
+%%| echo: true
+flowchart TB
+
+P1(Masks are effective at preventing people from spreading Covid-19.)
+C(Our campus should have a mask mandate.)
+
+P1 --> C
+```
+
+The first line tells Mermaid what type of diagram we're creating.  (We're using a flowchart, ordered from top to bottom, and colored specifically for argument maps.) The next two lines mark the premise and conclusion. We give each claim a label, `P1` or `C`.  These labels indicate what kind of claim it is, and are used by Mermaid to get the colors right.  Then we put the text in parentheses.  Finally, the last line indicates that support runs from the premise `P1` to the conclusion `C`.  
+
+The premise is a little long.  Mermaid won't automatically add line breaks to make things more compact.  We can do it manually, but need to put the text into quotes. 
+
+```{mermaid}
+%%| echo: true
+flowchart TB
+
+P1("Masks are effective at preventing 
+    people from spreading Covid-19.")
+C(Our campus should have a mask mandate.)
+
+P1 --> C
+```
+
+
+::: exercises
+1. What happens if you leave out one of the lines?  
+
+2. What happens if you reverse the arrow in the final line, `P1 <-- C`?  What if you keep the arrow the same, but switch the place of the premise and conclusion? 
+
+3. Construct a map for the following argument: 
+
+> Bikes, scooters, and the bus all have a lower carbon footprint than individual cars.  So campus should encourage people to take bikes, scooters, and the bus.  
+
+:::
+
+
+
+## Independent arguments for the same conclusion ##
+
+Consider the following passage:  
+
+> **Animal agriculture is not bad for the environment and it is not bad for people.** [The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.]{.red} [Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.]{.blue} Furthermore, [new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.]{.purple} (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)
+
+This argument has one conclusion sentence (in **bold**) and three premises, in red, blue, and purple. These premises form **independent** arguments:  the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat.  Because they're talking about different aspects of the debate over animal agriculture, these arguments are independent of each other.  You might reject one argument, but agree with the other two.  Here's how we can represent these three independent arguments in an argument map.  
+
+
+```{mermaid}
+%%| echo: true
+flowchart TB
+C("Animal agriculture is not bad 
+   for the environment and it is 
+   not bad for people.")
+
+Pscience("The so-called scientific studies purporting 
+              to show that animals are bad for the environment 
+              have been repeatedly shown to be flawed")
+Pscience --> C
+
+Pruminants("Ruminant animals, like cattle and sheep, 
+            are among the most sustainable food production 
+            systems on Earth, taking unusable land and 
+            waste products from vegetable and grain 
+            production, and turning it into healthy, 
+            nutrient-dense foods.")
+Pruminants --> C
+
+Phealthy("New scientific research is coming out 
+          showing that meat is extremely good for 
+          our health, and that a high-meat diet 
+          free of processed foods can actually 
+          reverse all kinds of chronic diseases.")
+Phealthy --> C
+```
+
+
+## Independent arguments for multiple conclusions
+
+It might have occurred to you that there are actually *two* conclusions in this argument: 
+
+1. Animal agriculture is not bad for the environment. 
+2. Animal agriculture is not bad for people. 
+
+Different arguments support different conclusions.  We can modify the Mermaid source code, separating the conclusions and indicating which arguments support which conclusion. 
+
+```{mermaid}
+%%| echo: true
+flowchart TB
+Cenviro("Animal agriculture is not bad
+         for the environment")
+Cpeople("Animal agriculture is not bad
+         for people")
+
+Pscience("The so-called scientific studies purporting 
+              to show that animals are bad for the environment 
+              have been repeatedly shown to be flawed")
+Pscience --> Cenviro
+
+Pruminants("Ruminant animals, like cattle and sheep, 
+            are among the most sustainable food production 
+            systems on Earth, taking unusable land and 
+            waste products from vegetable and grain 
+            production, and turning it into healthy, 
+            nutrient-dense foods.")
+Pruminants --> Cenviro
+Pruminants --> Cpeople
+
+Phealthy("New scientific research is coming out 
+          showing that meat is extremely good for 
+          our health, and that a high-meat diet 
+          free of processed foods can actually 
+          reverse all kinds of chronic diseases.")
+Phealthy --> Cpeople
+```
+
+
+
+This example illustrates the importance of putting each claim of an argument in its own box.  The premise **meat healthy** isn't an argument for the **not bad for enviro** conclusion; it's only making claims about the health effects of eating meat.  And someone might present an objection to the **unusuable land** premise without addressing the other two, independent arguments.  
+
+
+::: exercises
+1. Construct a map of the following argument: 
+
+> Eating animals is wrong for a variety of reasons. First, many animals are sentient creatures that have thoughts and emotions. Second, we should not cause animals to suffer if we don’t need to. Finally, raising animals for food uses resources, like grain, that could be used to feed hungry people around the world. 
+
+2. Construct a map of the following argument: 
+
+> Poverty, illiteracy, and child mortality are all falling faster than ever. The average person is less likely to be affected by war, governed by a dictator, or die in a natural disaster than ever before. This shows that there has never been a better time to be alive than right now.
+
+3. Construct a map of the following argument: 
+
+> People who work in the technology industry are increasingly limiting their kids’ screen time and their access to technology. Apple CEO Tim Cook prohibited his nephew from joining social media. Cook’s predecessor, Apple co-founder Steve Jobs, prohibited his young children from using iPads. Former Microsoft CEO Bill Gates wouldn’t let his kids have cell phones until they were teenagers. 
+:::
+
+

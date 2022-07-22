@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mapping Arguments and Debates with Argdown - 3&nbsp; Simple argument maps</title>
+<title>Mapping Arguments and Debates with Mermaid - 3&nbsp; Simple argument maps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +15,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -26,7 +89,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./04-interdependent.html" rel="next">
-<link href="./02-argdown.html" rel="prev">
+<link href="./02-mermaid.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -55,6 +118,9 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -78,7 +144,7 @@ ul.task-list{list-style: none;}
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Mapping Arguments and Debates with Argdown</a> 
+      <a href="./">Mapping Arguments and Debates with Mermaid</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/dhicks/argmaps" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
 </div>
@@ -98,7 +164,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-argdown.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Argdown</span></a>
+  <a href="./02-mermaid.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Mermaid</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -132,6 +198,7 @@ ul.task-list{list-style: none;}
   <ul>
   <li><a href="#a-first-map" id="toc-a-first-map" class="nav-link active" data-scroll-target="#a-first-map"> <span class="header-section-number">3.1</span> A first map</a></li>
   <li><a href="#independent-arguments-for-the-same-conclusion" id="toc-independent-arguments-for-the-same-conclusion" class="nav-link" data-scroll-target="#independent-arguments-for-the-same-conclusion"> <span class="header-section-number">3.2</span> Independent arguments for the same conclusion</a></li>
+  <li><a href="#independent-arguments-for-multiple-conclusions" id="toc-independent-arguments-for-multiple-conclusions" class="nav-link" data-scroll-target="#independent-arguments-for-multiple-conclusions"> <span class="header-section-number">3.3</span> Independent arguments for multiple conclusions</a></li>
   </ul>
 </nav>
     </div>
@@ -140,7 +207,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-simple" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple argument maps</span></span></h1>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-simple" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simple argument maps</span></span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -160,52 +227,73 @@ ul.task-list{list-style: none;}
 <blockquote class="blockquote">
 <p><span class="blue">Masks are effective at preventing people from spreading Covid-19.</span> <span class="green">So our campus should have a mask mandate.</span></p>
 </blockquote>
-<p>This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word <strong>so</strong>. To start mapping out this argument, we start with the conclusion. Enter this into either the <a href="02-argdown.html#using-the-argdown-sandbox">Argdown Sandbox</a> or <a href="02-argdown.html#using-argdown-with-obsidian">Obsidian</a>.</p>
-<pre><code>[mandate]: our campus should have a mask mandate</code></pre>
-<p>We give the conclusion a title, <code>[mandate]</code>, so that we can construct multiple arguments that involve it without having to type and retype it again and again.</p>
-<p>Next we’ll add the premise, and indicate that it supports the conclusion. Like the conclusion, we give the premise a name so that we can refer back to it again. Argdown has a few different ways of indicating support relationships. All of the following are equivalent:</p>
-<pre><code>[masks effective]: Masks are effective at preventing people from spreading Covid-19.
-    +&gt; [mandate]
-    
-[mandate]
-    &lt;+ [masks effective]: Masks are effective at preventing people from spreading Covid-19.
+<p>This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word <strong>so</strong>. The structure is basically the same as the “first argument map” we created in the previous chapter.</p>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>P1(Masks are effective at preventing people from spreading Covid-19.)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>C(Our campus should have a mask mandate.)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart TB
 
-[mandate] 
-    + [masks effective]: Masks are effective at preventing people from spreading Covid-19.</code></pre>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+P1(Masks are effective at preventing people from spreading Covid-19.)
+C(Our campus should have a mask mandate.)
+
+P1 --&gt; C
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
 </div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We can refer to claims (premises or conclusions) using just the title, without having to type them out again and again.</p>
+<p></p>
 </div>
 </div>
-<p>The first version has the premise, followed by the conclusion. The second and third start with the conclusion, then give the premise. Notice that the direction of the arrow is reversed between the first and second versions. Support always goes from the premise and to the conclusion. The third version can be useful for showing how an conclusion can be supported by multiple independent arguments; more on that later. Whichever way you write out the argument in Argdown, you should see this when you visualize it:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="data:image/svg+xml;base64,CjwhLS0gR2VuZXJhdGVkIGJ5IGdyYXBodml6IHZlcnNpb24gMi40Ny4wICgyMDIxMDMxNi4wMDA0KQogLS0+CjwhLS0gVGl0bGU6IEFyZ3VtZW50IE1hcCBQYWdlczogMSAtLT4KPHN2ZyB3aWR0aD0iMjIxcHQiIGhlaWdodD0iMTM2cHQiCiB2aWV3Qm94PSIwLjAwIDAuMDAgMjIxLjAwIDEzNi4wMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxnIGlkPSJncmFwaDAiIGNsYXNzPSJncmFwaCIgdHJhbnNmb3JtPSJzY2FsZSgxIDEpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoNCAxMzIpIj4KPHRpdGxlPkFyZ3VtZW50IE1hcDwvdGl0bGU+CjwhLS0gbjAgLS0+CjxnIGlkPSJub2RlMSIgY2xhc3M9Im5vZGUiPgo8dGl0bGU+bjA8L3RpdGxlPgo8cGF0aCBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMWI5ZTc3IiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0yMDEsLTEyOEMyMDEsLTEyOCAxMiwtMTI4IDEyLC0xMjggNiwtMTI4IDAsLTEyMiAwLC0xMTYgMCwtMTE2IDAsLTEwMCAwLC0xMDAgMCwtOTQgNiwtODggMTIsLTg4IDEyLC04OCAyMDEsLTg4IDIwMSwtODggMjA3LC04OCAyMTMsLTk0IDIxMywtMTAwIDIxMywtMTAwIDIxMywtMTE2IDIxMywtMTE2IDIxMywtMTIyIDIwNywtMTI4IDIwMSwtMTI4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iODcuNTUiIHk9Ii0xMTQiIGZvbnQtZmFtaWx5PSJhcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iMTAuMDAiIGZpbGw9IiMwMDAwMDAiPm1hbmRhdGU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMTAuMzEiIHk9Ii05NyIgZm9udC1mYW1pbHk9ImFyaWFsIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5PdXIgY2FtcHVzIHNob3VsZCBoYXZlIGEgbWFzayBtYW5kYXRlLiA8L3RleHQ+CjwvZz4KPCEtLSBuMSAtLT4KPGcgaWQ9Im5vZGUyIiBjbGFzcz0ibm9kZSI+Cjx0aXRsZT5uMTwvdGl0bGU+CjxwYXRoIGZpbGw9IndoaXRlIiBzdHJva2U9IiMxYjllNzciIHN0cm9rZS13aWR0aD0iMiIgZD0iTTE5Mi41LC01MkMxOTIuNSwtNTIgMjAuNSwtNTIgMjAuNSwtNTIgMTQuNSwtNTIgOC41LC00NiA4LjUsLTQwIDguNSwtNDAgOC41LC0xMiA4LjUsLTEyIDguNSwtNiAxNC41LDAgMjAuNSwwIDIwLjUsMCAxOTIuNSwwIDE5Mi41LDAgMTk4LjUsMCAyMDQuNSwtNiAyMDQuNSwtMTIgMjA0LjUsLTEyIDIwNC41LC00MCAyMDQuNSwtNDAgMjA0LjUsLTQ2IDE5OC41LC01MiAxOTIuNSwtNTIiLz4KPHRleHQgdGV4dC1hbmNob3I9InN0YXJ0IiB4PSI3Mi4wNSIgeT0iLTM4IiBmb250LWZhbWlseT0iYXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5tYXNrcyBlZmZlY3RpdmU8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMzMuMTUiIHk9Ii0yMSIgZm9udC1mYW1pbHk9ImFyaWFsIiBmb250LXNpemU9IjEwLjAwIiBmaWxsPSIjMDAwMDAwIj5NYXNrcyBhcmUgZWZmZWN0aXZlIGF0IHByZXZlbnRpbmc8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMzIuNiIgeT0iLTkiIGZvbnQtZmFtaWx5PSJhcmlhbCIgZm9udC1zaXplPSIxMC4wMCIgZmlsbD0iIzAwMDAwMCI+IHBlb3BsZSBmcm9tIHNwcmVhZGluZyBDb3ZpZCYjNDU7MTkuPC90ZXh0Pgo8L2c+CjwhLS0gbjEmIzQ1OyZndDtuMCAtLT4KPGcgaWQ9ImVkZ2UxIiBjbGFzcz0iZWRnZSI+Cjx0aXRsZT5uMSYjNDU7Jmd0O24wPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA5NmZmIiBkPSJNMTA2LjUsLTUyLjMxQzEwNi41LC02MC40MiAxMDYuNSwtNjkuNDcgMTA2LjUsLTc3LjgzIi8+Cjxwb2x5Z29uIGZpbGw9IiMwMDk2ZmYiIHN0cm9rZT0iIzAwOTZmZiIgcG9pbnRzPSIxMDMsLTc3Ljk0IDEwNi41LC04Ny45NCAxMTAsLTc3Ljk0IDEwMywtNzcuOTQiLz4KPC9nPgo8L2c+Cjwvc3ZnPgo=" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption"></figcaption><p></p>
-</figure>
+</div>
+<p>The first line tells Mermaid what type of diagram we’re creating. (We’re using a flowchart, ordered from top to bottom, and colored specifically for argument maps.) The next two lines mark the premise and conclusion. We give each claim a label, <code>P1</code> or <code>C</code>. These labels indicate what kind of claim it is, and are used by Mermaid to get the colors right. Then we put the text in parentheses. Finally, the last line indicates that support runs from the premise <code>P1</code> to the conclusion <code>C</code>.</p>
+<p>The premise is a little long. Mermaid won’t automatically add line breaks to make things more compact. We can do it manually, but need to put the text into quotes.</p>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>P1("Masks are effective at preventing </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    people from spreading Covid-19.")</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>C(Our campus should have a mask mandate.)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-2">flowchart TB
+
+P1("Masks are effective at preventing 
+    people from spreading Covid-19.")
+C(Our campus should have a mask mandate.)
+
+P1 --&gt; C
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
 </div>
 <div class="exercises">
 <ol type="1">
-<li><p>Try each version of the argument separately. Confirm that the argument maps are identical in each case.</p></li>
-<li><p>What happens if you reverse one of the arrows?</p></li>
+<li><p>What happens if you leave out one of the lines?</p></li>
+<li><p>What happens if you reverse the arrow in the final line, <code>P1 &lt;-- C</code>? What if you keep the arrow the same, but switch the place of the premise and conclusion?</p></li>
 <li><p>Construct a map for the following argument:</p></li>
 </ol>
 <blockquote class="blockquote">
 <p>Bikes, scooters, and the bus all have a lower carbon footprint than individual cars. So campus should encourage people to take bikes, scooters, and the bus.</p>
-</blockquote>
-<ol start="4" type="1">
-<li>Construct a map for the following argument:</li>
-</ol>
-<blockquote class="blockquote">
-
 </blockquote>
 </div>
 </section>
@@ -215,207 +303,148 @@ Note
 <blockquote class="blockquote">
 <p><strong>Animal agriculture is not bad for the environment and it is not bad for people.</strong> <span class="red">The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.</span> <span class="blue">Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.</span> Furthermore, <span class="purple">new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.</span> (Adapted from <em>Rulebook for Arguments</em>, Third Edition, pp36-37)</p>
 </blockquote>
-<p>This argument has one conclusion sentence (in <strong>bold</strong>) and three premises, in red, blue, and purple. These premises form <strong>independent</strong> arguments: the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat. Because they’re talking about different aspects of the debate over animal agriculture, these arguments are independent of each other. Here’s how we can represent these three independent arguments in an argument map.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Most of the argument maps in this tutorial will be interactive. You can click on the Source button to view the underlying Argdown code.</p>
-</div>
-</div>
+<p>This argument has one conclusion sentence (in <strong>bold</strong>) and three premises, in red, blue, and purple. These premises form <strong>independent</strong> arguments: the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat. Because they’re talking about different aspects of the debate over animal agriculture, these arguments are independent of each other. You might reject one argument, but agree with the other two. Here’s how we can represent these three independent arguments in an argument map.</p>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>C("Animal agriculture is not bad </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>   for the environment and it is </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>   not bad for people.")</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Pscience("The so-called scientific studies purporting </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>              to show that animals are bad for the environment </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>              have been repeatedly shown to be flawed")</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>Pscience --&gt; C</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>Pruminants("Ruminant animals, like cattle and sheep, </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            are among the most sustainable food production </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            systems on Earth, taking unusable land and </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            waste products from vegetable and grain </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>            production, and turning it into healthy, </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            nutrient-dense foods.")</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>Pruminants --&gt; C</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>Phealthy("New scientific research is coming out </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>          showing that meat is extremely good for </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>          our health, and that a high-meat diet </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>          free of processed foods can actually </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>          reverse all kinds of chronic diseases.")</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>Phealthy --&gt; C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.css"><script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-bundle.js" type="module"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@argdown/web-components/dist/argdown-map.js"></script><figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[not bad for enviro or people]:</span> Animal agriculture is not bad for the environment and it is not bad for people. 
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-3">flowchart TB
+C("Animal agriculture is not bad 
+   for the environment and it is 
+   not bad for people.")
 
-<span class="hljs-statement-title">[bad science]:</span> The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed. 
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[not bad for enviro or people]</span>
+Pscience("The so-called scientific studies purporting 
+              to show that animals are bad for the environment 
+              have been repeatedly shown to be flawed")
+Pscience --&gt; C
 
-<span class="hljs-statement-title">[unusuable land]:</span> Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[not bad for enviro or people]</span>
-    
-<span class="hljs-statement-title">[meat healthy]:</span> New scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[not bad for enviro or people]</span></code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="634pt" height="220pt" viewbox="0.00 0.00 634.00 220.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 216)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M399,-212C399,-212 227,-212 227,-212 221,-212 215,-206 215,-200 215,-200 215,-160 215,-160 215,-154 221,-148 227,-148 227,-148 399,-148 399,-148 405,-148 411,-154 411,-160 411,-160 411,-200 411,-200 411,-206 405,-212 399,-212"></path>
-<text text-anchor="start" x="251.87" y="-198" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">not bad for enviro or people</text>
-<text text-anchor="start" x="234.37" y="-181" font-family="arial" font-size="10.00" fill="#000000">Animal agriculture is not bad for the</text>
-<text text-anchor="start" x="240.2" y="-169" font-family="arial" font-size="10.00" fill="#000000"> environment and it is not bad for</text>
-<text text-anchor="start" x="293.82" y="-157" font-family="arial" font-size="10.00" fill="#000000"> people. </text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M184,-94C184,-94 12,-94 12,-94 6,-94 0,-88 0,-82 0,-82 0,-30 0,-30 0,-24 6,-18 12,-18 12,-18 184,-18 184,-18 190,-18 196,-24 196,-30 196,-30 196,-82 196,-82 196,-88 190,-94 184,-94"></path>
-<text text-anchor="start" x="71.32" y="-80" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bad science</text>
-<text text-anchor="start" x="30.21" y="-63" font-family="arial" font-size="10.00" fill="#000000">The so-called scientific studies</text>
-<text text-anchor="start" x="18.54" y="-51" font-family="arial" font-size="10.00" fill="#000000"> purporting to show that animals are</text>
-<text text-anchor="start" x="19.08" y="-39" font-family="arial" font-size="10.00" fill="#000000"> bad for the environment have been</text>
-<text text-anchor="start" x="26.31" y="-27" font-family="arial" font-size="10.00" fill="#000000"> repeatedly shown to be flawed. </text>
-</g>
-<!-- n1&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n1-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M163.38,-94.1C190.58,-109.53 222.04,-127.39 249.08,-142.73"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="247.64,-145.94 258.07,-147.83 251.1,-139.85 247.64,-145.94"></polygon>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M399.5,-112C399.5,-112 226.5,-112 226.5,-112 220.5,-112 214.5,-106 214.5,-100 214.5,-100 214.5,-12 214.5,-12 214.5,-6 220.5,0 226.5,0 226.5,0 399.5,0 399.5,0 405.5,0 411.5,-6 411.5,-12 411.5,-12 411.5,-100 411.5,-100 411.5,-106 405.5,-112 399.5,-112"></path>
-<text text-anchor="start" x="279.6" y="-98" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">unusuable land</text>
-<text text-anchor="start" x="240.16" y="-81" font-family="arial" font-size="10.00" fill="#000000">Ruminant animals, like cattle and</text>
-<text text-anchor="start" x="224.58" y="-69" font-family="arial" font-size="10.00" fill="#000000"> sheep, are among the most sustainable</text>
-<text text-anchor="start" x="236.25" y="-57" font-family="arial" font-size="10.00" fill="#000000"> food production systems on Earth,</text>
-<text text-anchor="start" x="242.08" y="-45" font-family="arial" font-size="10.00" fill="#000000"> taking unusable land and waste</text>
-<text text-anchor="start" x="236.26" y="-33" font-family="arial" font-size="10.00" fill="#000000"> products from vegetable and grain</text>
-<text text-anchor="start" x="247.65" y="-21" font-family="arial" font-size="10.00" fill="#000000"> production, and turning it into</text>
-<text text-anchor="start" x="246.25" y="-9" font-family="arial" font-size="10.00" fill="#000000"> healthy, nutrient-dense foods.</text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge2" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M313,-112.29C313,-120.89 313,-129.64 313,-137.85"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="309.5,-137.92 313,-147.92 316.5,-137.92 309.5,-137.92"></polygon>
-</g>
-<!-- n3 -->
-<g id="node4" class="node">
-<title>n3</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M614,-106C614,-106 442,-106 442,-106 436,-106 430,-100 430,-94 430,-94 430,-18 430,-18 430,-12 436,-6 442,-6 442,-6 614,-6 614,-6 620,-6 626,-12 626,-18 626,-18 626,-94 626,-94 626,-100 620,-106 614,-106"></path>
-<text text-anchor="start" x="499.38" y="-92" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">meat healthy</text>
-<text text-anchor="start" x="445.77" y="-75" font-family="arial" font-size="10.00" fill="#000000">New scientific research is coming out</text>
-<text text-anchor="start" x="445.48" y="-63" font-family="arial" font-size="10.00" fill="#000000"> showing that meat is extremely good</text>
-<text text-anchor="start" x="448.53" y="-51" font-family="arial" font-size="10.00" fill="#000000"> for our health, and that a high-meat</text>
-<text text-anchor="start" x="455.47" y="-39" font-family="arial" font-size="10.00" fill="#000000"> diet free of processed foods can</text>
-<text text-anchor="start" x="449.1" y="-27" font-family="arial" font-size="10.00" fill="#000000"> actually reverse all kinds of chronic</text>
-<text text-anchor="start" x="505.49" y="-15" font-family="arial" font-size="10.00" fill="#000000"> diseases.</text>
-</g>
-<!-- n3&#45;&gt;n0 -->
-<g id="edge3" class="edge">
-<title>n3-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M441.48,-106.09C419.83,-118.38 397,-131.34 376.69,-142.86"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="374.82,-139.9 367.85,-147.88 378.27,-145.99 374.82,-139.9"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
+Pruminants("Ruminant animals, like cattle and sheep, 
+            are among the most sustainable food production 
+            systems on Earth, taking unusable land and 
+            waste products from vegetable and grain 
+            production, and turning it into healthy, 
+            nutrient-dense foods.")
+Pruminants --&gt; C
+
+Phealthy("New scientific research is coming out 
+          showing that meat is extremely good for 
+          our health, and that a high-meat diet 
+          free of processed foods can actually 
+          reverse all kinds of chronic diseases.")
+Phealthy --&gt; C
+</pre>
+<div id="mermaid-tooltip-3" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="independent-arguments-for-multiple-conclusions" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="independent-arguments-for-multiple-conclusions"><span class="header-section-number">3.3</span> Independent arguments for multiple conclusions</h2>
 <p>It might have occurred to you that there are actually <em>two</em> conclusions in this argument:</p>
 <ol type="1">
 <li>Animal agriculture is not bad for the environment.</li>
 <li>Animal agriculture is not bad for people.</li>
 </ol>
-<p>Different arguments support different conclusions. We can modify the Argdown source code, separating the conclusions and indicating which arguments support which conclusion.</p>
+<p>Different arguments support different conclusions. We can modify the Mermaid source code, separating the conclusions and indicating which arguments support which conclusion.</p>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Cenviro("Animal agriculture is not bad</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>         for the environment")</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Cpeople("Animal agriculture is not bad</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>         for people")</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Pscience("The so-called scientific studies purporting </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>              to show that animals are bad for the environment </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>              have been repeatedly shown to be flawed")</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>Pscience --&gt; Cenviro</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>Pruminants("Ruminant animals, like cattle and sheep, </span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>            are among the most sustainable food production </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>            systems on Earth, taking unusable land and </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>            waste products from vegetable and grain </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>            production, and turning it into healthy, </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>            nutrient-dense foods.")</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>Pruminants --&gt; Cenviro</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>Pruminants --&gt; Cpeople</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>Phealthy("New scientific research is coming out </span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>          showing that meat is extremely good for </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>          our health, and that a high-meat diet </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>          free of processed foods can actually </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>          reverse all kinds of chronic diseases.")</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>Phealthy --&gt; Cpeople</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p>
 
-<figure role="group" class="argdown-figure figure"><argdown-map initial-view="map"><div slot="source" class=""><pre class="language-argdown"><code class="language-argdown"><span class="hljs-statement-title">[not bad for enviro]:</span> Animal agriculture is not bad for the environment. 
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-4">flowchart TB
+Cenviro("Animal agriculture is not bad
+         for the environment")
+Cpeople("Animal agriculture is not bad
+         for people")
 
-<span class="hljs-statement-title">[not bad for people]:</span> Animal agriculture is not bad for people. 
+Pscience("The so-called scientific studies purporting 
+              to show that animals are bad for the environment 
+              have been repeatedly shown to be flawed")
+Pscience --&gt; Cenviro
 
+Pruminants("Ruminant animals, like cattle and sheep, 
+            are among the most sustainable food production 
+            systems on Earth, taking unusable land and 
+            waste products from vegetable and grain 
+            production, and turning it into healthy, 
+            nutrient-dense foods.")
+Pruminants --&gt; Cenviro
+Pruminants --&gt; Cpeople
 
-<span class="hljs-statement-title">[bad science]:</span> The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed. 
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[not bad for enviro]</span>
+Phealthy("New scientific research is coming out 
+          showing that meat is extremely good for 
+          our health, and that a high-meat diet 
+          free of processed foods can actually 
+          reverse all kinds of chronic diseases.")
+Phealthy --&gt; Cpeople
+</pre>
+<div id="mermaid-tooltip-4" class="mermaidTooltip">
 
-<span class="hljs-statement-title">[unusuable land]:</span> Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[not bad for enviro]</span>
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[not bad for people]</span>
-    
-<span class="hljs-statement-title">[meat healthy]:</span> New scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.
-<span class="hljs-support">    +&gt;</span> <span class="hljs-statement-title">[not bad for people]</span></code></pre></div><div slot="map">
-<!-- Generated by graphviz version 2.47.0 (20210316.0004)
- -->
-<!-- Title: Argument Map Pages: 1 -->
-<svg width="634pt" height="208pt" viewbox="0.00 0.00 634.00 208.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 204)">
-<title>Argument Map</title>
-<!-- n0 -->
-<g id="node1" class="node">
-<title>n0</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M292,-200C292,-200 120,-200 120,-200 114,-200 108,-194 108,-188 108,-188 108,-160 108,-160 108,-154 114,-148 120,-148 120,-148 292,-148 292,-148 298,-148 304,-154 304,-160 304,-160 304,-188 304,-188 304,-194 298,-200 292,-200"></path>
-<text text-anchor="start" x="167.1" y="-186" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">not bad for enviro</text>
-<text text-anchor="start" x="127.37" y="-169" font-family="arial" font-size="10.00" fill="#000000">Animal agriculture is not bad for the</text>
-<text text-anchor="start" x="174.33" y="-157" font-family="arial" font-size="10.00" fill="#000000"> environment. </text>
-</g>
-<!-- n1 -->
-<g id="node2" class="node">
-<title>n1</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M506,-200C506,-200 334,-200 334,-200 328,-200 322,-194 322,-188 322,-188 322,-160 322,-160 322,-154 328,-148 334,-148 334,-148 506,-148 506,-148 512,-148 518,-154 518,-160 518,-160 518,-188 518,-188 518,-194 512,-200 506,-200"></path>
-<text text-anchor="start" x="379.7" y="-186" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">not bad for people</text>
-<text text-anchor="start" x="349.71" y="-169" font-family="arial" font-size="10.00" fill="#000000">Animal agriculture is not bad for</text>
-<text text-anchor="start" x="400.82" y="-157" font-family="arial" font-size="10.00" fill="#000000"> people. </text>
-</g>
-<!-- n2 -->
-<g id="node3" class="node">
-<title>n2</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M184,-94C184,-94 12,-94 12,-94 6,-94 0,-88 0,-82 0,-82 0,-30 0,-30 0,-24 6,-18 12,-18 12,-18 184,-18 184,-18 190,-18 196,-24 196,-30 196,-30 196,-82 196,-82 196,-88 190,-94 184,-94"></path>
-<text text-anchor="start" x="71.32" y="-80" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">bad science</text>
-<text text-anchor="start" x="30.21" y="-63" font-family="arial" font-size="10.00" fill="#000000">The so-called scientific studies</text>
-<text text-anchor="start" x="18.54" y="-51" font-family="arial" font-size="10.00" fill="#000000"> purporting to show that animals are</text>
-<text text-anchor="start" x="19.08" y="-39" font-family="arial" font-size="10.00" fill="#000000"> bad for the environment have been</text>
-<text text-anchor="start" x="26.31" y="-27" font-family="arial" font-size="10.00" fill="#000000"> repeatedly shown to be flawed. </text>
-</g>
-<!-- n2&#45;&gt;n0 -->
-<g id="edge1" class="edge">
-<title>n2-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M132.47,-94.02C146.22,-108.79 161.92,-125.66 175.28,-140"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="173.05,-142.75 182.43,-147.68 178.18,-137.98 173.05,-142.75"></polygon>
-</g>
-<!-- n3 -->
-<g id="node4" class="node">
-<title>n3</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M399.5,-112C399.5,-112 226.5,-112 226.5,-112 220.5,-112 214.5,-106 214.5,-100 214.5,-100 214.5,-12 214.5,-12 214.5,-6 220.5,0 226.5,0 226.5,0 399.5,0 399.5,0 405.5,0 411.5,-6 411.5,-12 411.5,-12 411.5,-100 411.5,-100 411.5,-106 405.5,-112 399.5,-112"></path>
-<text text-anchor="start" x="279.6" y="-98" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">unusuable land</text>
-<text text-anchor="start" x="240.16" y="-81" font-family="arial" font-size="10.00" fill="#000000">Ruminant animals, like cattle and</text>
-<text text-anchor="start" x="224.58" y="-69" font-family="arial" font-size="10.00" fill="#000000"> sheep, are among the most sustainable</text>
-<text text-anchor="start" x="236.25" y="-57" font-family="arial" font-size="10.00" fill="#000000"> food production systems on Earth,</text>
-<text text-anchor="start" x="242.08" y="-45" font-family="arial" font-size="10.00" fill="#000000"> taking unusable land and waste</text>
-<text text-anchor="start" x="236.26" y="-33" font-family="arial" font-size="10.00" fill="#000000"> products from vegetable and grain</text>
-<text text-anchor="start" x="247.65" y="-21" font-family="arial" font-size="10.00" fill="#000000"> production, and turning it into</text>
-<text text-anchor="start" x="246.25" y="-9" font-family="arial" font-size="10.00" fill="#000000"> healthy, nutrient-dense foods.</text>
-</g>
-<!-- n3&#45;&gt;n0 -->
-<g id="edge2" class="edge">
-<title>n3-&gt;n0</title>
-<path fill="none" stroke="#0096ff" d="M262.01,-112.28C253.1,-121.94 244.1,-131.7 235.99,-140.49"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="233.33,-138.2 229.13,-147.93 238.48,-142.95 233.33,-138.2"></polygon>
-</g>
-<!-- n3&#45;&gt;n1 -->
-<g id="edge3" class="edge">
-<title>n3-&gt;n1</title>
-<path fill="none" stroke="#0096ff" d="M363.99,-112.28C372.9,-121.94 381.9,-131.7 390.01,-140.49"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="387.52,-142.95 396.87,-147.93 392.67,-138.2 387.52,-142.95"></polygon>
-</g>
-<!-- n4 -->
-<g id="node5" class="node">
-<title>n4</title>
-<path fill="white" stroke="#1b9e77" stroke-width="2" d="M614,-106C614,-106 442,-106 442,-106 436,-106 430,-100 430,-94 430,-94 430,-18 430,-18 430,-12 436,-6 442,-6 442,-6 614,-6 614,-6 620,-6 626,-12 626,-18 626,-18 626,-94 626,-94 626,-100 620,-106 614,-106"></path>
-<text text-anchor="start" x="499.38" y="-92" font-family="arial" font-weight="bold" font-size="10.00" fill="#000000">meat healthy</text>
-<text text-anchor="start" x="445.77" y="-75" font-family="arial" font-size="10.00" fill="#000000">New scientific research is coming out</text>
-<text text-anchor="start" x="445.48" y="-63" font-family="arial" font-size="10.00" fill="#000000"> showing that meat is extremely good</text>
-<text text-anchor="start" x="448.53" y="-51" font-family="arial" font-size="10.00" fill="#000000"> for our health, and that a high-meat</text>
-<text text-anchor="start" x="455.47" y="-39" font-family="arial" font-size="10.00" fill="#000000"> diet free of processed foods can</text>
-<text text-anchor="start" x="449.1" y="-27" font-family="arial" font-size="10.00" fill="#000000"> actually reverse all kinds of chronic</text>
-<text text-anchor="start" x="505.49" y="-15" font-family="arial" font-size="10.00" fill="#000000"> diseases.</text>
-</g>
-<!-- n4&#45;&gt;n1 -->
-<g id="edge4" class="edge">
-<title>n4-&gt;n1</title>
-<path fill="none" stroke="#0096ff" d="M482.2,-106.19C471.47,-117.72 460.29,-129.73 450.42,-140.32"></path>
-<polygon fill="#0096ff" stroke="#0096ff" points="447.75,-138.06 443.49,-147.77 452.87,-142.83 447.75,-138.06"></polygon>
-</g>
-</g>
-</svg>
-</div></argdown-map></figure>
+</div>
+<p></p>
+</div>
+</div>
+</div>
 <p>This example illustrates the importance of putting each claim of an argument in its own box. The premise <strong>meat healthy</strong> isn’t an argument for the <strong>not bad for enviro</strong> conclusion; it’s only making claims about the health effects of eating meat. And someone might present an objection to the <strong>unusuable land</strong> premise without addressing the other two, independent arguments.</p>
 <div class="exercises">
 <ol type="1">
@@ -434,10 +463,12 @@ Note
 <li>Construct a map of the following argument:</li>
 </ol>
 <blockquote class="blockquote">
-<p>People who work in the technology industry are increasingly lim- iting their kids’ screen time and their access to technology. Apple CEO Tim Cook prohibited his nephew from joining social media. Cook’s predecessor, Apple co-founder Steve Jobs, prohib- ited his young children from using iPads. Former Microsoft CEO Bill Gates wouldn’t let his kids have cell phones until they were teenagers.</p>
+<p>People who work in the technology industry are increasingly limiting their kids’ screen time and their access to technology. Apple CEO Tim Cook prohibited his nephew from joining social media. Cook’s predecessor, Apple co-founder Steve Jobs, prohibited his young children from using iPads. Former Microsoft CEO Bill Gates wouldn’t let his kids have cell phones until they were teenagers.</p>
 </blockquote>
 </div>
 
+
+<!-- -->
 
 </section>
 
@@ -472,6 +503,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -523,8 +605,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02-argdown.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Argdown</span></span>
+      <a href="./02-mermaid.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Mermaid</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -532,7 +614,154 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Arguments with interdependent claims</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Simple argument maps {#sec-simple}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## A first map ##</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Let's start with a simple argument for a campus mask mandate:  </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span><span class="co">[</span><span class="ot">Masks are effective at preventing people from spreading Covid-19.</span><span class="co">]</span><span class="at">{.blue}  </span><span class="co">[</span><span class="ot">So our campus should have a mask mandate.</span><span class="co">]</span><span class="at">{.green}</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>This argument has a single premise (in blue) and a conclusion (in green; it has the indicator word **so**.  The structure is basically the same as the "first argument map" we created in the previous chapter. </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>P1(Masks are effective at preventing people from spreading Covid<span class="dv">-19</span>.)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>C(Our campus should have a mask mandate.)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="st">The first line tells Mermaid what type of diagram we're creating.  (We're using a flowchart, ordered from top to bottom, and colored specifically for argument maps.) The next two lines mark the premise and conclusion. We give each claim a label, </span><span class="ot">`</span>P1<span class="ot">`</span><span class="st"> or </span><span class="ot">`</span>C<span class="ot">`</span><span class="st">.  These labels indicate what kind of claim it is, and are used by Mermaid to get the colors right.  Then we put the text in parentheses.  Finally, the last line indicates that support runs from the premise </span><span class="ot">`</span>P1<span class="ot">`</span><span class="st"> to the conclusion </span><span class="ot">`</span>C<span class="ot">`</span><span class="st">.  </span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="st">The premise is a little long.  Mermaid won't automatically add line breaks to make things more compact.  We can do it manually, but need to put the text into quotes. </span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span>mermaid</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>P1(<span class="ot">"</span><span class="st">Masks are effective at preventing </span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="st">    people from spreading Covid-19.</span><span class="ot">"</span>)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>C(Our campus should have a mask mandate.)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="st">::: exercises</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="st">1. What happens if you leave out one of the lines?  </span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="st">2. What happens if you reverse the arrow in the final line, </span><span class="ot">`</span>P1 &lt;-- C<span class="ot">`</span><span class="st">?  What if you keep the arrow the same, but switch the place of the premise and conclusion? </span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="st">3. Construct a map for the following argument: </span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; Bikes, scooters, and the bus all have a lower carbon footprint than individual cars.  So campus should encourage people to take bikes, scooters, and the bus.  </span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="st">:::</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="st">## Independent arguments for the same conclusion ##</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="st">Consider the following passage:  </span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; **Animal agriculture is not bad for the environment and it is not bad for people.** [The so-called scientific studies purporting to show that animals are bad for the environment have been repeatedly shown to be flawed.]{.red} [Ruminant animals, like cattle and sheep, are among the most sustainable food production systems on Earth, taking unusable land and waste products from vegetable and grain production, and turning it into healthy, nutrient-dense foods.]{.blue} Furthermore, [new scientific research is coming out showing that meat is extremely good for our health, and that a high-meat diet free of processed foods can actually reverse all kinds of chronic diseases.]{.purple} (Adapted from *Rulebook for Arguments*, Third Edition, pp36-37)</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="st">This argument has one conclusion sentence (in **bold**) and three premises, in red, blue, and purple. These premises form **independent** arguments:  the first challenges scientific evidence, the second explains benefits of animal agriculture, and the third is about research on the health benefits of eating meat.  Because they're talking about different aspects of the debate over animal agriculture, these arguments are independent of each other.  You might reject one argument, but agree with the other two.  Here's how we can represent these three independent arguments in an argument map.  </span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span>mermaid</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>C(<span class="ot">"</span><span class="st">Animal agriculture is not bad </span></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="st">   for the environment and it is </span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="st">   not bad for people.</span><span class="ot">"</span>)</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>Pscience(<span class="ot">"</span><span class="st">The so-called scientific studies purporting </span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="st">              to show that animals are bad for the environment </span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="st">              have been repeatedly shown to be flawed</span><span class="ot">"</span>)</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>Pscience --&gt; C</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>Pruminants(<span class="ot">"</span><span class="st">Ruminant animals, like cattle and sheep, </span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="st">            are among the most sustainable food production </span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="st">            systems on Earth, taking unusable land and </span></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a><span class="st">            waste products from vegetable and grain </span></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="st">            production, and turning it into healthy, </span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="st">            nutrient-dense foods.</span><span class="ot">"</span>)</span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>Pruminants --&gt; C</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>Phealthy(<span class="ot">"</span><span class="st">New scientific research is coming out </span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="st">          showing that meat is extremely good for </span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="st">          our health, and that a high-meat diet </span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="st">          free of processed foods can actually </span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="st">          reverse all kinds of chronic diseases.</span><span class="ot">"</span>)</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>Phealthy --&gt; C</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a><span class="st">## Independent arguments for multiple conclusions</span></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="st">It might have occurred to you that there are actually *two* conclusions in this argument: </span></span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a><span class="st">1. Animal agriculture is not bad for the environment. </span></span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a><span class="st">2. Animal agriculture is not bad for people. </span></span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a><span class="st">Different arguments support different conclusions.  We can modify the Mermaid source code, separating the conclusions and indicating which arguments support which conclusion. </span></span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span>mermaid</span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>%%| echo: true</span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>Cenviro(<span class="ot">"</span><span class="st">Animal agriculture is not bad</span></span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a><span class="st">         for the environment</span><span class="ot">"</span>)</span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>Cpeople(<span class="ot">"</span><span class="st">Animal agriculture is not bad</span></span>
+<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a><span class="st">         for people</span><span class="ot">"</span>)</span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>Pscience(<span class="ot">"</span><span class="st">The so-called scientific studies purporting </span></span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a><span class="st">              to show that animals are bad for the environment </span></span>
+<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a><span class="st">              have been repeatedly shown to be flawed</span><span class="ot">"</span>)</span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>Pscience --&gt; Cenviro</span>
+<span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>Pruminants(<span class="ot">"</span><span class="st">Ruminant animals, like cattle and sheep, </span></span>
+<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a><span class="st">            are among the most sustainable food production </span></span>
+<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a><span class="st">            systems on Earth, taking unusable land and </span></span>
+<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a><span class="st">            waste products from vegetable and grain </span></span>
+<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a><span class="st">            production, and turning it into healthy, </span></span>
+<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a><span class="st">            nutrient-dense foods.</span><span class="ot">"</span>)</span>
+<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>Pruminants --&gt; Cenviro</span>
+<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a>Pruminants --&gt; Cpeople</span>
+<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a>Phealthy(<span class="ot">"</span><span class="st">New scientific research is coming out </span></span>
+<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a><span class="st">          showing that meat is extremely good for </span></span>
+<span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a><span class="st">          our health, and that a high-meat diet </span></span>
+<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a><span class="st">          free of processed foods can actually </span></span>
+<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a><span class="st">          reverse all kinds of chronic diseases.</span><span class="ot">"</span>)</span>
+<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>Phealthy --&gt; Cpeople</span>
+<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a><span class="ot">```</span></span>
+<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a><span class="st">This example illustrates the importance of putting each claim of an argument in its own box.  The premise **meat healthy** isn't an argument for the **not bad for enviro** conclusion; it's only making claims about the health effects of eating meat.  And someone might present an objection to the **unusuable land** premise without addressing the other two, independent arguments.  </span></span>
+<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a><span class="st">::: exercises</span></span>
+<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a><span class="st">1. Construct a map of the following argument: </span></span>
+<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; Eating animals is wrong for a variety of reasons. First, many animals are sentient creatures that have thoughts and emotions. Second, we should not cause animals to suffer if we don’t need to. Finally, raising animals for food uses resources, like grain, that could be used to feed hungry people around the world. </span></span>
+<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a><span class="st">2. Construct a map of the following argument: </span></span>
+<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-147"><a href="#cb5-147" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; Poverty, illiteracy, and child mortality are all falling faster than ever. The average person is less likely to be affected by war, governed by a dictator, or die in a natural disaster than ever before. This shows that there has never been a better time to be alive than right now.</span></span>
+<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a><span class="st">3. Construct a map of the following argument: </span></span>
+<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; People who work in the technology industry are increasingly limiting their kids’ screen time and their access to technology. Apple CEO Tim Cook prohibited his nephew from joining social media. Cook’s predecessor, Apple co-founder Steve Jobs, prohibited his young children from using iPads. Former Microsoft CEO Bill Gates wouldn’t let his kids have cell phones until they were teenagers. </span></span>
+<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a><span class="st">:::</span></span>
+<span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 
