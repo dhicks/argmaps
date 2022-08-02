@@ -1,4 +1,4 @@
-# Case study: The biofuels debate
+# Case study: The biofuels debate {#sec-biofuels}
 
 In this section, we'll work our way through a debate over switching oil refineries to processing biofuels in the Bay Area.  In other words, refineries would create diesel from plant-based materials instead of fossil fuels.  This debate happened in the first six minutes of an episode of *Forum*, a daily news and call-in show on KQED in the Bay Area.  The episode aired May 2, 2022, and you can listen to it [here](https://www.kqed.org/forum/2010101888970/bay-area-refineries-plans-to-convert-to-biofuels-opposed-by-environmental).  The transcript below was generated using Otter.ai voice recognition.  It's been edited to correct errors and for brevity.  The example shows how even complex debates can be represented visually using argument maps.  
 

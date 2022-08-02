@@ -1,4 +1,4 @@
-# Setting up Mermaid 
+# Setting up Mermaid {#sec-setup}
 
 Mermaid is software designed to turn pieces of text into various kinds of diagrams.  We'll use it to create argument maps, visual representations of the structure of an argument or debate.  This page has instructions for two ways of setting up this software:  [you can use a website called Mermaid Live](#using-mermaid-live), or you can [download and install](#using-mermaid-with-obsidian) notetaking software called [Obsidian](https://obsidian.md/).  
 

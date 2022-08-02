@@ -1,4 +1,4 @@
-# Arguments with interdependent claims
+# Arguments with interdependent claims {#sec-interdependent}
 
 Now consider this argument: 
 
