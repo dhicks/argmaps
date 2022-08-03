@@ -6,13 +6,15 @@ book:
   title: "Mapping Arguments and Debates with Mermaid"
   author: "Dan Hicks"
   chapters:
-    - index.md
+    - index.qmd
     - 02-mermaid.qmd
     - 03-simple.qmd
     - 04-interdependent.qmd
     - 05-objections.qmd
     - 06-biofuels.qmd
   repo-url: https://github.com/dhicks/argmaps
+  resources:
+    - CNAME
 
 format:
   html:

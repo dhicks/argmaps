@@ -118,6 +118,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -225,7 +228,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>Argument maps are visual representations of arguments and debates, showing how claims support or challenge other claims. Here’s a map of an argument that you should learn how to make argument maps.</p>
-<pre class="mermaid"><code>flowchart TB
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart TB
 
 P1("Argument maps help you to
     understand arguments using 
@@ -240,7 +247,15 @@ P1 --&gt; C
 P2 --&gt; C
 
 C("You should learn to make
-   argument maps")</code></pre>
+   argument maps")
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
 <p>In <a href="02-mermaid.html"><span>Chapter&nbsp;2</span></a> we’ll get set up to create argument maps using free software. <a href="03-simple.html"><span>Chapter&nbsp;3</span></a> gets us started actually creating simple maps. Then <a href="04-interdependent.html"><span>Chapter&nbsp;4</span></a> we’ll learn how to map arguments with interdependent premises — sets of premises that work together to support a conclusion. To map <strong>debates</strong> — in which <a href="https://en.wiktionary.org/wiki/interlocutor#Noun">interlocutors</a> exchange objections and replies — we’ll need to indicate when a claim challenges another claim. We’ll learn how to do this in <a href="05-objections.html"><span>Chapter&nbsp;5</span></a>, looking specifically at one corner of the debate over abortion. Finally, <a href="06-biofuels.html"><span>Chapter&nbsp;6</span></a> walks through a complex debate over switching fossil fuel refineries to biodiesel production. We’ll see how argument maps help clarify how a rapid exchange of claims, objections, and replies all relate to each other.</p>
 <p>Parts of this tutorial use examples from Maralee Harrell, <em>What is the Argument?</em>, MIT Press, 2016, chapter 3, and David Morrow and Anthony Weston, <em>A Workbook for Arguments</em>, third edition, Hackett Publishing, 2019.</p>
 <p>Thanks to <a href="https://twitter.com/Cedric_Eyssette/status/1544599827035602944">Cédric Eyssette</a> for suggesting Mermaid.</p>
@@ -390,34 +405,35 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Argument maps are visual representations of arguments and debates, showing how claims support or challenge other claims.  Here's a map of an argument that you should learn how to make argument maps. </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">```mermaid</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>P1(<span class="ot">"</span><span class="st">Argument maps help you to</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">    understand arguments using </span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">    visual reasoning</span><span class="ot">"</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>P2(<span class="ot">"</span><span class="st">Some education studies have</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">    found that argument maps</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">    improve student learning in </span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">    critical thinking</span><span class="ot">"</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>P2 --&gt; C</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>C(<span class="ot">"</span><span class="st">You should learn to make</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="st">   argument maps</span><span class="ot">"</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>In @sec-setup we'll get set up to create argument maps using free software.  @sec-simple gets us started actually creating simple maps.  Then @sec-interdependent we'll learn how to map arguments with interdependent premises — sets of premises that work together to support a conclusion.  To map **debates** — in which <span class="co">[</span><span class="ot">interlocutors</span><span class="co">](https://en.wiktionary.org/wiki/interlocutor#Noun)</span> exchange objections and replies — we'll need to indicate when a claim challenges another claim.  We'll learn how to do this in @sec-objections, looking specifically at one corner of the debate over abortion.  Finally, @sec-biofuels walks through a complex debate over switching fossil fuel refineries to biodiesel production.  We'll see how argument maps help clarify how a rapid exchange of claims, objections, and replies all relate to each other.  </span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>Parts of this tutorial use examples from Maralee Harrell, *What is the Argument?*, MIT Press, 2016, chapter 3, and David Morrow and Anthony Weston, *A Workbook for Arguments*, third edition, Hackett Publishing, 2019. </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>Thanks to <span class="co">[</span><span class="ot">Cédric Eyssette</span><span class="co">](https://twitter.com/Cedric_Eyssette/status/1544599827035602944)</span> for suggesting Mermaid.  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Argument maps are visual representations of arguments and debates, showing how claims support or challenge other claims.  Here's a map of an argument that you should learn how to make argument maps. </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>P1(<span class="ot">"</span><span class="st">Argument maps help you to</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">    understand arguments using </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">    visual reasoning</span><span class="ot">"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>P2(<span class="ot">"</span><span class="st">Some education studies have</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="st">    found that argument maps</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="st">    improve student learning in </span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">    critical thinking</span><span class="ot">"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>P1 --&gt; C</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>P2 --&gt; C</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>C(<span class="ot">"</span><span class="st">You should learn to make</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="st">   argument maps</span><span class="ot">"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>In @sec-setup we'll get set up to create argument maps using free software.  @sec-simple gets us started actually creating simple maps.  Then @sec-interdependent we'll learn how to map arguments with interdependent premises — sets of premises that work together to support a conclusion.  To map **debates** — in which <span class="co">[</span><span class="ot">interlocutors</span><span class="co">](https://en.wiktionary.org/wiki/interlocutor#Noun)</span> exchange objections and replies — we'll need to indicate when a claim challenges another claim.  We'll learn how to do this in @sec-objections, looking specifically at one corner of the debate over abortion.  Finally, @sec-biofuels walks through a complex debate over switching fossil fuel refineries to biodiesel production.  We'll see how argument maps help clarify how a rapid exchange of claims, objections, and replies all relate to each other.  </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Parts of this tutorial use examples from Maralee Harrell, *What is the Argument?*, MIT Press, 2016, chapter 3, and David Morrow and Anthony Weston, *A Workbook for Arguments*, third edition, Hackett Publishing, 2019. </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Thanks to <span class="co">[</span><span class="ot">Cédric Eyssette</span><span class="co">](https://twitter.com/Cedric_Eyssette/status/1544599827035602944)</span> for suggesting Mermaid.  </span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

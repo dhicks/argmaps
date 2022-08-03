@@ -2,7 +2,7 @@
 
 Argument maps are visual representations of arguments and debates, showing how claims support or challenge other claims.  Here's a map of an argument that you should learn how to make argument maps. 
 
-```mermaid
+```{mermaid}
 flowchart TB
 
 P1("Argument maps help you to
