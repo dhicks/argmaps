@@ -2,11 +2,16 @@
 
 Mermaid is software designed to turn pieces of text into various kinds of diagrams.  We'll use it to create argument maps, visual representations of the structure of an argument or debate.  This page has instructions for two ways of setting up this software:  [you can use a website called Mermaid Live](#using-mermaid-live), or you can [download and install](#using-mermaid-with-obsidian) notetaking software called [Obsidian](https://obsidian.md/).  
 
+::: {.callout-note}
+You don't need to read both sections of this chapter.  Pick one of the two options, and just read that section.  
+:::
+
 Both options for using Mermaid are completely free, and either one will work to generate argument maps for this course.  [Mermaid Live](#using-mermaid-live) doesn't require any setup — you just open up a website and start typing — but has very limited functionality for saving your work.  Using [Obsidian](#using-mermaid-with-obsidian) requires you to download and install some software on your computer.  It's easy to use Obsidian to save your argument maps; but the software hasn't been vetted by our campus IT office.  That means there's a security risk installing this software.  
 
 ::: {.callout-important}
 Do not store any sensitive information in Obsidian. 
 :::
+
 
 ## Using Mermaid Live
 
@@ -170,12 +175,19 @@ If nothing seems to happen, try replacing the braces with spaces on the first li
 In the rest of this tutorial, I won't include the ` ```{mermaid}` line at the top or the ` ``` ` at the end.  You need to use these special symbols (called *code fencing*) to tell Obsidian that it needs to run this chunk through Mermaid. 
 :::
 
+### Saving an argument map image
 
-### Saving an argument map as a PDF file
+Obsidian doesn't have a built-in way to generate image files or Word docx files.  (I haven't tested it, but it looks like the plugin [Obsidian Pandoc](obsidian://show-plugin?id=obsidian-pandoc) can do this for you.)  There are two ways to generate an image file that you can turn in with an assignment or quiz.  
 
-Obsidian doesn't have a built-in way to generate image files or Word docx files.  (I haven't tested it, but it looks like the plugin [Obsidian Pandoc](obsidian://show-plugin?id=obsidian-pandoc) can do this for you.)  But it can generate PDF files, which will work just fine for our class.  
+One option is to take a screenshot.  The steps to do this after different for [Windows](https://support.microsoft.com/en-us/topic/00246869-1843-655f-f220-97299b865f6b) vs. [Mac](https://support.apple.com/en-us/HT201361).  
 
-To export a note as PDF, click on the three dots icon (upper right) to open the More Options menu.  Export to PDF is at the bottom.  After clicking the Export to PDF button, a save dialog will pop up.  I recommend saving it in the same folder as the argument map itself, so that you can always find them together.  
+::: {.callout-note}
+If you take a screenshot, please just include the argument map.  I don't need to see the source code or whatever else happens to be on your screen.
+:::
+
+The other options is to export the note as a PDF file.  To do this, click on the three dots icon (upper right) to open the More Options menu.  Export to PDF is at the bottom.  After clicking the Export to PDF button, a save dialog will pop up.  
+
+However you generate the image file, I recommend saving it in the same folder as the argument map itself, so that you can always find them together.  
 
 ### Doing more with Obsidian
 
