@@ -237,7 +237,7 @@ Olcfs("The low carbon fuel standard will
        
 Oev("We should be switching to electric 
      vehicles instead of producing biofuels") --- OLev["Electric vehicles
-     													objection"] -.-> C
+     													opposing argument"] -.-> C
 ```
 
 > RS: As we move forward in time, we may see that technology come online, and we may be able to move to it and all applications. But that is not the case today. And when we think about applications, like aviation, locomotives and marine, and the legacy fleets of heavy and medium duty, those are going to persist into the mid century. 
@@ -281,19 +281,11 @@ Olcfs("The low carbon fuel standard will
 
 Oev("We should be switching to electric 
      vehicles instead of producing biofuels") --- OLev["Electric vehicles
-     													objection"] -.-> C
+     													opposing argument"] -.-> C
 
 Oheavy-duty("Planes, trains, and large ships 
 			 cannot be electrified for several 
 			 decades") -.-> OLev
 ```
 
-[start here]{.todo}
-
-## Exercise
-
-*[jobs]*
-
-::: {.exercises}
-:::
 
