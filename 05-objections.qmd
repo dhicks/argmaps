@@ -1,6 +1,33 @@
 # Opposing arguments and objections {#sec-objections}
 
-An **opposing argument** is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise (**challenging a premise**), or (b) another argument's premises don't support its conclusion (**challenging support**).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Mermaid, which enables us to represent complex debates. 
+An [**opposing argument**](#opposing-arguments) is an argument whose conclusion is the opposite of another argument.  An **objection** is an argument whose conclusion is that (a) another argument has a false premise ([**challenging a premise**](#objecting-to-a-premise)), or (b) another argument's premises don't support its conclusion ([**challenging support**](#objecting-to-support)).  In other words, an opposing argument disagrees with a conclusion, while an objection disagrees with an argument.  We can represent both opposing arguments and objections in Mermaid, which enables us to represent complex debates. 
+
+
+## Counterarguments
+
+You might be more familiar with the terminology of *counterarguments* or *counters* in argumentative writing.  A counterargument is usually defined as something like ["An argument that is opposed to another argument"](https://en.wiktionary.org/wiki/counterargument).  This makes it a general term: opposing arguments, objections to premises, and objections to support are all counterarguments.  
+
+Writing assignments that involve counterarguments often boil down to trading opposing arguments.  Consider [an example from a university writing center](https://www.unr.edu/writing-speaking-center/student-resources/writing-speaking-resources/counterarguments): 
+
+> Admittedly, [many students would like to smoke on campus]{.red}. Some people may rightly argue that [if smoking on campus is not illegal, then it should be permitted]{.red}; however, [second-hand smoke may cause harm to those who have health issues like asthma, possibly putting them at risk]{.blue}.
+
+We don't have a full essay to go along with this example, but it looks like the thesis of the full essay is "smoking should be banned on campus." The paragraph gives two independent opposing arguments (against the thesis), in red:
+
+::: red
+- Many students would like to smoke on campus.
+- If smoking on campus is not illegal, then it should be permitted.
+:::
+
+Then we get an argument for the thesis, in blue: 
+
+::: blue
+- Second-hand smoke may cause harm to those who have health issues like asthma, possibly putting them at risk. 
+:::
+
+Trading opposing arguments like this might help us understand the main concerns motivating each side of the debate.  But it doesn't help us understand what each side thinks of the other side's arguments.  What does the pro-smoking side think about health concerns?  How would the anti-smoking side balance freedom and health?  
+
+To go further, in this class (and many other philosophy classes), we emphasize objections and replies rather than opposing arguments.  
+
 
 ## Opposing arguments
 
@@ -22,7 +49,10 @@ Oright-to-life -.-> C
 [*Embryo*](https://en.wikipedia.org/wiki/Embryo) is the term for the first 8-9 weeks of development, starting with conception (unification of an egg cell and sperm cell).  After that it's a [*fetus*](https://en.wikipedia.org/wiki/Embryo), though according to the Wikipedia article "Prenatal development is a continuum, with no clear defining feature distinguishing an embryo from a fetus."  *Length of pregnancy* is usually measured from the last menstrual period, which is typically 9-20 days before conception.  "Fetus" seems to be more common in the abortin debate than "embryo." But a six-week abortion ban is a prohibition on abortion during part of the embryonic stage.  So here I'm using "embryo." 
 :::
 
-These two arguments form a pair, each opposing the other.  They also don't engage with each other.  The pro-choice side appeals to the right to bodily autonomy, while the anti-abortion side appeals to the right to life.  Because they don't address each others' arguments, the debate doesn't go anywhere.  
+These two arguments form a pair, each opposing the other.  They also don't engage with each other.  The pro-choice side appeals to the right to bodily autonomy, while the anti-abortion side appeals to the right to life.  But what does the pro-choice side think about the rights of a developing embryo?  And what does the anti-abortion side think about bodily autonomy?  Because they don't address each others' arguments, the debate doesn't go anywhere.  This makes opposing arguments not much better than *mere disagreement* (where one side makes a claim and the other side says the opposite, without any arguments).  
+
+In contrast, objections help us understand what one side thinks of the other side's arguments.  This can lead to deeper insights:  What's the fundamental disagreement between the two sides?  Where do they agree?  Tracing out a complex debate, using tools like argument maps, might not resolve a controversy, but they can help us understand it better.  
+
 
 
 ## Objecting to a premise
@@ -57,8 +87,6 @@ OWarren1 & OWarren2 --- OL[Warren's objection] -.-> Oright-to-life
 ```
 
 When you're reading this, remember that solid/blue indicates support and dashed/red indicates opposition.  So Warren's two premises support (solid blue line) her objection, and the objection opposes (dashed red line) the right-to-life premise.  In turn, the right-to-life premise opposes (dashed red line) the conclusion that abortion should be legal.  
-
-An opposing argument is not much better than **mere disagreement** (where one side makes a claim and the other side says the opposite, without any arguments).  Opposing arguments give us some insight into how each side of a debate thinks about the issue.  But objections help us understand what one side thinks of the other side's arguments.  This can lead to deeper insights:  What's the fundamental disagreement between the two sides?  Where do they agree?  Tracing out a complex debate, using tools like argument maps, might not resolve a controversy, but they can help us understand it better.  
 
 A number of philosophers and other writers, including the [ethicist Don Marquis](https://drive.google.com/file/d/0B6oYmzobonqoWTJqeUhxSm5XcWM/view?usp=sharing&resourcekey=0-VNrlLS4h6Iz1txoiA9swGA), responded to Warren's argument by pointing out that coma patients have a right to life, despite lacking the capacities Warren points to. 
 
@@ -147,7 +175,7 @@ end
 You can draw a box around a section of the debate by putting `subgraph [name]` at the beginning of the section and `end` at the end.  Check the source code to see how.
 :::
 
-Initially, this map of the debate over abortion might not seem that helpful.  We've taken a complex moral and political debate, and turned it into a complex diagram.  
+Initially, this map of the debate over abortion might not seem that helpful.  We've taken a complex moral and political debate and turned it into a complex diagram.  
 
 But examining the map does help us understand a few aspects of the debate.  First, no one is denying that embryos lack the capacity to feel pain or consciousness or the like.  And no one is denying that (typically) embryos have the potential for a future-like-ours.  
 
